@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_app/constants.dart';
+
+import '../constants.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -9,10 +10,10 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
-  FirebaseUser loggedInUser;
+  User loggedInUser;
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser();
+      final user = await _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
         print(loggedInUser.email);
