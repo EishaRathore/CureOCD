@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:edge_alert/edge_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,7 +35,6 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Image.asset('assets/images/VEXPOcd_logo.png'),
-
 
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
@@ -120,7 +121,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                                     email: email, password: password);
                             if (newUser != null) {
                               User info = FirebaseAuth.instance.currentUser;
-                              info.updateProfile(displayName:name);
+                              info.updateProfile(displayName: name);
                               // UserUpdateInfo info = UserUpdateInfo();
                               // info.displayName = name;
                               // await newUser.user.updateProfile(info);

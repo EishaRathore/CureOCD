@@ -1,7 +1,9 @@
 // import 'dart:html';
 
+// ignore_for_file: must_be_immutable
+
 // import 'dart:html';
-import 'package:flutter/foundation.dart';
+//import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -27,13 +29,12 @@ import 'chatterScreen.dart';
 //   }
 // }
 
-class Home extends KFDrawerContent {
+class AboutUs extends KFDrawerContent {
   @override
-  _HomeState createState() => _HomeState();
+  _AboutUsState createState() => _AboutUsState();
 }
 
-
-class _HomeState extends State<Home> {
+class _AboutUsState extends State<AboutUs> {
   // String _selectedValue;
   // Map<String, bool> items = {
   //   'Sale': false,

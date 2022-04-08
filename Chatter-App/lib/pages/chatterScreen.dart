@@ -1,3 +1,5 @@
+// ignore_for_file: await_only_futures
+
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -146,7 +148,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                 Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (context) => Home(),
+                      builder: (context) => AboutUs(),
                     ));
               },
 
