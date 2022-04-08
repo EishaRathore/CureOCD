@@ -28,6 +28,7 @@ apply plugin: 'com.google.gms.google-services'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 def flutterMinSdkVersion = localProperties.getProperty('flutter.minSdkVersion')
 if (flutterMinSdkVersion == null) {
     flutterMinSdkVersion = flutter.minSdkVersion
@@ -38,6 +39,8 @@ if (flutterTargetSdkVersion == null) {
     flutterTargetSdkVersion = flutter.targetSdkVersion
 }
 
+=======
+>>>>>>> parent of 1c84b2d (integration)
 =======
 >>>>>>> parent of 1c84b2d (integration)
 =======
@@ -58,8 +61,14 @@ android {
         applicationId "com.finalyearproject.VEXPOcd"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         minSdkVersion flutterMinSdkVersion
         targetSdkVersion flutterTargetSdkVersion
+=======
+        minSdkVersion 23
+        multiDexEnabled true
+        targetSdkVersion 28
+>>>>>>> parent of 1c84b2d (integration)
 =======
         minSdkVersion 23
         multiDexEnabled true
