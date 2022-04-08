@@ -4,6 +4,7 @@
 
 // import 'dart:html';
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
@@ -40,6 +41,12 @@ class AboutUs extends KFDrawerContent {
 import 'package:chat_app/widgets/custombutton.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+=======
+
+import 'package:chat_app/widgets/custombutton.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+>>>>>>> parent of 1c84b2d (integration)
 import 'package:chat_app/pages/chatterScreen.dart';
 
 void main() {
@@ -62,6 +69,16 @@ class MyApp extends StatelessWidget {
 
 class AboutUs extends StatefulWidget {
   AboutUs({Key key, this.title}) : super(key: key);
+<<<<<<< HEAD
+
+  final String title;
+
+  @override
+  _AboutUsState createState() => _AboutUsState();
+}
+
+>>>>>>> parent of 1c84b2d (integration)
+=======
 
   final String title;
 

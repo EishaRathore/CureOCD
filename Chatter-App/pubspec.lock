@@ -178,6 +178,7 @@ packages:
     source: hosted
     version: "0.6.3"
 <<<<<<< HEAD
+<<<<<<< HEAD
   kf_drawer:
     dependency: "direct main"
     description:
@@ -201,12 +202,15 @@ packages:
     version: "1.2.2"
 =======
 >>>>>>> parent of 1c84b2d (integration)
+=======
+>>>>>>> parent of 1c84b2d (integration)
   matcher:
     dependency: transitive
     description:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
 <<<<<<< HEAD
     version: "0.12.11"
   material_color_utilities:
@@ -216,6 +220,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.3"
+=======
+    version: "0.12.10"
+>>>>>>> parent of 1c84b2d (integration)
 =======
     version: "0.12.10"
 >>>>>>> parent of 1c84b2d (integration)
@@ -241,7 +248,11 @@ packages:
     source: hosted
     version: "1.8.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   petitparser:
+=======
+  pedantic:
+>>>>>>> parent of 1c84b2d (integration)
 =======
   pedantic:
 >>>>>>> parent of 1c84b2d (integration)
@@ -312,7 +323,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
 <<<<<<< HEAD
+<<<<<<< HEAD
     version: "0.4.8"
+=======
+    version: "0.3.0"
+>>>>>>> parent of 1c84b2d (integration)
 =======
     version: "0.3.0"
 >>>>>>> parent of 1c84b2d (integration)
@@ -330,6 +345,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
 <<<<<<< HEAD
+<<<<<<< HEAD
     version: "2.1.1"
   xml:
     dependency: transitive
@@ -345,6 +361,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.0"
+=======
+    version: "2.1.0"
+>>>>>>> parent of 1c84b2d (integration)
 =======
     version: "2.1.0"
 >>>>>>> parent of 1c84b2d (integration)

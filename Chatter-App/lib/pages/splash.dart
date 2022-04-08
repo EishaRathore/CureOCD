@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ignore_for_file: deprecated_member_use
 
+=======
+import 'package:chat_app/widgets/custombutton.dart';
+>>>>>>> parent of 1c84b2d (integration)
 =======
 import 'package:chat_app/widgets/custombutton.dart';
 >>>>>>> parent of 1c84b2d (integration)
