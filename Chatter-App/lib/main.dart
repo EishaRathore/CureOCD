@@ -23,11 +23,12 @@ class ChatterApp extends StatelessWidget {
       // home: ChatterHome() 0B1968,
       initialRoute: '/',
       routes: {
-        '/': (context) => ChatterHome(),
-        '/login': (context) => ChatterLogin(),
-        '/signup': (context) => ChatterSignUp(),
-        '/chat': (context) => ChatterScreen(),
-        '/aboutUs': (context) => AboutUs(),
+       // '/' (context) => ChatterHome(),
+       '/': (context) => ChatterHome(),
+        //'/login': (context) => ChatterLogin(),
+        //'/signup': (context) => ChatterSignUp(),
+        //'/chat': (context) => ChatterScreen(),
+        //'/aboutUs': (context) => AboutUs(),
         // '/aboutUs': (context) => AboutUsScreen(),
 
         // '/chats':(context)=>ChatterScreen()

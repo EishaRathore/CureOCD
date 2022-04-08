@@ -1,4 +1,4 @@
-package com.example.chat_app
+package com.example.CureOCD_app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
