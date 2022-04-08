@@ -1,7 +1,6 @@
 // import 'package:chat_app/pages/chat.dart';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 //import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -61,17 +60,6 @@ import 'pages/aboutUs.dart';
 void main() => runApp(ChatterApp());
 >>>>>>> parent of 1c84b2d (integration)
 
-=======
-import 'package:chat_app/pages/login.dart';
-import 'package:chat_app/pages/signup.dart';
-import 'package:flutter/material.dart';
-import 'package:chat_app/pages/chatterScreen.dart';
-import 'pages/splash.dart';
-import 'pages/aboutUs.dart';
-
-void main() => runApp(ChatterApp());
-
->>>>>>> parent of 1c84b2d (integration)
 =======
 import 'package:chat_app/pages/login.dart';
 import 'package:chat_app/pages/signup.dart';
