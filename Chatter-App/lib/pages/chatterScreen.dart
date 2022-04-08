@@ -1,15 +1,15 @@
+import 'package:chat_app/pages/aboutUs.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../constants.dart';
-import 'aboutUs.dart';
 
-final _firestore = FirebaseFirestore.instance;
+final _firestore = Firestore.instance;
 String username = 'User';
 String email = 'user@example.com';
 String messageText;
-User loggedInUser;
+FirebaseUser loggedInUser;
 
 class ChatterScreen extends StatefulWidget {
   @override
@@ -30,7 +30,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
 
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser;
+      final user = await _auth.currentUser();
       if (user != null) {
         loggedInUser = user;
         setState(() {
@@ -146,7 +146,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                 Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (context) => Home(),
+                      builder: (context) => AboutUs(),
                     ));
               },
 

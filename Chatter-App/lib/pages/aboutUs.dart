@@ -1,39 +1,40 @@
 // import 'dart:html';
 
 // import 'dart:html';
+
+import 'package:chat_app/widgets/custombutton.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:kf_drawer/kf_drawer.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:chat_app/pages/chatterScreen.dart';
 
-import '../widgets/CustomButton.dart';
-import 'chatterScreen.dart';
-
-// void main() {
-//   runApp(MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'VEXPOcd',
-//       theme: ThemeData(
-//         primarySwatch: Colors.indigo[900],
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: AboutUs(),
-//     );
-//   }
-// }
-
-class Home extends KFDrawerContent {
-  @override
-  _HomeState createState() => _HomeState();
+void main() {
+  runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'VEXPOcd',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo[900],
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: AboutUs(),
+    );
+  }
+}
 
-class _HomeState extends State<Home> {
+class AboutUs extends StatefulWidget {
+  AboutUs({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _AboutUsState createState() => _AboutUsState();
+}
+
+class _AboutUsState extends State<AboutUs> {
   // String _selectedValue;
   // Map<String, bool> items = {
   //   'Sale': false,
@@ -51,69 +52,35 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 1, 13, 66),
-          automaticallyImplyLeading: false,
-          elevation: 1.0,
-          leading: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(32.0)),
-            child: Material(
-              shadowColor: Colors.transparent,
-              color: Colors.transparent,
-              child: IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Color.fromARGB(255, 255, 254, 254),
-                ),
-                onPressed: widget.onMenuPressed,
-              ),
-            ),
-          ),
-          title: GradientText(
-            'VexpOcd',
-            style: const TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            colors: [
-              const Color.fromARGB(255, 0, 118, 197),
-              const Color.fromARGB(255, 197, 194, 194),
-              // const Color.fromARGB(255, 107, 4, 110),
-              const Color.fromARGB(255, 0, 118, 197),
-            ],
-          ),
-        ),
-        // appBar: AppBar(
-        //   title: Text('VEXPOcd'),
-        //   backgroundColor: Colors.indigo,
+          title: Text('VEXPOcd'),
+          backgroundColor: Colors.indigo,
 
-        //   // leading: Icon(
-        //   //   Icons.cancel,
-        //   // ),
-        //   // actions: [
-        //   //   TextButton(
-        //   //     child: Text(
-        //   //       'CLEAR',
-        //   //       style: TextStyle(color: Colors.white, fontSize: 14),
-        //   //     ),
-        //   //     onPressed: () {},
-        //   //   ),
-        //   //   SizedBox(
-        //   //     width: 15,
-        //   //   ),
-        //   //   TextButton(
-        //   //     child: Text(
-        //   //       'APPLY',
-        //   //       style: TextStyle(color: Colors.white, fontSize: 14),
-        //   //     ),
-        //   //     onPressed: () {},
-        //   //   ),
-        //   //   SizedBox(
-        //   //     width: 6,
-        //   //   ),
-        //   // ],
-        // ),
+          // leading: Icon(
+          //   Icons.cancel,
+          // ),
+          // actions: [
+          //   TextButton(
+          //     child: Text(
+          //       'CLEAR',
+          //       style: TextStyle(color: Colors.white, fontSize: 14),
+          //     ),
+          //     onPressed: () {},
+          //   ),
+          //   SizedBox(
+          //     width: 15,
+          //   ),
+          //   TextButton(
+          //     child: Text(
+          //       'APPLY',
+          //       style: TextStyle(color: Colors.white, fontSize: 14),
+          //     ),
+          //     onPressed: () {},
+          //   ),
+          //   SizedBox(
+          //     width: 6,
+          //   ),
+          // ],
+        ),
         body: Padding(
           padding: EdgeInsets.all(12.0),
           child: ListView(
