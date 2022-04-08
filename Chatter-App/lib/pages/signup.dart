@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 // ignore_for_file: deprecated_member_use
 
-=======
-import 'package:chat_app/widgets/custombutton.dart';
-import 'package:chat_app/widgets/customtextinput.dart';
->>>>>>> parent of 1c84b2d (integration)
 import 'package:edge_alert/edge_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+
+import '../widgets/custombutton.dart';
+import '../widgets/customtextinput.dart';
 
 class ChatterSignUp extends StatefulWidget {
   @override
@@ -122,17 +120,11 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                                 await _auth.createUserWithEmailAndPassword(
                                     email: email, password: password);
                             if (newUser != null) {
-<<<<<<< HEAD
                               User info = FirebaseAuth.instance.currentUser;
                               info.updateProfile(displayName: name);
                               // UserUpdateInfo info = UserUpdateInfo();
                               // info.displayName = name;
                               // await newUser.user.updateProfile(info);
-=======
-                              UserUpdateInfo info = UserUpdateInfo();
-                              info.displayName = name;
-                              await newUser.user.updateProfile(info);
->>>>>>> parent of 1c84b2d (integration)
 
                               Navigator.pushNamed(context, '/chat');
                             }
