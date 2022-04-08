@@ -177,62 +177,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  kf_drawer:
-    dependency: "direct main"
-    description:
-      name: kf_drawer
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.1"
-  lints:
-    dependency: transitive
-    description:
-      name: lints
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
-  lottie:
-    dependency: "direct main"
-    description:
-      name: lottie
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.2"
-=======
->>>>>>> parent of 1c84b2d (integration)
-=======
->>>>>>> parent of 1c84b2d (integration)
-=======
->>>>>>> parent of 1c84b2d (integration)
   matcher:
     dependency: transitive
     description:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    version: "0.12.11"
-  material_color_utilities:
-    dependency: transitive
-    description:
-      name: material_color_utilities
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.3"
-=======
     version: "0.12.10"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "0.12.10"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "0.12.10"
->>>>>>> parent of 1c84b2d (integration)
   meta:
     dependency: transitive
     description:
@@ -254,19 +205,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  petitparser:
-=======
   pedantic:
->>>>>>> parent of 1c84b2d (integration)
-=======
-  pedantic:
->>>>>>> parent of 1c84b2d (integration)
-=======
-  pedantic:
->>>>>>> parent of 1c84b2d (integration)
     dependency: transitive
     description:
       name: pedantic
@@ -333,19 +272,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    version: "0.4.8"
-=======
     version: "0.3.0"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "0.3.0"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "0.3.0"
->>>>>>> parent of 1c84b2d (integration)
   typed_data:
     dependency: transitive
     description:
@@ -359,33 +286,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    version: "2.1.1"
-  xml:
-    dependency: transitive
-    description:
-      name: xml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.3.1"
-  yaml:
-    dependency: transitive
-    description:
-      name: yaml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
-=======
     version: "2.1.0"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "2.1.0"
->>>>>>> parent of 1c84b2d (integration)
-=======
-    version: "2.1.0"
->>>>>>> parent of 1c84b2d (integration)
 sdks:
   dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.12.13+hotfix.4"

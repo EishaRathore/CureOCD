@@ -22,29 +22,11 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.google.gms.google-services'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-def flutterMinSdkVersion = localProperties.getProperty('flutter.minSdkVersion')
-if (flutterMinSdkVersion == null) {
-    flutterMinSdkVersion = flutter.minSdkVersion
-}
-
-def flutterTargetSdkVersion = localProperties.getProperty('flutter.targetSdkVersion')
-if (flutterTargetSdkVersion == null) {
-    flutterTargetSdkVersion = flutter.targetSdkVersion
-}
-
-=======
->>>>>>> parent of 1c84b2d (integration)
-=======
->>>>>>> parent of 1c84b2d (integration)
-=======
->>>>>>> parent of 1c84b2d (integration)
 android {
     compileSdkVersion 28
 
@@ -59,26 +41,9 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.finalyearproject.VEXPOcd"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        minSdkVersion flutterMinSdkVersion
-        targetSdkVersion flutterTargetSdkVersion
-=======
         minSdkVersion 23
         multiDexEnabled true
         targetSdkVersion 28
->>>>>>> parent of 1c84b2d (integration)
-=======
-        minSdkVersion 23
-        multiDexEnabled true
-        targetSdkVersion 28
->>>>>>> parent of 1c84b2d (integration)
-=======
-        minSdkVersion 23
-        multiDexEnabled true
-        targetSdkVersion 28
->>>>>>> parent of 1c84b2d (integration)
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -96,9 +61,9 @@ android {
 flutter {
     source '../..'
 }
+
 dependencies {
     implementation 'com.android.support:multidex:1.0.3'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'

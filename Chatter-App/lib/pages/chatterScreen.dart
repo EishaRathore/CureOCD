@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// ignore_for_file: await_only_futures
-
-=======
 import 'package:chat_app/pages/aboutUs.dart';
->>>>>>> parent of 1c84b2d (integration)
-=======
-import 'package:chat_app/pages/aboutUs.dart';
->>>>>>> parent of 1c84b2d (integration)
-=======
-import 'package:chat_app/pages/aboutUs.dart';
->>>>>>> parent of 1c84b2d (integration)
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
