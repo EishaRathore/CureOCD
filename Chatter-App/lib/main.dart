@@ -1,4 +1,5 @@
 // import 'package:chat_app/pages/chat.dart';
+<<<<<<< HEAD
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 //import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -47,6 +48,16 @@ Future<void> main() async {
 //     );
 //   }
 // }
+=======
+import 'package:chat_app/pages/login.dart';
+import 'package:chat_app/pages/signup.dart';
+import 'package:flutter/material.dart';
+import 'package:chat_app/pages/chatterScreen.dart';
+import 'pages/splash.dart';
+import 'pages/aboutUs.dart';
+
+void main() => runApp(ChatterApp());
+>>>>>>> parent of 1c84b2d (integration)
 
 class ChatterApp extends StatelessWidget {
   @override

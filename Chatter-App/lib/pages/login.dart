@@ -1,10 +1,9 @@
+import 'package:chat_app/widgets/custombutton.dart';
+import 'package:chat_app/widgets/customtextinput.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
-import '../widgets/custombutton.dart';
-import '../widgets/customtextinput.dart';
 
 class ChatterLogin extends StatefulWidget {
   @override
