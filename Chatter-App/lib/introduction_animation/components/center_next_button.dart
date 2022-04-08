@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class CenterNextButton extends StatelessWidget {
   final AnimationController animationController;
   final VoidCallback onNextClick;
-  const CenterNextButton({Key key, this.animationController, this.onNextClick})
+  const CenterNextButton(
+      {Key key,this.animationController,  this.onNextClick})
       : super(key: key);
 
   @override
@@ -94,19 +95,15 @@ class CenterNextButton extends StatelessWidget {
                     child: _signUpMoveAnimation.value > 0.7
                         ? InkWell(
                             key: const ValueKey('Sign Up button'),
-                            onTap: () {
-                              Navigator.pushReplacementNamed(
-                                  context, '/signup');
-                            },
+                            onTap: onNextClick,
                             child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16.0, right: 16.0),
+                              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: [
-                                  const Text(
+                                   const Text(
                                     'Sign Up',
                                     style: TextStyle(
                                       color: Colors.white,
@@ -140,6 +137,7 @@ class CenterNextButton extends StatelessWidget {
               position: _loginTextMoveAnimation,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const Text(
                     'Already have an account? ',
@@ -149,18 +147,13 @@ class CenterNextButton extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-                  TextButton(
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          color: Color(0xff132137),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/login');
-                    },
+                  const Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Color(0xff132137),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -194,7 +187,9 @@ class CenterNextButton extends StatelessWidget {
               padding: const EdgeInsets.all(3),
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 480),
+                
                 decoration: BoxDecoration(
+                  
                   borderRadius: BorderRadius.circular(32),
                   color: _selectedIndex == i
                       ? const Color(0xff132137)
