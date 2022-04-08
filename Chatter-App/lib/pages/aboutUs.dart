@@ -5,6 +5,7 @@
 // import 'dart:html';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
@@ -47,6 +48,12 @@ import 'package:chat_app/widgets/custombutton.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 >>>>>>> parent of 1c84b2d (integration)
+=======
+
+import 'package:chat_app/widgets/custombutton.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+>>>>>>> parent of 1c84b2d (integration)
 import 'package:chat_app/pages/chatterScreen.dart';
 
 void main() {
@@ -54,6 +61,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,6 +87,23 @@ class AboutUs extends StatefulWidget {
 
 >>>>>>> parent of 1c84b2d (integration)
 =======
+=======
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'VEXPOcd',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo[900],
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: AboutUs(),
+    );
+  }
+}
+
+class AboutUs extends StatefulWidget {
+  AboutUs({Key key, this.title}) : super(key: key);
+>>>>>>> parent of 1c84b2d (integration)
 
   final String title;
 
@@ -86,6 +111,9 @@ class AboutUs extends StatefulWidget {
   _AboutUsState createState() => _AboutUsState();
 }
 
+<<<<<<< HEAD
+>>>>>>> parent of 1c84b2d (integration)
+=======
 >>>>>>> parent of 1c84b2d (integration)
 class _AboutUsState extends State<AboutUs> {
   // String _selectedValue;
