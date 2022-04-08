@@ -1,131 +1,71 @@
-// import 'dart:html';
-
-// import 'dart:html';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:kf_drawer/kf_drawer.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:vexpocd/detailpage.dart';
+import 'package:kf_drawer/kf_drawer.dart';
 
-import '../widgets/CustomButton.dart';
-import 'chatterScreen.dart';
-
-// void main() {
-//   runApp(MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'VEXPOcd',
-//       theme: ThemeData(
-//         primarySwatch: Colors.indigo[900],
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: AboutUs(),
-//     );
-//   }
-// }
+import 'widgets/CustomButton.dart';
 
 class Home extends KFDrawerContent {
   @override
   _HomeState createState() => _HomeState();
 }
 
-
 class _HomeState extends State<Home> {
-  // String _selectedValue;
-  // Map<String, bool> items = {
-  //   'Sale': false,
-  // };
-
-  // Map<String, bool> items2 = {
-  //   'Consultant Notes only': false,
-  //   'Overdue only': false,
-  //   'Data Range': false,
-  // };
-
   @override
   Widget build(BuildContext context) {
-    //   var aboutus_features;
-
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 1, 13, 66),
-          automaticallyImplyLeading: false,
-          elevation: 1.0,
-          leading: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(32.0)),
-            child: Material(
-              shadowColor: Colors.transparent,
-              color: Colors.transparent,
-              child: IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Color.fromARGB(255, 255, 254, 254),
-                ),
-                onPressed: widget.onMenuPressed,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 1, 13, 66),
+        automaticallyImplyLeading: false,
+        elevation: 1.0,
+        leading: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+          child: Material(
+            shadowColor: Colors.transparent,
+            color: Colors.transparent,
+            child: IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Color.fromARGB(255, 255, 254, 254),
               ),
+              onPressed: widget.onMenuPressed,
             ),
-          ),
-          title: GradientText(
-            'VexpOcd',
-            style: const TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            colors: [
-              const Color.fromARGB(255, 0, 118, 197),
-              const Color.fromARGB(255, 197, 194, 194),
-              // const Color.fromARGB(255, 107, 4, 110),
-              const Color.fromARGB(255, 0, 118, 197),
-            ],
           ),
         ),
-        // appBar: AppBar(
-        //   title: Text('VEXPOcd'),
-        //   backgroundColor: Colors.indigo,
-
-        //   // leading: Icon(
-        //   //   Icons.cancel,
-        //   // ),
-        //   // actions: [
-        //   //   TextButton(
-        //   //     child: Text(
-        //   //       'CLEAR',
-        //   //       style: TextStyle(color: Colors.white, fontSize: 14),
-        //   //     ),
-        //   //     onPressed: () {},
-        //   //   ),
-        //   //   SizedBox(
-        //   //     width: 15,
-        //   //   ),
-        //   //   TextButton(
-        //   //     child: Text(
-        //   //       'APPLY',
-        //   //       style: TextStyle(color: Colors.white, fontSize: 14),
-        //   //     ),
-        //   //     onPressed: () {},
-        //   //   ),
-        //   //   SizedBox(
-        //   //     width: 6,
-        //   //   ),
-        //   // ],
-        // ),
-        body: Padding(
-          padding: EdgeInsets.all(12.0),
-          child: ListView(
-            children: [
-              SizedBox(height: 15),
+        title: GradientText(
+          'VexpOcd',
+          style: const TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+          ),
+          textAlign: TextAlign.center,
+          // ignore: prefer_const_literals_to_create_immutables
+          colors: [
+            const Color.fromARGB(255, 0, 118, 197),
+            const Color.fromARGB(255, 197, 194, 194),
+            // const Color.fromARGB(255, 107, 4, 110),
+            const Color.fromARGB(255, 0, 118, 197),
+          ],
+        ),
+      ),
+      body: SafeArea(
+        child: ListView(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:  <Widget>[
+                       SizedBox(height: 15),
               Align(
                 alignment: Alignment.center,
                 child: Text('WHY VEXPOCD?',
                     style: TextStyle(
                         fontSize: 55,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Colors.indigo)),
               ),
               SizedBox(height: 15),
 
@@ -150,7 +90,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Colors.indigo)),
               ),
 
               SizedBox(height: 15),
@@ -174,7 +114,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Colors.indigo)),
               ),
 
               SizedBox(height: 15),
@@ -198,7 +138,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Colors.indigo)),
               ),
 
               SizedBox(height: 15),
@@ -211,22 +151,6 @@ class _HomeState extends State<Home> {
                       // fontWeight: FontWeight.bold,
                     )),
               ),
-              SizedBox(height: 15),
-
-              // Align(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //       'We believe in using virtual reality to help our clients improve their practice.',
-              //       style: TextStyle(
-              //         fontSize: 15,
-              //         fontWeight: FontWeight.bold,
-              //       )),
-              // ),
-              // SizedBox(height: 15),
-              // Image.asset('assets/images/vr_image1.jpg'),
-              SizedBox(height: 15),
-              //Image.asset('assets/images/aboutus_image1.PNG'),
-
               SizedBox(height: 15),
               SizedBox(height: 15),
               Align(
@@ -281,11 +205,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.topLeft,
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                          builder: (context) => ChatterScreen(),
-                        ));
+                  
                   },
                   child: Text('Learn more >',
                       style: TextStyle(
@@ -327,13 +247,9 @@ class _HomeState extends State<Home> {
                 child: CustomButton(
                   text: 'Join now',
                   accentColor: Colors.white,
-                  mainColor: Colors.indigo[900],
+                  mainColor: Colors.indigo,
                   onpress: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                          builder: (context) => ChatterScreen(),
-                        ));
+                   
                   },
                 ),
               ),
@@ -453,173 +369,15 @@ class _HomeState extends State<Home> {
                         color: Colors.indigo[900])),
               ),
 
-              // Align(
-              //   alignment: Alignment.center,
 
-              // ),
-              // Image(image: aboutus_features.PNG),
-              // Icon(
-              //   Icons.aboutus_features.PNG,
-              //   size: 80,
-              // ),
-
-              //   Align(
-              //     alignment: Alignment.center,
-              //     child: Text('Muk',
-              //         style: TextStyle(
-              //           fontSize: 18,
-              //           fontWeight: FontWeight.bold,
-              //         )),
-              //   ),
-              //   DropdownButton<String>(
-              //     value: _selectedValue,
-              //     iconEnabledColor: Colors.purple,
-              //     underline: Container(
-              //       height: 2,
-              //       color: Colors.purple,
-              //     ),
-              //     isExpanded: true,
-              //     items: <String>[
-              //       "Newest first",
-              //       "Oldest first",
-              //       "Value High-Low",
-              //       "Value Low-High",
-              //     ].map<DropdownMenuItem<String>>((String value) {
-              //       return DropdownMenuItem<String>(
-              //         value: value,
-              //         child: Text(
-              //           value,
-              //           style: TextStyle(color: Colors.black),
-              //         ),
-              //       );
-              //     }).toList(),
-              //     hint: Text(
-              //       ('Choose an option'),
-              //       style: TextStyle(fontSize: 13),
-              //     ),
-              //     onChanged: (String value) {
-              //       setState(() {
-              //         _selectedValue = value;
-              //       });
-              //     },
-              //   ),
-              //   SizedBox(height: 15),
-              //   Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text(
-              //       'Transaction Types',
-              //       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              //     ),
-              //   ),
-              //   SizedBox(height: 14),
-              //   ToggleButtons(
-              //     borderRadius: BorderRadius.circular(32.0),
-              //     fillColor: Colors.purple,
-              //     children: [
-              //       Padding(
-              //         padding: const EdgeInsets.all(18.0),
-              //         child: Text(
-              //           'Money in',
-              //         ),
-              //       ),
-              //       Padding(
-              //         padding: const EdgeInsets.all(18.0),
-              //         child: Text(
-              //           'Money out',
-              //           style: TextStyle(color: Colors.white),
-              //         ),
-              //       ),
-              //     ],
-              //     onPressed: (i) {},
-              //     isSelected: [false, true],
-              //   ),
-              //   SizedBox(height: 3),
-              //   Expanded(
-              //     child: Column(
-              //       children: items.keys.map((String key) {
-              //         return new CheckboxListTile(
-              //           title: new Text(key),
-              //           value: items[key],
-              //           activeColor: Colors.purple,
-              //           checkColor: Colors.white,
-              //           onChanged: (bool value) {
-              //             setState(() {
-              //               items[key] = value;
-              //             });
-              //           },
-              //         );
-              //       }).toList(),
-              //     ),
-              //   ),
-              //   Divider(
-              //     thickness: 1,
-              //     color: Colors.grey,
-              //   ),
-              //   SizedBox(
-              //     height: 8,
-              //   ),
-              //   Text('Transaction Health',
-              //       style: TextStyle(
-              //         fontSize: 18,
-              //         fontWeight: FontWeight.bold,
-              //       )),
-              //   SizedBox(height: 18),
-              //   Expanded(
-              //     child: Column(
-              //       children: [
-              //         ToggleButtons(
-              //           borderRadius: BorderRadius.circular(20.0),
-              //           fillColor: Colors.purple,
-              //           children: [
-              //             Padding(
-              //               padding: const EdgeInsets.all(24.0),
-              //               child: Text(
-              //                 'Good ',
-              //                 style: TextStyle(color: Colors.white, fontSize: 14),
-              //               ),
-              //             ),
-              //             Padding(
-              //               padding: const EdgeInsets.all(24.0),
-              //               child: Text(
-              //                 'Ok ',
-              //                 style: TextStyle(color: Colors.black, fontSize: 14),
-              //               ),
-              //             ),
-              //             Padding(
-              //               padding: const EdgeInsets.all(24.0),
-              //               child: Text(
-              //                 'Bad ',
-              //                 style: TextStyle(color: Colors.black, fontSize: 14),
-              //               ),
-              //             ),
-              //           ],
-              //           onPressed: (i) {},
-              //           isSelected: [true, false, false],
-              //         ),
-              //       ].toList(),
-              //     ),
-              //   ),
-              //   SizedBox(height: 18),
-              //   Expanded(
-              //     child: Column(
-              //       children: items2.keys.map((String key) {
-              //         return new CheckboxListTile(
-              //           title: new Text(key),
-              //           value: items2[key],
-              //           activeColor: Colors.purple,
-              //           checkColor: Colors.white,
-              //           onChanged: (bool value) {
-              //             setState(() {
-              //               items2[key] = value;
-              //             });
-              //           },
-              //         );
-              //       }).toList(),
-              //     ),
-              //   ),
-              // ],
-            ],
-          ),
-        ));
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
