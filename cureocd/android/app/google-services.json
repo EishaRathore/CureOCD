@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "326480978299",
+    "project_id": "vexpocdfyp",
+    "storage_bucket": "vexpocdfyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326480978299:android:2b4f953efb9398ac10ddde",
+        "android_client_info": {
+          "package_name": "com.example.cureocd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326480978299-pm7qnkahvpshauos0kvkrbv8nq9vonsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyF6tMQdIn8W6IIsnsOesdB450l9a48bY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326480978299-pm7qnkahvpshauos0kvkrbv8nq9vonsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
