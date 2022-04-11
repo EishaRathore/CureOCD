@@ -1,8 +1,0 @@
-gradle-wrapper.jar
-/.gradle
-/captures/
-/gradlew
-/gradlew.bat
-/app/google-services.json
-/local.properties
-GeneratedPluginRegistrant.java
