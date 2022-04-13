@@ -84,7 +84,8 @@ class VrTherapyView extends StatelessWidget {
                 child: SlideTransition(
                   position: _imageSecondHalfAnimation,
                   child: Container(
-                    constraints: const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    constraints:
+                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: Image.asset(
                       'assets/PD5.gif',
                       fit: BoxFit.contain,
@@ -92,15 +93,20 @@ class VrTherapyView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 28,),
+              const SizedBox(
+                height: 28,
+              ),
               SlideTransition(
                 position: _relaxFirstHalfAnimation,
                 child: SlideTransition(
                   position: _relaxSecondHalfAnimation,
                   child: const Text(
                     "VR THERAPY",
-                    style:
-                        TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 26.0,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 0, 163, 173),
+                    ),
                   ),
                 ),
               ),
@@ -110,6 +116,10 @@ class VrTherapyView extends StatelessWidget {
                 child: Text(
                   "Based on Y-BOCS test score, VR therapy will be provided.",
                   textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Color.fromARGB(255, 0, 163, 173),
+                  ),
                 ),
               ),
             ],

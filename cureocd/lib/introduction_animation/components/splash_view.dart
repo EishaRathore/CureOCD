@@ -28,18 +28,15 @@ class _SplashViewState extends State<SplashView> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                'assets/images/vrimage_one.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
             const Padding(
-              padding: EdgeInsets.only(top: 58.0, bottom:8.0),
+              padding: EdgeInsets.only(top: 18.0, bottom: 8.0),
               child: Text(
-                "VexpOcd",
-                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                "CureOCD",
+                style: TextStyle(
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 163, 173),
+                ),
               ),
             ),
             const SizedBox(
@@ -50,6 +47,20 @@ class _SplashViewState extends State<SplashView> {
               child: Text(
                 "Virtual Exposure Obssesive Compulsive Disorder",
                 textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: Color.fromARGB(255, 0, 163, 173),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 48,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Image.asset(
+                'assets/images/vrimage_one.jpg',
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(
@@ -72,7 +83,7 @@ class _SplashViewState extends State<SplashView> {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(38.0),
-                    color: Color.fromARGB(255, 7, 10, 43),
+                    color: const Color.fromARGB(255, 0, 163, 173),
                   ),
                   child: const Text(
                     "Let's begin",

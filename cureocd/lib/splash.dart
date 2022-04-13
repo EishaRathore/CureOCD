@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   startTime() async {
-    var _duration = const Duration(seconds: 5);
+    var _duration = const Duration(seconds: 3);
     return Timer(_duration, navigationPage);
   }
 
@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //const SizedBox(height: 90),
-          Image.asset('assets/logo.png'),
+          Image.asset('assets/cureocd_logo.png'),
           GradientText(
             'CureOCD',
             style: const TextStyle(
@@ -49,19 +49,18 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             // ignore: prefer_const_literals_to_create_immutables
             colors: [
-              const Color.fromARGB(255, 0, 118, 197),
-              const Color.fromARGB(255, 197, 194, 194),
+              const Color.fromARGB(255, 11, 81, 128),
+              const Color.fromARGB(255, 196, 10, 149),
               // const Color.fromARGB(255, 107, 4, 110),
-              Color.fromARGB(255, 42, 224, 185),
+              const Color.fromARGB(255, 0, 163, 173),
             ],
           ),
-         const SizedBox(height: 60),
-       Center(
-          child: SizedBox(
+          const SizedBox(height: 60),
+          Center(
+              child: SizedBox(
             height: 80,
             child: Lottie.asset('assets/89023-loading-circles.json'),
-          )
-          ),
+          )),
         ],
         //  children: Lottie.asset('assets/news_yellow.json'),
       ),

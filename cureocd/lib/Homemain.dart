@@ -25,9 +25,8 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    
     super.initState();
-     getCurrentUser();
+    getCurrentUser();
     // getMessages();
     _drawerController = KFDrawerController(
       initialPage: AboutUs(),
@@ -52,8 +51,8 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
           icon: const Icon(Icons.question_answer_rounded, color: Colors.white),
-          onPressed: (){
-             Navigator.pushReplacementNamed(context, '/chatbot');
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/chatbot');
           },
           // page: ClassBuilder.fromString('Notifications'),
         ),
@@ -63,8 +62,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
           icon: const Icon(Icons.trending_up, color: Colors.white),
-         page: AboutUs(),
-         
+          page: AboutUs(),
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
@@ -74,22 +72,23 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           icon: const Icon(Icons.contact_page_rounded, color: Colors.white),
           //  page: Schedules(),
         ),
-        KFDrawerItem.initWithPage(
-          text: const Text(
-            'Login',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
-          icon: const Icon(Icons.login_rounded, color: Colors.white),
-          onPressed: () async {
-                await _auth.signOut();
-                Navigator.pushReplacementNamed(context, '/login');
-              },
-          // page: Settings(),
-        ),
+        // KFDrawerItem.initWithPage(
+        //   text: const Text(
+        //     'Login',
+        //     style: TextStyle(color: Colors.white, fontSize: 18),
+        //   ),
+        //   icon: const Icon(Icons.login_rounded, color: Colors.white),
+        //   onPressed: () async {
+        //     await _auth.signOut();
+        //     Navigator.pushReplacementNamed(context, '/login');
+        //   },
+        //   // page: Settings(),
+        // ),
       ],
     );
   }
-void getCurrentUser() async {
+
+  void getCurrentUser() async {
     try {
       final user = await _auth.currentUser();
       if (user != null) {
@@ -105,7 +104,7 @@ void getCurrentUser() async {
           description: e.toString(),
           gravity: EdgeAlert.BOTTOM,
           icon: Icons.error,
-          backgroundColor: Colors.indigo[900]);
+          backgroundColor: Color.fromARGB(255, 0, 163, 173));
     }
   }
   // void getMessages()async{
@@ -120,7 +119,7 @@ void getCurrentUser() async {
   //     snapshot.documents;
   //   }
   // }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,12 +136,13 @@ void getCurrentUser() async {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      image: const DecorationImage(
-                          image: NetworkImage(
-                    "https://www.freeiconspng.com/uploads/person-icon-8.png"),
-              fit: BoxFit.cover,
-              ),),
+                    borderRadius: BorderRadius.circular(25),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                          "https://www.freeiconspng.com/uploads/person-icon-8.png"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 160,
@@ -152,19 +152,16 @@ void getCurrentUser() async {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
                     const SizedBox(height: 8),
-                    Row(
-                     children: <Widget>[
-                       SizedBox(width: 6,),
-                        Text(username,
-                        style: TextStyle(fontSize: 17, color: Colors.white)),
-                        Text("\n",
-                        style: TextStyle(fontSize: 17)),
-                        Text(email,
-                        style: TextStyle(fontSize: 10, color: Colors.white)),
-                     ]
-
-                    ),
-                    
+                    Row(children: <Widget>[
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text(username,
+                          style: TextStyle(fontSize: 17, color: Colors.white)),
+                      Text("\n", style: TextStyle(fontSize: 17)),
+                      Text(email,
+                          style: TextStyle(fontSize: 10, color: Colors.white)),
+                    ]),
                   ],
                 )
               ],
@@ -177,17 +174,17 @@ void getCurrentUser() async {
             style: TextStyle(color: Colors.grey, fontSize: 18),
           ),
           onPressed: () async {
-                await _auth.signOut();
-                Navigator.pushReplacementNamed(context, '/login');
-              },
+            await _auth.signOut();
+            Navigator.pushReplacementNamed(context, '/login');
+          },
         ),
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color.fromARGB(255, 7, 0, 100),
-              Color.fromARGB(255, 163, 3, 142)
+              Color.fromARGB(255, 0, 163, 173),
+              Color.fromARGB(255, 11, 81, 128),
             ],
             tileMode: TileMode.repeated,
           ),

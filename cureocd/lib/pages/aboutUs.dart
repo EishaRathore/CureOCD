@@ -7,8 +7,8 @@ import 'package:kf_drawer/kf_drawer.dart';
 import '../widgets/custom_button.dart';
 import 'chatterScreen.dart';
 
-class AboutUs  extends KFDrawerContent  {
-  AboutUs() ;
+class AboutUs extends KFDrawerContent {
+  AboutUs();
 
   @override
   _AboutUsState createState() => _AboutUsState();
@@ -31,41 +31,33 @@ class _AboutUsState extends State<AboutUs> {
     //   var aboutus_features;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 77, 228, 255),
-        automaticallyImplyLeading: false,
-        elevation: 1.0,
-        leading: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(32.0)),
-          child: Material(
-            shadowColor: Colors.transparent,
-            color: Colors.transparent,
-            child: IconButton(
-              icon: const Icon(
-                Icons.menu,
-                color: Color.fromARGB(255, 255, 254, 254),
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 0, 163, 173),
+          automaticallyImplyLeading: false,
+          elevation: 1.0,
+          leading: ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+            child: Material(
+              shadowColor: Colors.transparent,
+              color: Colors.transparent,
+              child: IconButton(
+                icon: const Icon(
+                  Icons.menu,
+                  color: Color.fromARGB(255, 255, 254, 254),
+                ),
+                onPressed: widget.onMenuPressed,
               ),
-              onPressed: widget.onMenuPressed,
             ),
           ),
-        ),
-        title: GradientText(
-          'VexpOcd',
-          style: const TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+          title: Text(
+            'CureOCD',
+            style: const TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-          // ignore: prefer_const_literals_to_create_immutables
-          colors: [
-            const Color.fromARGB(255, 0, 118, 197),
-            const Color.fromARGB(255, 197, 194, 194),
-            // const Color.fromARGB(255, 107, 4, 110),
-            const Color.fromARGB(255, 0, 118, 197),
-          ],
         ),
-      ),
-        
         body: Padding(
           padding: EdgeInsets.all(12.0),
           child: ListView(
@@ -77,11 +69,11 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 55,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
               SizedBox(height: 15),
 
-              Image.asset('assets/images/VEXPOcd_logo.png'),
+              Image.asset('assets/cureocd_logo.png'),
               SizedBox(height: 15),
               Align(
                 alignment: Alignment.center,
@@ -102,7 +94,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
 
               SizedBox(height: 15),
@@ -126,7 +118,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
 
               SizedBox(height: 15),
@@ -150,7 +142,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
 
               SizedBox(height: 15),
@@ -187,7 +179,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
               SizedBox(height: 15),
               Align(
@@ -214,7 +206,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
 
               SizedBox(height: 25),
@@ -243,7 +235,7 @@ class _AboutUsState extends State<AboutUs> {
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: Colors.indigo[900])),
+                          color: Color.fromARGB(255, 0, 163, 173))),
                 ),
               ),
               SizedBox(height: 25),
@@ -259,7 +251,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
               SizedBox(height: 15),
 
@@ -279,7 +271,7 @@ class _AboutUsState extends State<AboutUs> {
                 child: CustomButton(
                   text: 'Join now',
                   accentColor: Colors.white,
-                  mainColor: Colors.indigo,
+                  mainColor: Color.fromARGB(255, 0, 163, 173),
                   onpress: () {
                     Navigator.push(
                         context,
@@ -302,7 +294,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
               SizedBox(height: 15),
               Align(
@@ -330,7 +322,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
               SizedBox(height: 15),
               Align(
@@ -356,7 +348,7 @@ class _AboutUsState extends State<AboutUs> {
                       color: Colors.white,
                       // fontWeight: FontWeight.bold,
                     )),
-                tileColor: Colors.indigo[900],
+                tileColor: Color.fromARGB(255, 0, 163, 173),
               ),
 
               // subtitle: Text("Sign out of this account"),
@@ -379,7 +371,7 @@ class _AboutUsState extends State<AboutUs> {
                       color: Colors.white,
                       // fontWeight: FontWeight.bold,
                     )),
-                tileColor: Colors.indigo[900],
+                tileColor: Color.fromARGB(255, 0, 163, 173),
               ),
 
               ListTile(
@@ -393,7 +385,7 @@ class _AboutUsState extends State<AboutUs> {
                       color: Colors.white,
                       // fontWeight: FontWeight.bold,
                     )),
-                tileColor: Colors.indigo[900],
+                tileColor: Color.fromARGB(255, 0, 163, 173),
               ),
               SizedBox(height: 15),
               Align(
@@ -402,7 +394,7 @@ class _AboutUsState extends State<AboutUs> {
                     style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo[900])),
+                        color: Color.fromARGB(255, 0, 163, 173))),
               ),
 
               // Align(

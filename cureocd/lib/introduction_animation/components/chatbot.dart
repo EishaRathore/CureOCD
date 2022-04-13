@@ -9,7 +9,8 @@ class ChatbootView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _firstHalfAnimation =
-        Tween<Offset>(begin: const Offset(0, 1), end: const Offset(0, 0)).animate(
+        Tween<Offset>(begin: const Offset(0, 1), end: const Offset(0, 0))
+            .animate(
       CurvedAnimation(
         parent: animationController,
         curve: const Interval(
@@ -20,7 +21,8 @@ class ChatbootView extends StatelessWidget {
       ),
     );
     final _secondHalfAnimation =
-        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-1, 0)).animate(
+        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-1, 0))
+            .animate(
       CurvedAnimation(
         parent: animationController,
         curve: const Interval(
@@ -31,7 +33,8 @@ class ChatbootView extends StatelessWidget {
       ),
     );
     final _textAnimation =
-        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-2, 0)).animate(
+        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-2, 0))
+            .animate(
       CurvedAnimation(
         parent: animationController,
         curve: const Interval(
@@ -42,7 +45,8 @@ class ChatbootView extends StatelessWidget {
       ),
     );
     final _imageAnimation =
-        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-4, 0)).animate(
+        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-4, 0))
+            .animate(
       CurvedAnimation(
         parent: animationController,
         curve: const Interval(
@@ -54,7 +58,8 @@ class ChatbootView extends StatelessWidget {
     );
 
     final _relaxAnimation =
-        Tween<Offset>(begin: const Offset(0, -2), end: const Offset(0, 0)).animate(
+        Tween<Offset>(begin: const Offset(0, -2), end: const Offset(0, 0))
+            .animate(
       CurvedAnimation(
         parent: animationController,
         curve: const Interval(
@@ -77,7 +82,11 @@ class ChatbootView extends StatelessWidget {
                 position: _relaxAnimation,
                 child: const Text(
                   "CHATBOT",
-                  style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 26.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 0, 163, 173),
+                  ),
                 ),
               ),
               SlideTransition(
@@ -87,6 +96,10 @@ class ChatbootView extends StatelessWidget {
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                   child: Text(
                     "To determine the severity of OCD symptoms, Y-BOCS test will be Conducted.",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Color.fromARGB(255, 0, 163, 173),
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -95,7 +108,8 @@ class ChatbootView extends StatelessWidget {
                 position: _imageAnimation,
                 child: Container(
                   height: 150,
-                  constraints: const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                  constraints:
+                      const BoxConstraints(maxWidth: 350, maxHeight: 250),
                   child: Image.asset(
                     'assets/chatbot.png',
                     fit: BoxFit.contain,

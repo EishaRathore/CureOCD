@@ -8,8 +8,8 @@ class RoundedButton extends StatelessWidget {
   const RoundedButton({
     required this.text,
     required this.press,
-    this.color = Colors.black87,
-    this.textColor = Colors.indigo,
+    this.color = const Color.fromARGB(255, 0, 163, 173),
+    this.textColor = const Color.fromARGB(255, 255, 255, 255),
   }) : super();
 
   @override
@@ -35,10 +35,8 @@ class RoundedButton extends StatelessWidget {
         style: TextStyle(color: textColor),
       ),
       onPressed: press,
-      
       style: ElevatedButton.styleFrom(
           primary: color,
-          
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           textStyle: TextStyle(
               color: textColor, fontSize: 14, fontWeight: FontWeight.w500)),

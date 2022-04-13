@@ -9,7 +9,7 @@ import 'components/top_back_skip_view.dart';
 import 'components/welcome_view.dart';
 
 class IntroductionAnimationScreen extends StatefulWidget {
-  const   IntroductionAnimationScreen({Key? key}) : super(key: key);
+  const IntroductionAnimationScreen({Key? key}) : super(key: key);
 
   @override
   _IntroductionAnimationScreenState createState() =>
@@ -39,7 +39,7 @@ class _IntroductionAnimationScreenState
     // ignore: avoid_print
     print(_animationController?.value);
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: ClipRect(
         child: Stack(
           children: [
@@ -57,7 +57,6 @@ class _IntroductionAnimationScreenState
             ),
             WelcomeView(
               animationController: _animationController!,
-              
             ),
             TopBackSkipView(
               onBackClick: _onBackClick,
@@ -68,7 +67,6 @@ class _IntroductionAnimationScreenState
               animationController: _animationController!,
               onNextClick: _onNextClick,
             ),
-            
           ],
         ),
       ),

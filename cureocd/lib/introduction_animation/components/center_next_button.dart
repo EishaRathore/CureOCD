@@ -74,7 +74,7 @@ class CenterNextButton extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(
                         8 + 32 * (1 - _signUpMoveAnimation.value)),
-                    color: const Color(0xff132137),
+                    color: const Color.fromARGB(255, 0, 163, 173),
                   ),
                   child: PageTransitionSwitcher(
                     duration: const Duration(milliseconds: 480),
@@ -85,7 +85,7 @@ class CenterNextButton extends StatelessWidget {
                       Animation<double> secondaryAnimation,
                     ) {
                       return SharedAxisTransition(
-                        fillColor: Colors.transparent,
+                        fillColor: const Color.fromARGB(255, 0, 163, 173),
                         child: child,
                         animation: animation,
                         secondaryAnimation: secondaryAnimation,
@@ -97,17 +97,18 @@ class CenterNextButton extends StatelessWidget {
                             key: const ValueKey('Sign Up button'),
                             onTap: onNextClick,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                              padding: const EdgeInsets.only(
+                                  left: 16.0, right: 16.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: [
-                                   const Text(
+                                  const Text(
                                     'Sign Up',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -142,27 +143,27 @@ class CenterNextButton extends StatelessWidget {
                   const Text(
                     'Already have an account? ',
                     style: TextStyle(
-                      color: Colors.grey,
+                      color: Color.fromARGB(255, 107, 102, 102),
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
                   Hero(
-                  tag: 'loginbutton',
-                  child: TextButton(
-                    child: const Text(
-                    'Login',
-                    style: TextStyle(
-                      color: Color(0xff132137),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                    tag: 'loginbutton',
+                    child: TextButton(
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 163, 173),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/login');
+                      },
                     ),
-                   ),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/login');
-                    },
                   ),
-                ),
                   // const Text(
                   //   'Login',
                   //   style: TextStyle(
@@ -203,18 +204,19 @@ class CenterNextButton extends StatelessWidget {
               padding: const EdgeInsets.all(3),
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 480),
-                
                 decoration: BoxDecoration(
-                  
                   borderRadius: BorderRadius.circular(32),
                   color: _selectedIndex == i
-                      ? const Color(0xff132137)
+                      ? const Color.fromARGB(255, 0, 163, 173)
                       : const Color(0xffE3E4E4),
                 ),
                 width: 10,
                 height: 10,
               ),
-            )
+            ),
+          const SizedBox(
+            height: 15.0,
+          ),
         ],
       ),
     );

@@ -7,6 +7,8 @@ import '../widgets/custom_button.dart';
 import '../widgets/customtextinput.dart';
 
 class ChatterSignUp extends StatefulWidget {
+  const ChatterSignUp({Key? key}) : super(key: key);
+
   @override
   _ChatterSignUpState createState() => _ChatterSignUpState();
 }
@@ -32,18 +34,18 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset('assets/images/VEXPOcd_logo.png'),
-
+                  Image.asset('assets/cureocd_logo.png'),
 
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
+                  // ignore: prefer_const_constructors
                   Hero(
                     tag: 'HeroTitle',
-                    child: Text(
-                      'VEXPOcd',
+                    child: const Text(
+                      'CureOCD',
                       style: TextStyle(
-                          color: Colors.indigo[900],
+                          color: Color.fromARGB(255, 0, 163, 173),
                           fontFamily: 'Poppins',
                           fontSize: 26,
                           fontWeight: FontWeight.w700),
@@ -67,7 +69,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                       name = value;
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 0,
                   ),
                   // CustomTextInput(
@@ -78,7 +80,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                   //     username = value;
                   //   },
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 0,
                   ),
                   CustomTextInput(
@@ -90,7 +92,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                       email = value;
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 0,
                   ),
                   CustomTextInput(
@@ -102,13 +104,13 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                       password = value;
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Hero(
                     tag: 'signupbutton',
                     child: CustomButton(
-                      mainColor: Colors.indigo,
+                      mainColor: Color.fromARGB(255, 0, 163, 173),
                       onpress: () async {
                         if (name != null && password != null && email != null) {
                           setState(() {
@@ -129,40 +131,71 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                             setState(() {
                               signingup = false;
                             });
-                            EdgeAlert.show(context,
-                                title: 'Signup Failed',
-                                description: e.toString(),
-                                gravity: EdgeAlert.BOTTOM,
-                                icon: Icons.error,
-                                backgroundColor: Colors.indigo[900]);
-                          }
-                        } else {
-                          EdgeAlert.show(context,
+                            EdgeAlert.show(
+                              context,
                               title: 'Signup Failed',
-                              description: 'All fields are required.',
+                              description: e.toString(),
                               gravity: EdgeAlert.BOTTOM,
                               icon: Icons.error,
-                              backgroundColor: Colors.indigo[900]);
+                              backgroundColor: Color.fromARGB(255, 0, 163, 173),
+                            );
+                          }
+                        } else {
+                          EdgeAlert.show(
+                            context,
+                            title: 'Signup Failed',
+                            description: 'All fields are required.',
+                            gravity: EdgeAlert.BOTTOM,
+                            icon: Icons.error,
+                            backgroundColor: Color.fromARGB(255, 0, 163, 173),
+                          );
                         }
                       },
                       text: 'sign up',
                       accentColor: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   GestureDetector(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(context, '/login');
-                      },
-                      child: Text(
-                        'or log in instead',
-                        style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontSize: 12,
-                            color: Colors.indigo),
-                      )),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        const Text(
+                          'Already have an account? ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 107, 102, 102),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Hero(
+                          tag: 'loginbutton',
+                          child: TextButton(
+                            child: const Text(
+                              'Login',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 0, 163, 173),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/login');
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), // child: const Text(
+                  //   'or log in instead',
+                  //   style: const TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontSize: 12,
+                  //       color: olor.fromARGB(255, 0, 163, 173),),
+                  // )),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.1,
                   ),

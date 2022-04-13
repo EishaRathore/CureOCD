@@ -31,13 +31,13 @@ class _ChatterLoginState extends State<ChatterLogin> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset('assets/images/VEXPOcd_logo.png'),
-                  SizedBox(height: 15),
+                  Image.asset('assets/cureocd_logo.png'),
+                  const SizedBox(height: 15),
 
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
-                  Hero(
+                  const Hero(
                     tag: 'HeroTitle',
                     child: Text(
                       'CureOCD',
@@ -67,7 +67,7 @@ class _ChatterLoginState extends State<ChatterLogin> {
                       email = val;
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 0,
                   ),
                   CustomTextInput(
@@ -78,15 +78,15 @@ class _ChatterLoginState extends State<ChatterLogin> {
                       password = val;
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Hero(
                     tag: 'loginbutton',
                     child: CustomButton(
                       text: 'login',
-                      accentColor: Colors.white,
-                      mainColor: Color.fromARGB(255, 124, 252, 235),
+                      accentColor: Color.fromARGB(255, 113, 238, 255),
+                      mainColor: Color.fromARGB(255, 255, 255, 255),
                       onpress: () async {
                         if (password != null && email != null) {
                           setState(() {
@@ -111,7 +111,8 @@ class _ChatterLoginState extends State<ChatterLogin> {
                                 description: e.toString(),
                                 gravity: EdgeAlert.BOTTOM,
                                 icon: Icons.error,
-                                backgroundColor: Colors.indigo[900]);
+                                backgroundColor:
+                                    Color.fromARGB(255, 113, 238, 255));
                           }
                         } else {
                           EdgeAlert.show(context,
@@ -120,26 +121,59 @@ class _ChatterLoginState extends State<ChatterLogin> {
                                   'Please enter the email and password.',
                               gravity: EdgeAlert.BOTTOM,
                               icon: Icons.error,
-                              backgroundColor: Colors.indigo[900]);
+                              backgroundColor:
+                                  Color.fromARGB(255, 113, 238, 255));
                         }
                         // Navigator.pushReplacementNamed(context, '/chat');
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   GestureDetector(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(context, '/signup');
-                      },
-                      child: Text(
-                        'or create an account',
-                        style: TextStyle(
-                            fontFamily: 'Poppins',
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        const Text(
+                          'Already have an account? ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 107, 102, 102),
                             fontSize: 14,
-                            color: Color.fromARGB(255, 255, 255, 255)),
-                      )),
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Hero(
+                          tag: 'loginbutton',
+                          child: TextButton(
+                            child: const Text(
+                              'Login',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 0, 163, 173),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(
+                                  context, '/signup');
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // onTap: () {
+                  //   Navigator.pushReplacementNamed(context, '/signup');
+                  // },
+                  // child: const Text(
+                  //   'or create an account',
+                  //   style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontSize: 14,
+                  //       color: Color.fromARGB(255, 255, 255, 255)),
+                  // )
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.1,
                   ),

@@ -81,7 +81,11 @@ class OnlineSessionView extends StatelessWidget {
             children: [
               const Text(
                 "ONLINE THERAPY SESSION",
-                style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 163, 173),
+                ),
               ),
               SlideTransition(
                 position: _moodFirstHalfAnimation,
@@ -93,6 +97,10 @@ class OnlineSessionView extends StatelessWidget {
                     child: Text(
                       "Incase of severe condition, live therapy sessions will be provided.",
                       textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Color.fromARGB(255, 0, 163, 173),
+                      ),
                     ),
                   ),
                 ),
@@ -102,7 +110,8 @@ class OnlineSessionView extends StatelessWidget {
                 child: SlideTransition(
                   position: _imageSecondHalfAnimation,
                   child: Container(
-                    constraints: const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    constraints:
+                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: Image.asset(
                       'assets/online.gif',
                       fit: BoxFit.contain,
