@@ -14,7 +14,7 @@ class _InviteFriendState extends State<InviteFriend> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color:Colors.white54,
+      color: Colors.white54,
       child: SafeArea(
         top: false,
         child: Scaffold(

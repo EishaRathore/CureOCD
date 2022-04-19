@@ -98,11 +98,14 @@ class ChatbootView extends StatelessWidget {
                     "To determine the severity of OCD symptoms, Y-BOCS test will be Conducted.",
                     style: TextStyle(
                       fontSize: 16.0,
-                      color: Color.fromARGB(255, 0, 163, 173),
+                      color: Color.fromARGB(255, 107, 102, 102),
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 50,
               ),
               SlideTransition(
                 position: _imageAnimation,

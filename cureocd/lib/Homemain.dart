@@ -104,7 +104,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           description: e.toString(),
           gravity: EdgeAlert.BOTTOM,
           icon: Icons.error,
-          backgroundColor: Color.fromARGB(255, 0, 163, 173));
+          backgroundColor: const Color.fromARGB(255, 0, 163, 173));
     }
   }
   // void getMessages()async{
@@ -153,14 +153,17 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
                   children: <Widget>[
                     const SizedBox(height: 8),
                     Row(children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         width: 6,
                       ),
                       Text(username,
-                          style: TextStyle(fontSize: 17, color: Colors.white)),
-                      Text("\n", style: TextStyle(fontSize: 17)),
+                          style: const TextStyle(
+                              fontSize: 17, color: Colors.white)),
+                      // ignore: unnecessary_const
+                      const Text("\n", style: const TextStyle(fontSize: 17)),
                       Text(email,
-                          style: TextStyle(fontSize: 10, color: Colors.white)),
+                          style: const TextStyle(
+                              fontSize: 10, color: Colors.white)),
                     ]),
                   ],
                 )

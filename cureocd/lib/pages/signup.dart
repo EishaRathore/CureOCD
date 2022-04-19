@@ -1,8 +1,9 @@
+//import 'package:chat_app/widgets/custombutton.dart';
+// import 'package:chat_app/widgets/customtextinput.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
 import '../widgets/custom_button.dart';
 import '../widgets/customtextinput.dart';
 
@@ -40,17 +41,17 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
                   // ignore: prefer_const_constructors
-                  Hero(
-                    tag: 'HeroTitle',
-                    child: const Text(
-                      'CureOCD',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 0, 163, 173),
-                          fontFamily: 'Poppins',
-                          fontSize: 26,
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
+                  // Hero(
+                  //   tag: 'HeroTitle',
+                  //   child: const Text(
+                  //     'CureOCD',
+                  //     style: TextStyle(
+                  //         color: Color.fromARGB(255, 0, 163, 173),
+                  //         fontFamily: 'Poppins',
+                  //         fontSize: 26,
+                  //         fontWeight: FontWeight.w700),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
@@ -110,7 +111,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                   Hero(
                     tag: 'signupbutton',
                     child: CustomButton(
-                      mainColor: Color.fromARGB(255, 0, 163, 173),
+                      mainColor: const Color.fromARGB(255, 0, 163, 173),
                       onpress: () async {
                         if (name != null && password != null && email != null) {
                           setState(() {
@@ -124,7 +125,6 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                               UserUpdateInfo info = UserUpdateInfo();
                               info.displayName = name;
                               await newUser.user.updateProfile(info);
-
                               Navigator.pushNamed(context, '/homeMain');
                             }
                           } catch (e) {
@@ -137,7 +137,8 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                               description: e.toString(),
                               gravity: EdgeAlert.BOTTOM,
                               icon: Icons.error,
-                              backgroundColor: Color.fromARGB(255, 0, 163, 173),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 0, 163, 173),
                             );
                           }
                         } else {
@@ -147,7 +148,8 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                             description: 'All fields are required.',
                             gravity: EdgeAlert.BOTTOM,
                             icon: Icons.error,
-                            backgroundColor: Color.fromARGB(255, 0, 163, 173),
+                            backgroundColor:
+                                const Color.fromARGB(255, 0, 163, 173),
                           );
                         }
                       },

@@ -99,7 +99,7 @@ class OnlineSessionView extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16.0,
-                        color: Color.fromARGB(255, 0, 163, 173),
+                        color: Color.fromARGB(255, 107, 102, 102),
                       ),
                     ),
                   ),

@@ -47,9 +47,10 @@ class _ChatterScreenState extends State<ChatterScreen> {
           backgroundColor: Colors.indigo[900]);
     }
   }
-  void getMessages()async{
-    final messages=await _firestore.collection('messages').getDocuments();
-    for(var message in messages.documents){
+
+  void getMessages() async {
+    final messages = await _firestore.collection('messages').getDocuments();
+    for (var message in messages.documents) {
       print(message.data);
     }
   }
@@ -64,7 +65,8 @@ class _ChatterScreenState extends State<ChatterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Color.fromARGB(255, 77, 228, 255)),
+        iconTheme:
+            const IconThemeData(color: Color.fromARGB(255, 77, 228, 255)),
         elevation: 0,
         bottom: PreferredSize(
           preferredSize: const Size(25, 10),
@@ -285,7 +287,8 @@ class MessageBubble extends StatelessWidget {
   final String msgText;
   final String msgSender;
   final bool user;
-  MessageBubble({required this.msgText, required this.msgSender,required  this.user});
+  MessageBubble(
+      {required this.msgText, required this.msgSender, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -306,9 +309,11 @@ class MessageBubble extends StatelessWidget {
           Material(
             borderRadius: BorderRadius.only(
               bottomLeft: const Radius.circular(50),
-              topLeft: user ? const Radius.circular(50) : const Radius.circular(0),
+              topLeft:
+                  user ? const Radius.circular(50) : const Radius.circular(0),
               bottomRight: const Radius.circular(50),
-              topRight: user ? const Radius.circular(0) : const Radius.circular(50),
+              topRight:
+                  user ? const Radius.circular(0) : const Radius.circular(50),
             ),
             color: user ? Colors.blue : Colors.white,
             elevation: 5,

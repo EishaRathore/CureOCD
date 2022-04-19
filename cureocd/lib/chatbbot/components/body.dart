@@ -17,12 +17,15 @@ class Body extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: size.height * 0.02),
             const Text(
-              "   Lets begin with a few questions to identify\n your level of OCD.",
+              "   Lets begin with a few questions to identify your level of OCD.",
               // ignore: unnecessary_const
-              style: const TextStyle(fontSize: 22,),
+              style: const TextStyle(
+                fontSize: 22,
+                color: Color.fromARGB(255, 0, 163, 173),
+              ),
               textAlign: TextAlign.center,
             ),
-           // SizedBox(height: size.height * 0.00),
+            // SizedBox(height: size.height * 0.00),
             Image.asset(
               'assets/ques.png',
               height: size.height * 0.50,
@@ -31,24 +34,23 @@ class Body extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-              //  SizedBox(width: size.width * 0.04),
-              
+                //  SizedBox(width: size.width * 0.04),
+
                 RoundedButton(
                   text: "START MY JOURNEY",
-                //  textColor: Colors.black,
+                  //  textColor: Colors.black,
                   press: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const QuizzScreen ();
+                          return const QuizzScreen();
                           //return LoginScreen();
                         },
                       ),
                     );
                   },
                 ),
-                
               ],
             ),
           ],

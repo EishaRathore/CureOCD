@@ -32,7 +32,7 @@ class _AboutUsState extends State<AboutUs> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 0, 163, 173),
+          backgroundColor: const Color.fromARGB(255, 0, 163, 173),
           automaticallyImplyLeading: false,
           elevation: 1.0,
           leading: ClipRRect(
@@ -40,18 +40,29 @@ class _AboutUsState extends State<AboutUs> {
             child: Material(
               shadowColor: Colors.transparent,
               color: Colors.transparent,
-              child: IconButton(
-                icon: const Icon(
-                  Icons.menu,
-                  color: Color.fromARGB(255, 255, 254, 254),
-                ),
-                onPressed: widget.onMenuPressed,
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.menu,
+                      color: Color.fromARGB(255, 255, 254, 254),
+                    ),
+                    onPressed: widget.onMenuPressed,
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.chat,
+                      color: Color.fromARGB(255, 255, 254, 254),
+                    ),
+                    onPressed: widget.onMenuPressed,
+                  ),
+                ],
               ),
             ),
           ),
-          title: Text(
+          title: const Text(
             'CureOCD',
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),

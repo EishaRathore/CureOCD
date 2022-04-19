@@ -79,20 +79,6 @@ class VrTherapyView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SlideTransition(
-                position: _imageFirstHalfAnimation,
-                child: SlideTransition(
-                  position: _imageSecondHalfAnimation,
-                  child: Container(
-                    constraints:
-                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
-                    child: Image.asset(
-                      'assets/PD5.gif',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
               const SizedBox(
                 height: 28,
               ),
@@ -118,7 +104,24 @@ class VrTherapyView extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Color.fromARGB(255, 0, 163, 173),
+                    color: Color.fromARGB(255, 107, 102, 102),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SlideTransition(
+                position: _imageFirstHalfAnimation,
+                child: SlideTransition(
+                  position: _imageSecondHalfAnimation,
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    child: Image.asset(
+                      'assets/PD5.gif',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),

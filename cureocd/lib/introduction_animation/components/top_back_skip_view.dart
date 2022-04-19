@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class TopBackSkipView extends StatelessWidget {
@@ -69,9 +71,14 @@ class TopBackSkipView extends StatelessWidget {
                   position: _skipAnimation,
                   child: IconButton(
                     onPressed: onSkipClick,
-                    icon: const Text("Skip"),
+                    icon: const Text(
+                      "Skip",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 163, 173),
+                      ),
+                    ),
                     iconSize: 35,
-                    color: const Color.fromARGB(255, 0, 163, 173),
+                    // color: const Color.fromARGB(255, 0, 163, 173),
                   ),
                 ),
               ],

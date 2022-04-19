@@ -76,8 +76,8 @@ class _WelcomeViewState extends State<WelcomeView> {
             alignment: Alignment.center,
             children: <Widget>[
               Positioned(
-                top: 0,
-                left: 0,
+                top: 60,
+                left: 20,
 
                 //  right: 40,
 
@@ -147,7 +147,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                         textStyle: const TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 16,
-                          color: Color.fromARGB(255, 0, 163, 173),
+                          color: Color.fromARGB(255, 107, 102, 102),
                         ),
                       ),
                     ),

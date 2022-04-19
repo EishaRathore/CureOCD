@@ -17,7 +17,7 @@ class DiscoButton extends StatelessWidget {
       required this.child,
       this.width = 250.0,
       this.height = 100.0,
-      this.buttonColor = const Color(0xff6758C0),
+      this.buttonColor = const Color.fromARGB(255, 0, 163, 173),
       this.isActive = false})
       : super(key: key);
 

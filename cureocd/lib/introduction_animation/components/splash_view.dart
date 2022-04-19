@@ -28,8 +28,11 @@ class _SplashViewState extends State<SplashView> {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 140,
+            ),
             const Padding(
-              padding: EdgeInsets.only(top: 18.0, bottom: 8.0),
+              padding: EdgeInsets.only(top: 30.0, bottom: 8.0),
               child: Text(
                 "CureOCD",
                 style: TextStyle(
@@ -45,11 +48,11 @@ class _SplashViewState extends State<SplashView> {
             const Padding(
               padding: EdgeInsets.only(left: 64, right: 64),
               child: Text(
-                "Virtual Exposure Obssesive Compulsive Disorder",
+                " Cure for Obssesive Compulsive Disorder",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 25.0,
-                  color: Color.fromARGB(255, 0, 163, 173),
+                  fontSize: 17.0,
+                  color: Color.fromARGB(255, 107, 102, 102),
                 ),
               ),
             ),

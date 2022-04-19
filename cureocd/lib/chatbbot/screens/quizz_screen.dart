@@ -11,6 +11,7 @@ class QuizzScreen extends StatefulWidget {
 }
 
 class _QuizzScreenState extends State<QuizzScreen> {
+  // ignore: non_constant_identifier_names
   int question_pos = 0;
   int score = 0;
   bool btnPressed = false;
@@ -20,6 +21,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     _controller = PageController(initialPage: 0);
@@ -28,7 +30,6 @@ class _QuizzScreenState extends State<QuizzScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: AppColor.pripmaryColor,
       body: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -44,6 +45,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 answered = false;
               });
             },
+            // ignore: prefer_const_constructors, unnecessary_new
             physics: new NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Column(
@@ -75,8 +77,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                           Text(
                             "${questions[index].title}",
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 0, 163, 173),
                               fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           const SizedBox(
@@ -85,13 +88,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                           Text(
                             "${questions[index].question}",
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 116, 116, 116),
                               fontSize: 16.0,
                             ),
                           ),
                         ],
                       )),
-                      const SizedBox(
+                  const SizedBox(
                     height: 25.0,
                   ),
                   for (int i = 0; i < questions[index].answers!.length; i++)
@@ -104,9 +107,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        fillColor: btnPressed ?
-                        Colors.green
-                        :AppColor.secondaryColor,
+                        fillColor: btnPressed
+                            ? AppColor.secondaryColor
+                            : AppColor.secondaryColor,
                         onPressed: !answered
                             ? () {
                                 score = score +
@@ -148,7 +151,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       }
                     },
                     shape: const StadiumBorder(),
-                    fillColor: Colors.blue,
+                    fillColor: const Color.fromARGB(255, 0, 163, 173),
                     padding: const EdgeInsets.all(18.0),
                     elevation: 0.0,
                     child: Text(

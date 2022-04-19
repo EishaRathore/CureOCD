@@ -38,28 +38,30 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
+
         children: [
-          //const SizedBox(height: 90),
+          const SizedBox(height: 80),
           Image.asset('assets/cureocd_logo.png'),
-          GradientText(
-            'CureOCD',
-            style: const TextStyle(
-              fontSize: 48.0,
-              fontWeight: FontWeight.bold,
-            ),
-            // ignore: prefer_const_literals_to_create_immutables
-            colors: [
-              const Color.fromARGB(255, 11, 81, 128),
-              const Color.fromARGB(255, 196, 10, 149),
-              // const Color.fromARGB(255, 107, 4, 110),
-              const Color.fromARGB(255, 0, 163, 173),
-            ],
-          ),
+
+          // GradientText(
+          //   'CureOCD',
+          //   style: const TextStyle(
+          //     fontSize: 48.0,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ignore: prefer_const_literals_to_create_immutables
+          //   colors: [
+          //     const Color.fromARGB(255, 11, 81, 128),
+          //     const Color.fromARGB(255, 196, 10, 149),
+          //     // const Color.fromARGB(255, 107, 4, 110),
+          //     const Color.fromARGB(255, 0, 163, 173),
+          //   ],
+          // ),
           const SizedBox(height: 60),
           Center(
               child: SizedBox(
             height: 80,
-            child: Lottie.asset('assets/89023-loading-circles.json'),
+            child: Lottie.asset('assets/lf20_Stt1R6.json'),
           )),
         ],
         //  children: Lottie.asset('assets/news_yellow.json'),

@@ -15,6 +15,5 @@ class HomeList {
       imagePath: 'assets/introduction_animation/introduction_animation.png',
       navigateScreen: IntroductionAnimationScreen(),
     ),
-    
   ];
 }

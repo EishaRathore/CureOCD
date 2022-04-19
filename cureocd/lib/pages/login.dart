@@ -37,17 +37,17 @@ class _ChatterLoginState extends State<ChatterLogin> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
-                  const Hero(
-                    tag: 'HeroTitle',
-                    child: Text(
-                      'CureOCD',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 113, 238, 255),
-                          fontFamily: 'Poppins',
-                          fontSize: 26,
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
+                  // const Hero(
+                  //   tag: 'HeroTitle',
+                  //   child: Text(
+                  //     'CureOCD',
+                  //     style: TextStyle(
+                  //         color: Color.fromARGB(255, 0, 163, 173),
+                  //         fontFamily: 'Poppins',
+                  //         fontSize: 26,
+                  //         fontWeight: FontWeight.w700),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
@@ -84,9 +84,10 @@ class _ChatterLoginState extends State<ChatterLogin> {
                   Hero(
                     tag: 'loginbutton',
                     child: CustomButton(
-                      text: 'login',
-                      accentColor: Color.fromARGB(255, 113, 238, 255),
-                      mainColor: Color.fromARGB(255, 255, 255, 255),
+                      mainColor: const Color.fromARGB(255, 0, 163, 173),
+                      // text: 'login',
+                      //  accentColor: Color.fromARGB(255, 0, 163, 173),
+                      //      mainColor: Color.fromARGB(255, 255, 255, 255),
                       onpress: () async {
                         if (password != null && email != null) {
                           setState(() {
@@ -106,26 +107,31 @@ class _ChatterLoginState extends State<ChatterLogin> {
                             setState(() {
                               loggingin = false;
                             });
-                            EdgeAlert.show(context,
-                                title: 'Login Failed',
-                                description: e.toString(),
-                                gravity: EdgeAlert.BOTTOM,
-                                icon: Icons.error,
-                                backgroundColor:
-                                    Color.fromARGB(255, 113, 238, 255));
-                          }
-                        } else {
-                          EdgeAlert.show(context,
-                              title: 'Login failed',
-                              description:
-                                  'Please enter the email and password.',
+                            EdgeAlert.show(
+                              context,
+                              title: 'Login Failed',
+                              description: e.toString(),
                               gravity: EdgeAlert.BOTTOM,
                               icon: Icons.error,
                               backgroundColor:
-                                  Color.fromARGB(255, 113, 238, 255));
+                                  const Color.fromARGB(255, 0, 163, 173),
+                            );
+                          }
+                        } else {
+                          EdgeAlert.show(
+                            context,
+                            title: 'Login failed',
+                            description: 'Please enter the email and password.',
+                            gravity: EdgeAlert.BOTTOM,
+                            icon: Icons.error,
+                            backgroundColor:
+                                const Color.fromARGB(255, 0, 163, 173),
+                          );
                         }
                         // Navigator.pushReplacementNamed(context, '/chat');
                       },
+                      text: 'Log in',
+                      accentColor: Colors.white,
                     ),
                   ),
                   const SizedBox(
@@ -148,7 +154,7 @@ class _ChatterLoginState extends State<ChatterLogin> {
                           tag: 'loginbutton',
                           child: TextButton(
                             child: const Text(
-                              'Login',
+                              'Signup',
                               style: TextStyle(
                                 color: Color.fromARGB(255, 0, 163, 173),
                                 fontSize: 16,

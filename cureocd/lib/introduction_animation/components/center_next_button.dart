@@ -85,7 +85,7 @@ class CenterNextButton extends StatelessWidget {
                       Animation<double> secondaryAnimation,
                     ) {
                       return SharedAxisTransition(
-                        fillColor: const Color.fromARGB(255, 0, 163, 173),
+                        fillColor: Colors.transparent,
                         child: child,
                         animation: animation,
                         secondaryAnimation: secondaryAnimation,

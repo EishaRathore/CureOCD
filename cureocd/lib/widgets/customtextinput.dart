@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class CustomTextInput extends StatelessWidget {
@@ -18,7 +20,9 @@ class CustomTextInput extends StatelessWidget {
       margin: const EdgeInsets.only(top: 15),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(
+          30,
+        ),
       ),
       padding: const EdgeInsets.only(left: 10),
       width: MediaQuery.of(context).size.width * 0.70,
@@ -27,6 +31,7 @@ class CustomTextInput extends StatelessWidget {
         keyboardType: keyboard,
         onSubmitted: (value) {},
         autofocus: false,
+        style: const TextStyle(color: Color.fromARGB(255, 56, 55, 55)),
         obscureText: obscure ? true : false,
         decoration: InputDecoration(
           icon: Icon(
