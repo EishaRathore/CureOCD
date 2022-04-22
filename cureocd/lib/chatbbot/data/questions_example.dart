@@ -5,33 +5,33 @@ List<QuestionModel> questions = [
     "TIME OCCUPIED BY OBSESSIVE THOUGHTS",
     "How much of your time is occupied by obsessive thoughts?",
     {
-      "None ": 0,
       "Less than 1 hr/day or occasional occurrence": 1,
       "1 to 3 hrs/day or frequent ": 2,
       "Greater than 3 and up to 8 hrs/day or very frequent occurrence": 3,
-      "Greater than 8 hrs/day or nearly constant\noccurrence": 4,
+      "Greater than 8 hrs/day or nearly constant occurrence": 4,
+      "None ": 0,
     },
   ),
   QuestionModel(
     "INTERFERENCE DUE TO OBSESSIVE THOUGHTS",
     "How much do your obsessive thoughts interfere with your work, school, social, or other important role functioning?",
     {
-      'None ': 0,
-      'Slight interference with social or other\nactivities, but overall performance not\nimpaired':
+      'Slight interference with social or other activities, but overall performance not\nimpaired':
           1,
-      'Definite interference with social or\noccupational performance,but still manageable':
+      'Definite interference with social or occupational performance,but still manageable':
           2,
-      'Causes substantial impairment in social\nor occupational performance': 3,
+      'Causes substantial impairment in social or occupational performance': 3,
       'Incapacitating': 4,
+      'None ': 0,
     },
   ),
   QuestionModel("DISTRESS ASSOCIATED WITH OBSESSIVE THOUGHTS",
       "How much distress do your obsessive thoughts cause you?", {
-    'None ': 0,
     'Not too disturbing': 1,
     'Disturbing, but still manageable': 2,
     'Very disturbing ': 3,
     'Very disturbing': 4,
+    'None ': 0,
   }),
   QuestionModel(
       "RESISTANCE AGAINST OBSESSIONS",
@@ -61,7 +61,6 @@ List<QuestionModel> questions = [
       "TIME SPENT PERFORMING COMPULSIVE BEHAVIORS",
       "How much time do you spend performing compulsive behaviors? How much longer than most people does it take to complete routine activities because of your rituals? How frequently do you do rituals?",
       {
-        'None': 0,
         'Less than 1 hr/day or occasional\nperformance of compulsive behaviors':
             1,
         'From 1 to 3 hrs/day, or frequent\nperformance of compulsive behaviors':
@@ -70,12 +69,12 @@ List<QuestionModel> questions = [
             3,
         'More than 8 hrs/day, or near constant\nperformance of compulsive behaviors\n(too numerous to count)':
             4,
+        'None': 0,
       }),
   QuestionModel(
       "INTERFERENCE DUE TO COMPULSIVE BEHAVIORS",
       "How much do your compulsive behaviors interfere with your work, school, social, or other important role functioning? Is there anything that you don’t do because of the compulsions?",
       {
-        'None': 0,
         'Slight interference with social or other\nactivities, but overall performance not impaired':
             1,
         'Definite interference with social or occupational performance,\nbut still manageable':
@@ -83,12 +82,12 @@ List<QuestionModel> questions = [
         'Causes substantial impairment in social or occupational\nperformance':
             3,
         'Incapacitating': 4,
+        'None': 0,
       }),
   QuestionModel(
       "DISTRESS ASSOCIATED WITH COMPULSIVE BEHAVIOR",
       "How would you feel if prevented from performing your compulsion(s)? How anxious would you become?",
       {
-        'None': 0,
         'Only slightly anxious if compulsions prevented': 1,
         'Anxiety would mount but remain manageable if compulsions\nprevented':
             2,
@@ -96,6 +95,7 @@ List<QuestionModel> questions = [
             3,
         'Incapacitating anxiety from any intervention aimed at\nmodifying activity':
             4,
+        'None': 0,
       }),
   QuestionModel("RESISTANCE AGAINST COMPULSIONS",
       "How much of an effort do you make to resist the compulsions?", {

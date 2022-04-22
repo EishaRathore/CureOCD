@@ -44,7 +44,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
           description: e.toString(),
           gravity: EdgeAlert.BOTTOM,
           icon: Icons.error,
-          backgroundColor: Colors.indigo[900]);
+          backgroundColor: const Color.fromARGB(255, 0, 163, 173));
     }
   }
 
@@ -73,7 +73,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
           child: Container(
             child: LinearProgressIndicator(
               valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
-              backgroundColor: Colors.indigo[900],
+              backgroundColor: const Color.fromARGB(255, 0, 163, 173),
             ),
             decoration: const BoxDecoration(
                 // color: Colors.blue,
@@ -98,13 +98,13 @@ class _ChatterScreenState extends State<ChatterScreen> {
                   style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16,
-                      color: Colors.indigo[900]),
+                      color: const Color.fromARGB(255, 0, 163, 173)),
                 ),
                 Text('Virtual Exposure Obssesive Compulsive Disorder',
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 10,
-                        color: Colors.indigo[900]))
+                        color: const Color.fromARGB(255, 0, 163, 173)))
               ],
             ),
           ],
@@ -212,7 +212,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                 ),
                 MaterialButton(
                     shape: const CircleBorder(),
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 0, 163, 173),
                     onPressed: () {
                       chatMsgTextController.clear();
                       _firestore.collection('messages').add({
@@ -275,7 +275,8 @@ class ChatStream extends StatelessWidget {
           );
         } else {
           return const Center(
-            child: CircularProgressIndicator(backgroundColor: Colors.indigo),
+            child: CircularProgressIndicator(
+                backgroundColor: Color.fromARGB(255, 0, 163, 173)),
           );
         }
       },

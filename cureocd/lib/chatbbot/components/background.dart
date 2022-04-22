@@ -19,47 +19,57 @@ class Background extends StatelessWidget {
         alignment: Alignment.center,
         children: <Widget>[
           Positioned(
-                  top: 0.0,
-                  left: 0.0,
-                  right: 0.0,
-                  child: AppBar(
-                    //title: const Text(''),// You can add title here
-                    leading: IconButton(
-                      icon: const Icon(Icons.arrow_back_ios, color: Colors.grey),
-                      onPressed: () => Navigator.popAndPushNamed(context, '/chatbot'),
+            top: 0.0,
+            left: 0.0,
+            right: 0.0,
+            child: AppBar(
+              //title: const Text(''),// You can add title here
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios,
+                    color: Color.fromARGB(255, 90, 89, 89)),
+                onPressed: () => Navigator.pushNamed(context, '/homeMain'),
+              ),
+              title: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 20,
                     ),
-                    title: Center(child:  Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                  Image.asset(
-                 'assets/log.png',
-                  fit: BoxFit.contain,
-                  height: 40,
+                    //   Image.asset(
+                    //  'assets/log.png',
+                    Image.asset(
+                      'assets/cureocd_logo.png',
+                      fit: BoxFit.contain,
+                      height: 40,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8.0),
+                      // child: GradientText(
+                      //   'VexpOcd',
+                      //   style: const TextStyle(
+                      //     fontSize: 23.0,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      //   textAlign: TextAlign.center,
+                      //   // ignore: prefer_const_literals_to_create_immutables
+                      //   colors: [
+                      //     const Color.fromARGB(255, 0, 118, 197),
+                      //     const Color.fromARGB(255, 197, 194, 194),
+                      //     // const Color.fromARGB(255, 107, 4, 110),
+                      //     const Color.fromARGB(255, 0, 118, 197),
+                      //   ],
+                      // ),
+                    )
+                  ],
+                ),
               ),
-              Container(
-                  padding: const EdgeInsets.all(8.0), child: GradientText(
-              'VexpOcd',
-              style: const TextStyle(
-                fontSize: 23.0,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              colors: [
-                const Color.fromARGB(255, 0, 118, 197),
-                const Color.fromARGB(255, 197, 194, 194),
-                // const Color.fromARGB(255, 107, 4, 110),
-                const Color.fromARGB(255, 0, 118, 197),
-              ],
-            ),)
-            ],
-
-          ),),
-                    backgroundColor: Colors.blue.withOpacity(0.0), //You can make this transparent
-                    elevation: 0.0, //No shadow
-                  ),
-                  ),
-                  child,
+              backgroundColor:
+                  Colors.blue.withOpacity(0.0), //You can make this transparent
+              elevation: 0.0, //No shadow
+            ),
+          ),
+          child,
         ],
       ),
     );

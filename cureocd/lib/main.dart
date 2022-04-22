@@ -2,6 +2,7 @@
 import 'package:cureocd/Homemain.dart';
 import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:flutter/material.dart';
+import 'Contact.dart';
 import 'pages/chatterScreen.dart';
 import 'pages/login.dart';
 import 'pages/signup.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/chat': (context) => ChatterScreen(),
         '/aboutUs': (context) => AboutUs(),
         '/homeMain': (context) => HomeMain(),
+        '/contact': (context) => Contact(),
         '/chatbot': (BuildContext context) => const chatbotScreen(),
         // '/aboutUs': (context) => AboutUsScreen(),
 

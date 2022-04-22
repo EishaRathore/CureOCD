@@ -3,7 +3,7 @@ import 'package:cureocd/pages/aboutUs.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:cureocd/profile.dart';
+import 'package:cureocd/Contact.dart';
 import 'package:kf_drawer/kf_drawer.dart';
 
 final _firestore = Firestore.instance;
@@ -43,7 +43,9 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
           icon: const Icon(Icons.account_box, color: Colors.white),
-          page: Profile(),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/contact');
+          },
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
@@ -147,23 +149,27 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
                 const SizedBox(
                   height: 160,
                 ),
-                Column(
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
-                    const SizedBox(height: 8),
-                    Row(children: <Widget>[
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    // const SizedBox(height: 8),
+                    Column(children: <Widget>[
+                      //  const SizedBox(
+                      //     width: 6,
+                      //   ),
                       Text(username,
                           style: const TextStyle(
                               fontSize: 17, color: Colors.white)),
+                      // const SizedBox(
+                      //   height: 8,
+                      // ),
                       // ignore: unnecessary_const
-                      const Text("\n", style: const TextStyle(fontSize: 17)),
+
+                      // const Text("\n", style: TextStyle(fontSize: 17)),
                       Text(email,
                           style: const TextStyle(
-                              fontSize: 10, color: Colors.white)),
+                              fontSize: 12, color: Colors.white)),
                     ]),
                   ],
                 )

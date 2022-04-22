@@ -58,7 +58,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       "Question ${index + 1}/10",
                       textAlign: TextAlign.start,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 0, 163, 173),
+
+                        // color: Colors.white,
                         fontSize: 18.0,
                       ),
                     ),
@@ -126,7 +128,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         child: Text(questions[index].answers!.keys.toList()[i],
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 14.0,
+                              fontSize: 10.0,
                             )),
                       ),
                     ),

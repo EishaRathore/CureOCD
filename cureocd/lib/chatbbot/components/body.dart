@@ -1,5 +1,6 @@
 import 'package:cureocd/chatbbot/screens/quizz_screen.dart';
 import 'package:flutter/material.dart';
+import '../../widgets/CustomButton.dart';
 import 'background.dart';
 import 'button.dart';
 
@@ -17,11 +18,12 @@ class Body extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: size.height * 0.02),
             const Text(
-              "   Lets begin with a few questions to identify your level of OCD.",
+              "Lets begin with a few questions to identify your level of OCD.",
               // ignore: unnecessary_const
               style: const TextStyle(
-                fontSize: 22,
-                color: Color.fromARGB(255, 0, 163, 173),
+                fontSize: 18,
+                // color: Color.fromARGB(255, 0, 163, 173),
+                color: Color.fromARGB(255, 107, 102, 102),
               ),
               textAlign: TextAlign.center,
             ),
@@ -35,11 +37,11 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 //  SizedBox(width: size.width * 0.04),
-
-                RoundedButton(
-                  text: "START MY JOURNEY",
-                  //  textColor: Colors.black,
-                  press: () {
+                CustomButton(
+                  text: 'Start my journey',
+                  accentColor: Colors.white,
+                  mainColor: Color.fromARGB(255, 0, 163, 173),
+                  onpress: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(

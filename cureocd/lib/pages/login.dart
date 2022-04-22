@@ -2,7 +2,6 @@ import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
 import '../widgets/custom_button.dart';
 import '../widgets/customtextinput.dart';
 

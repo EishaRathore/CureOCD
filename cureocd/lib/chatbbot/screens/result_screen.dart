@@ -43,7 +43,7 @@ class _ResultScreenState extends State<ResultScreen> {
         children: [
           DiscoButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/homeMain');
             },
             child: const Text(
               "Close",
@@ -63,9 +63,9 @@ class _ResultScreenState extends State<ResultScreen> {
             },
             child: const Text(
               "Repeat Y-BOCS test",
-              style: const TextStyle(color: Colors.white, fontSize: 16),
+              style: TextStyle(color: Colors.white, fontSize: 16),
             ),
-            width: 200,
+            width: 160,
             height: 60,
             isActive: true,
           ),
@@ -85,11 +85,13 @@ class _ResultScreenState extends State<ResultScreen> {
         children: [
           const SizedBox(
             width: double.infinity,
-            child: const Text(
-              "You Score is",
+            child: Text(
+              "Your Score:",
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
+              style: TextStyle(
+                //   color: Colors.white,
+                color: Color.fromARGB(255, 0, 163, 173),
+
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
               ),
