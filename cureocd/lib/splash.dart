@@ -41,7 +41,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
         children: [
           const SizedBox(height: 80),
-          Image.asset('assets/cureocd_logo.png'),
+          Image.asset(
+            'assets/cureocd_logo.png',
+            fit: BoxFit.contain,
+            height: 60,
+          ),
 
           // GradientText(
           //   'CureOCD',

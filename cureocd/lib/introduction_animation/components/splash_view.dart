@@ -29,7 +29,12 @@ class _SplashViewState extends State<SplashView> {
         child: Column(
           children: [
             const SizedBox(
-              height: 140,
+              height: 100,
+            ),
+            Image.asset(
+              'assets/cureocd_logo.png',
+              fit: BoxFit.contain,
+              height: 60,
             ),
             const Padding(
               padding: EdgeInsets.only(top: 30.0, bottom: 8.0),

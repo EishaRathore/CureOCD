@@ -30,7 +30,11 @@ class _ChatterLoginState extends State<ChatterLogin> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset('assets/cureocd_logo.png'),
+                  Image.asset(
+                    'assets/cureocd_logo.png',
+                    fit: BoxFit.contain,
+                    height: 45,
+                  ),
                   const SizedBox(height: 15),
 
                   SizedBox(

@@ -82,13 +82,17 @@ class _AboutUsState extends State<AboutUs> {
           child: ListView(
             children: [
               const SizedBox(height: 15),
-              Image.asset('assets/cureocd_logo.png'),
-              const SizedBox(height: 15),
+              Image.asset(
+                'assets/cureocd_logo.png',
+                fit: BoxFit.contain,
+                height: 50,
+              ),
+              const SizedBox(height: 25),
               const Align(
                 alignment: Alignment.center,
                 child: Text('WHY CureOCD?',
                     style: TextStyle(
-                        fontSize: 40,
+                        fontSize: 35,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 0, 163, 173))),
               ),

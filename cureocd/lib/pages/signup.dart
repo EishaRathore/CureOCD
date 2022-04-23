@@ -35,7 +35,11 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset('assets/cureocd_logo.png'),
+                  Image.asset(
+                    'assets/cureocd_logo.png',
+                    fit: BoxFit.contain,
+                    height: 45,
+                  ),
 
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,

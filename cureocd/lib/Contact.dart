@@ -43,11 +43,9 @@ class _ContactState extends State<Contact> {
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(
-                      Icons.menu,
-                      color: Color.fromARGB(255, 255, 254, 254),
-                    ),
-                    onPressed: widget.onMenuPressed,
+                    icon: const Icon(Icons.arrow_back_ios,
+                        color: Color.fromARGB(255, 255, 255, 255)),
+                    onPressed: () => Navigator.pushNamed(context, '/homeMain'),
                   ),
                 ],
               ),

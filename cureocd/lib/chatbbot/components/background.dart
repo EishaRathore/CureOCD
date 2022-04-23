@@ -33,8 +33,8 @@ class Background extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      height: 20,
+                    const SizedBox(
+                      height: 25,
                     ),
                     //   Image.asset(
                     //  'assets/log.png',

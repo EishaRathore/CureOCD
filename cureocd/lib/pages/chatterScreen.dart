@@ -65,8 +65,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme:
-            const IconThemeData(color: Color.fromARGB(255, 77, 228, 255)),
+        iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 163, 173)),
         elevation: 0,
         bottom: PreferredSize(
           preferredSize: const Size(25, 10),
@@ -84,103 +83,33 @@ class _ChatterScreenState extends State<ChatterScreen> {
           ),
         ),
         backgroundColor: Colors.white10,
-        // leading: Padding(
-        //   padding: const EdgeInsets.all(12.0),
-        //   child: CircleAvatar(backgroundImage: NetworkImage('https://cdn.clipart.email/93ce84c4f719bd9a234fb92ab331bec4_frisco-specialty-clinic-vail-health_480-480.png'),),
-        // ),
         title: Row(
           children: <Widget>[
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
+                const Text(
                   'CureOCD',
                   style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16,
-                      color: const Color.fromARGB(255, 0, 163, 173)),
+                      color: Color.fromARGB(255, 0, 163, 173)),
                 ),
-                Text('Virtual Exposure Obssesive Compulsive Disorder',
+                const Text('Virtual Exposure Obssesive Compulsive Disorder',
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 10,
-                        color: const Color.fromARGB(255, 0, 163, 173)))
+                        color: Color.fromARGB(255, 0, 163, 173)))
               ],
             ),
           ],
         ),
         actions: <Widget>[
-          GestureDetector(
-            child: const Icon(Icons.more_vert),
-          )
+          // GestureDetector(
+          //      child: const Icon(Icons.more_vert),
+          //     )
         ],
       ),
-      // drawer: Drawer(
-      //   child: ListView(
-      //     children: <Widget>[
-      //       UserAccountsDrawerHeader(
-      //         decoration: BoxDecoration(
-      //           color: Colors.indigo[900],
-      //         ),
-      //         accountName: Text(username),
-      //         accountEmail: Text(email),
-      //         currentAccountPicture: const CircleAvatar(
-      //           backgroundImage: NetworkImage(
-      //               "https://www.freeiconspng.com/uploads/person-icon-8.png"),
-      //         ),
-      //         // onDetailsPressed: () {},
-      //       ),
-
-      //       // ListTile(
-      //       //   leading: Icon(Icons.person),
-      //       //   title: Text("Profile"),
-      //       //   // subtitle: Text("Sign out of this account"),
-      //       //   onTap: () async {
-      //       //     await _auth.signOut();
-      //       //     Navigator.pushReplacementNamed(context, '/');
-      //       //   },
-      //       // ),
-      //       ListTile(
-      //         leading: const Icon(Icons.person),
-      //         title: const Text("About us"),
-      //         // subtitle: Text("Sign out of this account"),
-      //         onTap: () {
-      //           Navigator.push(
-      //               context,
-      //               MaterialPageRoute(
-      //                 builder: (context) => AboutUs(),
-      //               ));
-      //         },
-
-      //         // onTap: () async {
-      //         //   //await _auth.signOut();
-      //         //   Navigator.;
-
-      //         //   Navigator.pushReplacementNamed(context, '/');
-      //         // },
-      //       ),
-
-      //       // ListTile(
-      //       //   leading: Icon(Icons.exit_to_app),
-      //       //   title: Text("Contact us"),
-      //       //   // subtitle: Text("Sign out of this account"),
-      //       //   onTap: () async {
-      //       //     await _auth.signOut();
-      //       //     Navigator.pushReplacementNamed(context, '/');
-      //       //   },
-      //       // ),
-      //       ListTile(
-      //         leading: const Icon(Icons.exit_to_app),
-      //         title: const Text("Logout"),
-      //         // subtitle: Text("Sign out of this account"),
-      //         onTap: () async {
-      //           await _auth.signOut();
-      //           Navigator.pushReplacementNamed(context, '/login');
-      //         },
-      //       ),
-      //     ],
-      //   ),
-      // ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -195,7 +124,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                 Expanded(
                   child: Material(
                     borderRadius: BorderRadius.circular(50),
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 0, 163, 173),
                     elevation: 5,
                     child: Padding(
                       padding:
@@ -228,12 +157,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                         Icons.send,
                         color: Colors.white,
                       ),
-                    )
-                    // Text(
-                    //   'Send',
-                    //   style: kSendButtonTextStyle,
-                    // ),
-                    ),
+                    )),
               ],
             ),
           ),

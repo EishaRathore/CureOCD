@@ -33,24 +33,22 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
       items: [
         KFDrawerItem.initWithPage(
           text: const Text('Home',
-              style: TextStyle(color: Colors.white, fontSize: 18)),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+                fontFamily: 'Poppins',
+              )),
           icon: const Icon(Icons.home, color: Colors.white),
           page: AboutUs(),
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
-            'Profile',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
-          icon: const Icon(Icons.account_box, color: Colors.white),
-          onPressed: () {
-            Navigator.pushReplacementNamed(context, '/contact');
-          },
-        ),
-        KFDrawerItem.initWithPage(
-          text: const Text(
             'OCD Test',
-            style: TextStyle(color: Colors.white, fontSize: 18),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
           ),
           icon: const Icon(Icons.question_answer_rounded, color: Colors.white),
           onPressed: () {
@@ -61,31 +59,29 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         KFDrawerItem.initWithPage(
           text: const Text(
             'Blog',
-            style: TextStyle(color: Colors.white, fontSize: 18),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
           ),
           icon: const Icon(Icons.trending_up, color: Colors.white),
           page: AboutUs(),
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
-            'Contact',
-            style: TextStyle(color: Colors.white, fontSize: 18),
+            'Contact us',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
           ),
-          icon: const Icon(Icons.contact_page_rounded, color: Colors.white),
-          //  page: Schedules(),
+          icon: const Icon(Icons.account_box, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/contact');
+          },
         ),
-        // KFDrawerItem.initWithPage(
-        //   text: const Text(
-        //     'Login',
-        //     style: TextStyle(color: Colors.white, fontSize: 18),
-        //   ),
-        //   icon: const Icon(Icons.login_rounded, color: Colors.white),
-        //   onPressed: () async {
-        //     await _auth.signOut();
-        //     Navigator.pushReplacementNamed(context, '/login');
-        //   },
-        //   // page: Settings(),
-        // ),
       ],
     );
   }
@@ -109,18 +105,6 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           backgroundColor: const Color.fromARGB(255, 0, 163, 173));
     }
   }
-  // void getMessages()async{
-  //   final messages=await _firestore.collection('messages').getDocuments();
-  //   for(var message in messages.documents){
-  //     print(message.data);
-  //   }
-  // }
-
-  // void messageStream() async {
-  //   await for (var snapshot in _firestore.collection('messages').snapshots()) {
-  //     snapshot.documents;
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -149,12 +133,9 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
                 const SizedBox(
                   height: 160,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: <Widget>[
-                    // const SizedBox(height: 8),
-                    Column(children: <Widget>[
+                Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
                       //  const SizedBox(
                       //     width: 6,
                       //   ),
@@ -171,8 +152,6 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
                           style: const TextStyle(
                               fontSize: 12, color: Colors.white)),
                     ]),
-                  ],
-                )
               ],
             ),
           ),
@@ -180,8 +159,13 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         footer: KFDrawerItem(
           text: const Text(
             'Logout',
-            style: TextStyle(color: Colors.grey, fontSize: 18),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
           ),
+          icon: const Icon(Icons.logout, color: Colors.white),
           onPressed: () async {
             await _auth.signOut();
             Navigator.pushReplacementNamed(context, '/login');
