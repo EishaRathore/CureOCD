@@ -1,10 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cureocd/pages/aboutUs.dart';
+
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cureocd/Contact.dart';
 import 'package:kf_drawer/kf_drawer.dart';
+
+import 'chatbbot/screens/result_screen.dart';
 
 final _firestore = Firestore.instance;
 String username = 'User';
@@ -58,7 +61,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
-            'Blog',
+            'View OCD result',
             style: TextStyle(
               color: Colors.white,
               fontSize: 17,
@@ -66,7 +69,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             ),
           ),
           icon: const Icon(Icons.trending_up, color: Colors.white),
-          page: AboutUs(),
+          // page: ResultScreen(),
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
