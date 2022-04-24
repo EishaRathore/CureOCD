@@ -2,15 +2,26 @@ import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:cureocd/chatbbot/common/theme_helper.dart';
 import 'package:cureocd/chatbbot/ui/shared/color.dart';
 import 'package:cureocd/chatbbot/widgets/disco_button.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 // ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// String username = 'User';
+// String email = 'user@example.com';
+// late String messageText;
+// late FirebaseUser loggedInUser;
+
 // ignore: must_be_immutable
 class ResultScreen extends StatefulWidget {
   int score;
-  ResultScreen(this.score, {Key? key}) : super(key: key);
 
+  ResultScreen(this.score, {Key? key}) : super(key: key);
+  //final auth = FirebaseAuth.instance;
   @override
   _ResultScreenState createState() => _ResultScreenState();
 }

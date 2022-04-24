@@ -70,9 +70,9 @@ class _ChatterScreenState extends State<ChatterScreen> {
         bottom: PreferredSize(
           preferredSize: const Size(25, 10),
           child: Container(
-            child: LinearProgressIndicator(
-              valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
-              backgroundColor: const Color.fromARGB(255, 0, 163, 173),
+            child: const LinearProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              backgroundColor: Color.fromARGB(255, 0, 163, 173),
             ),
             decoration: const BoxDecoration(
                 // color: Colors.blue,
@@ -87,15 +87,15 @@ class _ChatterScreenState extends State<ChatterScreen> {
           children: <Widget>[
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                const Text(
+              children: const <Widget>[
+                Text(
                   'CureOCD',
                   style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16,
                       color: Color.fromARGB(255, 0, 163, 173)),
                 ),
-                const Text('Virtual Exposure Obssesive Compulsive Disorder',
+                Text('Virtual Exposure Obssesive Compulsive Disorder',
                     style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 10,
@@ -104,7 +104,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
             ),
           ],
         ),
-        actions: <Widget>[
+        actions: const <Widget>[
           // GestureDetector(
           //      child: const Icon(Icons.more_vert),
           //     )
@@ -148,7 +148,7 @@ class _ChatterScreenState extends State<ChatterScreen> {
                         'sender': username,
                         'text': messageText,
                         'timestamp': DateTime.now().millisecondsSinceEpoch,
-                        'senderemail': email
+                        'senderemail': email,
                       });
                     },
                     child: const Padding(

@@ -2,6 +2,15 @@ import 'package:cureocd/chatbbot/data/questions_example.dart';
 import 'package:cureocd/chatbbot/screens/result_screen.dart';
 import 'package:cureocd/chatbbot/ui/shared/color.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:edge_alert/edge_alert.dart';
+
+final firestore = Firestore.instance;
+String username = 'User';
+String email = 'user@example.com';
+//late String messageText;
+late FirebaseUser loggedInUser;
 
 class QuizzScreen extends StatefulWidget {
   const QuizzScreen({Key? key}) : super(key: key);
@@ -18,13 +27,34 @@ class _QuizzScreenState extends State<QuizzScreen> {
   PageController? _controller;
   String btnText = "Next Question";
   bool answered = false;
-
+  final _auth = FirebaseAuth.instance;
   @override
   void initState() {
     // ignore: todo
     // TODO: implement initState
     super.initState();
     _controller = PageController(initialPage: 0);
+    getCurrentUser();
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+        setState(() {
+          username = loggedInUser.displayName;
+          email = loggedInUser.email;
+        });
+      }
+    } catch (e) {
+      EdgeAlert.show(context,
+          title: 'Something Went Wrong',
+          description: e.toString(),
+          gravity: EdgeAlert.BOTTOM,
+          icon: Icons.error,
+          backgroundColor: const Color.fromARGB(255, 0, 163, 173));
+    }
   }
 
   @override
@@ -141,7 +171,15 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ResultScreen(score)));
+                              builder: (context) => ResultScreen(score),
+                            ));
+                        firestore.collection('quizscore').add({
+                          'sender': username,
+                          'quizscore': score,
+                          'timestamp': DateTime.now().millisecondsSinceEpoch,
+                          'senderemail': email,
+                        });
+                        ;
                       } else {
                         _controller!.nextPage(
                             duration: const Duration(milliseconds: 250),
