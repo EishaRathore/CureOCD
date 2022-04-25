@@ -27,35 +27,45 @@ class _QuizzScreenState extends State<QuizzScreen> {
   PageController? _controller;
   String btnText = "Next Question";
   bool answered = false;
-  final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance.currentUser();
+
+  Future<bool> doesNameAlreadyExist(String email) async {
+  final QuerySnapshot result = await Firestore.instance
+    .collection('quizscore')
+    .where('senderemail', isEqualTo: email)
+    .limit(1)
+    .getDocuments();
+  final List<DocumentSnapshot> documents = result.documents;
+  return documents.length == 1;
+}
   @override
   void initState() {
     // ignore: todo
     // TODO: implement initState
     super.initState();
     _controller = PageController(initialPage: 0);
-    getCurrentUser();
+   // getCurrentUser();
   }
 
-  void getCurrentUser() async {
-    try {
-      final user = await _auth.currentUser();
-      if (user != null) {
-        loggedInUser = user;
-        setState(() {
-          username = loggedInUser.displayName;
-          email = loggedInUser.email;
-        });
-      }
-    } catch (e) {
-      EdgeAlert.show(context,
-          title: 'Something Went Wrong',
-          description: e.toString(),
-          gravity: EdgeAlert.BOTTOM,
-          icon: Icons.error,
-          backgroundColor: const Color.fromARGB(255, 0, 163, 173));
-    }
-  }
+  // void getCurrentUser() async {
+  //   try {
+  //     final user = await _auth.currentUser();
+  //     if (user != null) {
+  //       loggedInUser = user;
+  //       setState(() {
+  //         username = loggedInUser.displayName;
+  //         email = loggedInUser.email;
+  //       });
+  //     }
+  //   } catch (e) {
+  //     EdgeAlert.show(context,
+  //         title: 'Something Went Wrong',
+  //         description: e.toString(),
+  //         gravity: EdgeAlert.BOTTOM,
+  //         icon: Icons.error,
+  //         backgroundColor: const Color.fromARGB(255, 0, 163, 173));
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -173,13 +183,14 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             MaterialPageRoute(
                               builder: (context) => ResultScreen(score),
                             ));
+                            
                         firestore.collection('quizscore').add({
                           'sender': username,
                           'quizscore': score,
                           'timestamp': DateTime.now().millisecondsSinceEpoch,
                           'senderemail': email,
                         });
-                        ;
+                        
                       } else {
                         _controller!.nextPage(
                             duration: const Duration(milliseconds: 250),

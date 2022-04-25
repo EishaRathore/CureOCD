@@ -11,11 +11,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:edge_alert/edge_alert.dart';
 
-final _firestore = Firestore.instance;
-String username = 'User';
-String email = 'user@example.com';
-int quizscore = 0;
-late FirebaseUser loggedInUser;
+// final _firestore = Firestore.instance;
+// String username = 'User';
+// String email = 'user@example.com';
+// int quizscore = 0;
+// late FirebaseUser loggedInUser;
+late final UserInfo profie;
 
 class Showresult extends KFDrawerContent {
   Showresult();
@@ -25,36 +26,51 @@ class Showresult extends KFDrawerContent {
 }
 
 class _ShowresultState extends State<Showresult> {
-  final _auth = FirebaseAuth.instance;
-  late int score;
-
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   void initState() {
     super.initState();
-    // getScore();
+    getCurrentUser();
     // getMessages();
   }
-
-//  void getScore() async {
-//     try {
-//       final user = await _auth.currentUser();
-//       if (user != null) {
-//         loggedInUser = user;
-//         setState(() {
-//           // username = loggedInUser.displayName;
-//           // email = loggedInUser.email;
-//           Future<null>
-//         });
-//       }
-//     } catch (e) {
-//       EdgeAlert.show(context,
-//           title: 'Something Went Wrong',
-//           description: e.toString(),
-//           gravity: EdgeAlert.BOTTOM,
-//           icon: Icons.error,
-//           backgroundColor: const Color.fromARGB(255, 0, 163, 173));
-//     }
-//   }
+// firestoreInstance
+//     .collection("users")
+//     .where("address.country", isEqualTo: "USA")
+//     .get()
+//     .then((value) {
+//   value.docs.forEach((result) {
+//     print(result.data());
+//   });
+// });
+  getCurrentUser() async {
+    final FirebaseUser user = await _auth.currentUser();
+    final uid = user.uid;
+    return uid;
+    // Similarly we can get email as well
+    //final uemail = user.email;
+    //print(uid);
+    //print(uemail);
+  }
+  
+  // void getScore() async {
+  //   try {
+  //     final user = await _auth.currentUser();
+  //     if (user != null) {
+  //       loggedInUser = user;
+  //       setState(() {
+  //         username = loggedInUser.displayName;
+  //         // email = loggedInUser.email;
+  //       });
+  //     }
+  //   } catch (e) {
+  //     EdgeAlert.show(context,
+  //         title: 'Something Went Wrong',
+  //         description: e.toString(),
+  //         gravity: EdgeAlert.BOTTOM,
+  //         icon: Icons.error,
+  //         backgroundColor: const Color.fromARGB(255, 0, 163, 173));
+  //   }
+  // }
 
 //  Future getScore() async{
 //    DocumentSnapshot document = await Firestore.instance.collection('quizscore').document(FirebaseUser().uid).get();
@@ -194,15 +210,45 @@ class _ShowresultState extends State<Showresult> {
           const SizedBox(
             height: 20.0,
           ),
-          Text(
-            "20",
-            // "${widget.score} / 40",
-            style: const TextStyle(
-              color: Colors.orange,
-              fontSize: 85.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+    //         Text((() {
+    //         if (user != null) {
+    // for (profile : user.getProviderData()) {
+    //     // // Id of the provider (ex: google.com)
+    //     // String providerId = profile.getProviderId();
+
+    //     // UID specific to the provider
+    //     String uid = profile.getUid();
+
+    //     // Name, email address, and profile photo Url
+    //     // String name = profile.getDisplayName();
+    //     // String email = profile.getEmail();
+    //     // Uri photoUrl = profile.getPhotoUrl();
+    //     return 
+    // }
+    //       //   if (widget.score >= 0 && widget.score <= 13) {
+    //       //     _resultPrnt = "mild symptoms";
+    //       //     return _resultPrnt;
+    //       //   } else if (widget.score >= 14 && widget.score <= 25) {
+    //       //     _resultPrnt = "moderate symptoms";
+    //       //     return _resultPrnt;
+    //       //   } else if (widget.score >= 26 && widget.score <= 34) {
+    //       //     _resultPrnt = "moderate-severe symptoms";
+    //       //     return _resultPrnt;
+    //       //   } else {
+    //       //     _resultPrnt = "severe symptoms";
+    //       //     return _resultPrnt;
+    //       //   }
+
+    //       })()),
+          // Text(
+          //  // "20",
+          //    "${widget.score} / 40",
+          //   style: const TextStyle(
+          //     color: Colors.orange,
+          //     fontSize: 85.0,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
           const SizedBox(
             height: 20.0,
           ),

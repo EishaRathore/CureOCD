@@ -4,6 +4,7 @@ import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:flutter/material.dart';
 import 'Contact.dart';
 import 'pages/chatterScreen.dart';
+import 'pages/forget_password.dart';
 import 'pages/login.dart';
 import 'pages/signup.dart';
 import 'pages/aboutUs.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/homeMain': (context) => HomeMain(),
         '/contact': (context) => Contact(),
         '/chatbot': (BuildContext context) => const chatbotScreen(),
+        ForgotPassword.id: (context) => ForgotPassword(),
         // '/aboutUs': (context) => AboutUsScreen(),
 
         // '/chats':(context)=>ChatterScreen()
