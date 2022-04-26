@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cureocd/pages/aboutUs.dart';
-
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:cureocd/pages/chatterScreen.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,8 @@ class HomeMain extends StatefulWidget {
 class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
   late KFDrawerController _drawerController;
+  int selectedpage = 0;
+  final _pageNo = [HomeMain(), Contact(), ChatterScreen()];
 
   @override
   void initState() {
@@ -112,6 +115,20 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ConvexAppBar(
+        items: [
+          TabItem(icon: Icons.home, title: 'Home'),
+          TabItem(icon: Icons.favorite, title: 'Favorite'),
+          TabItem(icon: Icons.shopping_cart, title: 'Cart'),
+          TabItem(icon: Icons.person, title: 'Profile'),
+        ],
+        initialActiveIndex: selectedpage,
+        onTap: (int index) {
+          setState(() {
+            selectedpage = index;
+          });
+        },
+      ),
       body: KFDrawer(
         controller: _drawerController,
         header: Align(
