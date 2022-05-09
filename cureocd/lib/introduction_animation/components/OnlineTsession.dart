@@ -95,7 +95,7 @@ class OnlineSessionView extends StatelessWidget {
                     padding: EdgeInsets.only(
                         left: 64, right: 64, top: 16, bottom: 16),
                     child: Text(
-                      "Incase of severe condition, live therapy sessions will be provided.",
+                      "Do online therapy sessions with a licensed therapist",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16.0,

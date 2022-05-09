@@ -100,7 +100,7 @@ class VrTherapyView extends StatelessWidget {
                 padding:
                     EdgeInsets.only(left: 64, right: 64, bottom: 16, top: 16),
                 child: Text(
-                  "Based on Y-BOCS test score, VR therapy will be provided.",
+                  "Do Virtual reality therapy to regain your life from OCD",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16.0,

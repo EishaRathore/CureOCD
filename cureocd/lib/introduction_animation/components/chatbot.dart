@@ -95,7 +95,7 @@ class ChatbootView extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                   child: Text(
-                    "To determine the severity of OCD symptoms, Y-BOCS test will be Conducted.",
+                    "Let's begin with few questions to identify your level of OCD",
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Color.fromARGB(255, 107, 102, 102),
