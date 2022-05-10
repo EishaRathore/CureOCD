@@ -83,7 +83,7 @@ class _TherapistsState extends State<Therapists> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 0, 163, 173))),
-
+              const SizedBox(height: 5),
               Image.asset('assets/images/woman_therapist1.jpg'),
 
               const SizedBox(height: 15),
@@ -106,7 +106,7 @@ class _TherapistsState extends State<Therapists> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 0, 163, 173))),
-
+              const SizedBox(height: 5),
               Image.asset('assets/images/woman_therapist2.jpg'),
 
               const SizedBox(height: 15),
@@ -131,7 +131,7 @@ class _TherapistsState extends State<Therapists> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 0, 163, 173))),
-
+              const SizedBox(height: 5),
               Image.asset('assets/images/woman_therapist2.jpg'),
 
               const SizedBox(height: 15),

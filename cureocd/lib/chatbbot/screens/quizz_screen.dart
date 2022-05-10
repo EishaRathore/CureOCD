@@ -30,21 +30,22 @@ class _QuizzScreenState extends State<QuizzScreen> {
   final _auth = FirebaseAuth.instance.currentUser();
 
   Future<bool> doesNameAlreadyExist(String email) async {
-  final QuerySnapshot result = await Firestore.instance
-    .collection('quizscore')
-    .where('senderemail', isEqualTo: email)
-    .limit(1)
-    .getDocuments();
-  final List<DocumentSnapshot> documents = result.documents;
-  return documents.length == 1;
-}
+    final QuerySnapshot result = await Firestore.instance
+        .collection('quizscore')
+        .where('senderemail', isEqualTo: email)
+        .limit(1)
+        .getDocuments();
+    final List<DocumentSnapshot> documents = result.documents;
+    return documents.length == 1;
+  }
+
   @override
   void initState() {
     // ignore: todo
     // TODO: implement initState
     super.initState();
     _controller = PageController(initialPage: 0);
-   // getCurrentUser();
+    // getCurrentUser();
   }
 
   // void getCurrentUser() async {
@@ -85,6 +86,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 answered = false;
               });
             },
+
             // ignore: prefer_const_constructors, unnecessary_new
             physics: new NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
@@ -92,6 +94,9 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(
+                    height: 25.0,
+                  ),
                   SizedBox(
                     width: double.infinity,
                     child: Text(
@@ -183,14 +188,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             MaterialPageRoute(
                               builder: (context) => ResultScreen(score),
                             ));
-                            
+
                         firestore.collection('quizscore').add({
                           'sender': username,
                           'quizscore': score,
                           'timestamp': DateTime.now().millisecondsSinceEpoch,
                           'senderemail': email,
                         });
-                        
                       } else {
                         _controller!.nextPage(
                             duration: const Duration(milliseconds: 250),

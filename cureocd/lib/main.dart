@@ -9,6 +9,8 @@ import 'pages/login.dart';
 import 'pages/signup.dart';
 import 'pages/aboutUs.dart';
 import 'splash.dart';
+import 'tools.dart';
+import 'therapist.dart';
 
 const kBackgroundColor = Color.fromARGB(255, 255, 255, 255);
 //const kPrimaryColor = Color.fromARGB(255, 253, 253, 253);
@@ -40,6 +42,9 @@ class MyApp extends StatelessWidget {
         '/aboutUs': (context) => AboutUs(),
         '/homeMain': (context) => HomeMain(),
         '/contact': (context) => Contact(),
+        '/Tools': (context) => Tools(),
+        '/Therapist': (context) => Therapists(),
+
         '/chatbot': (BuildContext context) => const chatbotScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
         // '/aboutUs': (context) => AboutUsScreen(),

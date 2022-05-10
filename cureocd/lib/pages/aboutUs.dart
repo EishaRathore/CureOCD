@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 // import 'dart:html';
+import 'package:cureocd/therapist.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:kf_drawer/kf_drawer.dart';
@@ -15,17 +16,6 @@ class AboutUs extends KFDrawerContent {
 }
 
 class _AboutUsState extends State<AboutUs> {
-  // String _selectedValue;
-  // Map<String, bool> items = {
-  //   'Sale': false,
-  // };
-
-  // Map<String, bool> items2 = {
-  //   'Consultant Notes only': false,
-  //   'Overdue only': false,
-  //   'Data Range': false,
-  // };
-
   @override
   Widget build(BuildContext context) {
     //   var aboutus_features;
@@ -133,7 +123,7 @@ class _AboutUsState extends State<AboutUs> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                    'Multiple environment Configurations specially designed for therapists',
+                    'Multiple environments to make the application of virtual reality to professional practice easier for everyone.',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color.fromARGB(255, 107, 102, 102),
@@ -143,29 +133,6 @@ class _AboutUsState extends State<AboutUs> {
               const SizedBox(height: 15),
 
               const SizedBox(height: 15),
-              //const Icon(Icons.bloodtype, size: 40),
-              // SizedBox(height: 10),
-              // Align(
-              //   alignment: Alignment.center,
-              //   child: Text('Galvanic skin response',
-              //       style: TextStyle(
-              //           fontSize: 17,
-              //           fontWeight: FontWeight.bold,
-              //           color: Color.fromARGB(255, 0, 163, 173))),
-              // ),
-
-              // SizedBox(height: 15),
-              // Align(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //       'An electrodermal response sensor that measure a patient sweat response',
-              //       style: TextStyle(
-              //         fontSize: 15,
-              //         color: const Color.fromARGB(255, 107, 102, 102),
-              //         // fontWeight: FontWeight.bold,
-              //       )),
-              // ),
-              // SizedBox(height: 15),
 
               const SizedBox(height: 15),
               // const Icon(Icons.help, size: 30),
@@ -190,7 +157,7 @@ class _AboutUsState extends State<AboutUs> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                    'We got the best info and made it easier to learn how to best work with your patients from the start of symptoms onset to the end of successful treatment using VR',
+                    'We got the best info and made it easier to learn how to best work with patients from the start of symptoms onset to the end of successful treatment using VR',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color.fromARGB(255, 107, 102, 102),
@@ -200,17 +167,6 @@ class _AboutUsState extends State<AboutUs> {
               ),
               const SizedBox(height: 15),
 
-              // Align(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //       'We believe in using virtual reality to help our clients improve their practice.',
-              //       style: TextStyle(
-              //         fontSize: 15,
-              //         fontWeight: FontWeight.bold,
-              //       )),
-              // ),
-              // SizedBox(height: 15),
-              // Image.asset('assets/images/vr_image1.jpg'),
               const SizedBox(height: 15),
               //Image.asset('assets/images/aboutus_image1.PNG'),
 
@@ -258,7 +214,7 @@ class _AboutUsState extends State<AboutUs> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                    'Our VR assistant therapist is trained to appropriately treat OCD for all stages from low to high level because different stages have different treatment needs.',
+                    'Our VR assistant therapists are trained to appropriately treat OCD for all stages from low to high level because different stages have different treatment needs.',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color.fromARGB(255, 107, 102, 102),
@@ -355,8 +311,26 @@ class _AboutUsState extends State<AboutUs> {
                       // fontWeight: FontWeight.bold,
                     )),
               ),
-
               const SizedBox(height: 15),
+              Align(
+                alignment: Alignment.topLeft,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                          builder: (context) => Therapists(),
+                        ));
+                  },
+                  child: const Text('Click here for further details >',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 0, 163, 173))),
+                ),
+              ),
+              const SizedBox(height: 25),
+
               Image.asset('assets/images/woman_therapist1.jpg'),
 
               const SizedBox(height: 10),

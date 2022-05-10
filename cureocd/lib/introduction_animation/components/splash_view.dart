@@ -31,33 +31,38 @@ class _SplashViewState extends State<SplashView> {
             const SizedBox(
               height: 100,
             ),
+            const SizedBox(
+              height: 60,
+            ),
             Image.asset(
               'assets/cureocd_logo.png',
               fit: BoxFit.contain,
               height: 60,
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 30.0, bottom: 8.0),
-              child: Text(
-                "CureOCD",
-                style: TextStyle(
-                  fontSize: 35.0,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 0, 163, 173),
-                ),
-              ),
-            ),
+            // const Padding(
+            //   padding: EdgeInsets.only(top: 30.0, bottom: 8.0),
+            //   child: Text(
+            //     "CureOCD",
+            //     style: TextStyle(
+            //       fontSize: 35.0,
+            //       fontWeight: FontWeight.bold,
+            //       color: Color.fromARGB(255, 0, 163, 173),
+            //     ),
+            //   ),
+            // ),
             const SizedBox(
-              height: 12,
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.only(left: 64, right: 64),
               child: Text(
-                " Cure for Obssesive Compulsive Disorder",
+                "A flexible and easy to use Virtual Reality Platform",
+
+                // child: Text( "OCD makes life difficult but you can still enjoy a happy life with CureOCD",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 17.0,
-                  color: Color.fromARGB(255, 107, 102, 102),
+                  fontSize: 16.0,
+                  color: Color.fromARGB(255, 0, 163, 173),
                 ),
               ),
             ),
@@ -67,7 +72,7 @@ class _SplashViewState extends State<SplashView> {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
-                'assets/images/vrimage_one.jpg',
+                'assets/images/first_image_bg.jpg',
                 fit: BoxFit.cover,
               ),
             ),

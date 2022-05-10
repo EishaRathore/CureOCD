@@ -95,7 +95,7 @@ class ChatbootView extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                   child: Text(
-                    "Let's begin with few questions to identify your level of OCD",
+                    "Take our short test to find out if you are living with Obsessive compulsive disorder",
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Color.fromARGB(255, 107, 102, 102),
@@ -114,7 +114,7 @@ class ChatbootView extends StatelessWidget {
                   constraints:
                       const BoxConstraints(maxWidth: 350, maxHeight: 250),
                   child: Image.asset(
-                    'assets/chatbot.png',
+                    'assets/chatbot_youcan.gif',
                     fit: BoxFit.contain,
                   ),
                 ),

@@ -16,11 +16,12 @@ List<QuestionModel> questions = [
     "INTERFERENCE DUE TO OBSESSIVE THOUGHTS",
     "How much do your obsessive thoughts interfere with your work, school, social, or other important role functioning?",
     {
-      'Slight interference with social or other activities, but overall performance not\nimpaired':
+      'Slight interference with social or other activities,\n but overall performance not impaired':
           1,
-      'Definite interference with social or occupational performance,but still manageable':
+      'Definite interference with social or occupational\nperformance,but still manageable':
           2,
-      'Causes substantial impairment in social or occupational performance': 3,
+      'Causes substantial impairment in social or\n occupational performance':
+          3,
       'Incapacitating': 4,
       'None ': 0,
     },

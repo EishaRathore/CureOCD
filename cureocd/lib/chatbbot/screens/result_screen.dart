@@ -94,6 +94,10 @@ class _ResultScreenState extends State<ResultScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Image.asset(
+            'assets/celebration.gif',
+            fit: BoxFit.contain,
+          ),
           const SizedBox(
             width: double.infinity,
             child: Text(
@@ -108,9 +112,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20.0,
-          ),
+          // const SizedBox(
+          //   height: 10.0,
+          // ),
           Text(
             "${widget.score} / 40",
             style: const TextStyle(
@@ -120,7 +124,7 @@ class _ResultScreenState extends State<ResultScreen> {
             ),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           Text((() {
             if (widget.score >= 0 && widget.score <= 13) {
@@ -138,7 +142,7 @@ class _ResultScreenState extends State<ResultScreen> {
             }
           })()),
           const SizedBox(
-            height: 100.0,
+            height: 20.0,
           ),
           FlatButton(
             onPressed: () {
@@ -152,7 +156,7 @@ class _ResultScreenState extends State<ResultScreen> {
             color: AppColor.secondaryColor,
             padding: const EdgeInsets.all(18.0),
             child: const Text(
-              "Reapeat the Y-BOCS test",
+              "Repeat the Y-BOCS test",
               style: const TextStyle(color: Colors.white),
             ),
             highlightColor: const Color.fromARGB(255, 0, 163, 173),

@@ -18,10 +18,10 @@ class Body extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: size.height * 0.02),
             const Text(
-              "Lets begin with a few questions to identify your level of OCD.",
+              "Take our short test to find out if you are living with Obsessive compulsive disorder.",
               // ignore: unnecessary_const
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 15,
                 // color: Color.fromARGB(255, 0, 163, 173),
                 color: Color.fromARGB(255, 107, 102, 102),
               ),

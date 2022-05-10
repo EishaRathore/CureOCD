@@ -7,7 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cureocd/Contact.dart';
 import 'package:kf_drawer/kf_drawer.dart';
-
+import 'package:cureocd/tools.dart';
+import 'package:cureocd/therapist.dart';
 import 'chatbbot/screens/result_screen.dart';
 
 final _firestore = Firestore.instance;
@@ -64,7 +65,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
-            'View OCD result',
+            'Product - Precuations',
             style: TextStyle(
               color: Colors.white,
               fontSize: 17,
@@ -72,6 +73,9 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             ),
           ),
           icon: const Icon(Icons.trending_up, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/Tools');
+          },
           // page: ResultScreen(),
         ),
         KFDrawerItem.initWithPage(
@@ -116,16 +120,25 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ConvexAppBar(
+        backgroundColor: const Color.fromARGB(255, 0, 163, 173),
         items: [
-          TabItem(icon: Icons.home, title: 'Home'),
-          TabItem(icon: Icons.favorite, title: 'Favorite'),
-          TabItem(icon: Icons.shopping_cart, title: 'Cart'),
-          TabItem(icon: Icons.person, title: 'Profile'),
+          TabItem(
+            icon: Icons.home,
+            title: 'Home',
+          ),
+          TabItem(
+            icon: Icons.question_answer_rounded,
+            title: 'OCD test',
+          ),
+          TabItem(icon: Icons.chat, title: 'Community'),
+          TabItem(icon: Icons.person, title: 'About us'),
         ],
         initialActiveIndex: selectedpage,
         onTap: (int index) {
           setState(() {
             selectedpage = index;
+
+            Navigator.pushReplacementNamed(context, '/Therapist');
           });
         },
       ),
