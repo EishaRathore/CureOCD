@@ -10,6 +10,7 @@ import 'package:kf_drawer/kf_drawer.dart';
 import 'package:cureocd/tools.dart';
 import 'package:cureocd/therapist.dart';
 import 'chatbbot/screens/result_screen.dart';
+import 'package:cureocd/aboutocd.dart';
 
 final _firestore = Firestore.instance;
 String username = 'User';
@@ -80,6 +81,35 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         ),
         KFDrawerItem.initWithPage(
           text: const Text(
+            'About OCD and ERP',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
+          ),
+          icon: const Icon(Icons.account_box, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/AboutOCD');
+          },
+        ),
+        // KFDrawerItem.initWithPage(
+        //   text: const Text(
+        //     'About OCD and ERP',
+        //     style: TextStyle(
+        //       color: Colors.white,
+        //       fontSize: 17,
+        //       fontFamily: 'Poppins',
+        //     ),
+        //   ),
+        //   icon: const Icon(Icons.question_mark, color: Colors.white),
+        //   onPressed: () {
+        //     Navigator.pushReplacementNamed(context, '/Aboutocd');
+        //   },
+        //   // page: ClassBuilder.fromString('Notifications'),
+        // ),
+        KFDrawerItem.initWithPage(
+          text: const Text(
             'Contact us',
             style: TextStyle(
               color: Colors.white,
@@ -138,7 +168,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           setState(() {
             selectedpage = index;
 
-            Navigator.pushReplacementNamed(context, '/Therapist');
+            // Navigator.pushReplacementNamed(context, '/Therapist');
           });
         },
       ),

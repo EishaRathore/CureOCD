@@ -5,11 +5,12 @@ import '../widgets/custom_button.dart';
 import 'chatbbot/chatbot.dart';
 import 'chatbbot/common/theme_helper.dart';
 import 'chatbbot/ui/shared/color.dart';
-import 'chatbbot/widgets/disco_button.dart';
+//import 'chatbbot/widgets/disco_button.dart';
 import 'pages/chatterScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:edge_alert/edge_alert.dart';
+import '../../widgets/CustomButton.dart';
 
 // final _firestore = Firestore.instance;
 // String username = 'User';
@@ -152,34 +153,81 @@ class _ShowresultState extends State<Showresult> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          DiscoButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/homeMain');
-            },
-            child: const Text(
-              "Close",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 0, 163, 173), fontSize: 17),
+          FlatButton(
+            splashColor: Color.fromARGB(255, 0, 163, 173),
+            textColor: Colors.white,
+            child: Text(
+              'Back',
             ),
-            width: 150,
-            height: 50,
-          ),
-          DiscoButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const chatbotScreen(),
-                  ));
+              setState(() {
+                Navigator.pushNamed(context, '/homeMain');
+                //   txt = 'FlatButton tapped';
+              });
             },
-            child: const Text(
-              "Repeat Y-BOCS test",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-            width: 160,
-            height: 60,
-            isActive: true,
           ),
+          // FlatButton(
+          //   minWidth: 2,
+          //   splashColor: Color.fromARGB(255, 0, 163, 173),
+          //   textColor: Colors.white,
+          //   child: Text(
+          //     'Repeat YBOCS-test',
+          //   ),
+          //   onPressed: () {
+          //     setState(() {
+          //       Navigator.pushNamed(context, '/chatbotScreen');
+          //       //   txt = 'FlatButton tapped';
+          //     });
+          //   },
+          // ),
+
+          // FlatButton(
+          //   text: 'Close',
+          //   accentColor: Colors.white,
+          //   mainColor: Color.fromARGB(255, 0, 163, 173),
+          //   onpress: () {
+          //     Navigator.pushNamed(context, '/homeMain');
+          //   },
+          // ),
+
+          // CustomButton(
+          //   text: 'Repeat YBOCS-test',
+          //   accentColor: Colors.white,
+          //   mainColor: Color.fromARGB(255, 0, 163, 173),
+          //   onpress: () {
+          //     Navigator.pushNamed(context, '/chatbotScreen');
+          //   },
+          // ),
+
+          //end
+          // DiscoButton(
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/homeMain');
+          //   },
+          //   child: const Text(
+          //     "Close",
+          //     style: TextStyle(
+          //         color: Color.fromARGB(255, 0, 163, 173), fontSize: 17),
+          //   ),
+          //   width: 150,
+          //   height: 50,
+          // ),
+          // DiscoButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => const chatbotScreen(),
+          //         ));
+          //   },
+          //   child: const Text(
+          //     "Repeat Y-BOCS test",
+          //     style: TextStyle(color: Colors.white, fontSize: 16),
+          //   ),
+          //   width: 160,
+          //   height: 60,
+          //   isActive: true,
+          // ),
         ],
       ),
     );
@@ -286,7 +334,7 @@ class _ShowresultState extends State<Showresult> {
             //  color : Color.fromARGB(255, 0, 163, 173)
             padding: const EdgeInsets.all(18.0),
             child: const Text(
-              "Repeat the Y-BOCS test",
+              "Repeat Y-BOCS test",
               style: const TextStyle(color: Colors.white),
             ),
             highlightColor: const Color.fromARGB(255, 0, 163, 173),

@@ -1,7 +1,7 @@
 import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:cureocd/chatbbot/common/theme_helper.dart';
 import 'package:cureocd/chatbbot/ui/shared/color.dart';
-import 'package:cureocd/chatbbot/widgets/disco_button.dart';
+//import 'package:cureocd/chatbbot/widgets/disco_button.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -10,6 +10,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 // ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/CustomButton.dart';
 
 // String username = 'User';
 // String email = 'user@example.com';
@@ -52,34 +54,52 @@ class _ResultScreenState extends State<ResultScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          DiscoButton(
-            onPressed: () {
+          CustomButton(
+            text: 'Close',
+            accentColor: Colors.white,
+            mainColor: Color.fromARGB(255, 0, 163, 173),
+            onpress: () {
               Navigator.pushNamed(context, '/homeMain');
             },
-            child: const Text(
-              "Close",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 0, 163, 173), fontSize: 17),
-            ),
-            width: 150,
-            height: 50,
           ),
-          DiscoButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const chatbotScreen(),
-                  ));
+
+          CustomButton(
+            text: 'Repeat YBOCS-test',
+            accentColor: Colors.white,
+            mainColor: Color.fromARGB(255, 0, 163, 173),
+            onpress: () {
+              Navigator.pushNamed(context, '/chatbotScreen');
             },
-            child: const Text(
-              "Repeat Y-BOCS test",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-            width: 160,
-            height: 60,
-            isActive: true,
           ),
+
+          // DiscoButton(
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/homeMain');
+          //   },
+          //   child: const Text(
+          //     "Close",
+          //     style: TextStyle(
+          //         color: Color.fromARGB(255, 0, 163, 173), fontSize: 17),
+          //   ),
+          //   width: 150,
+          //   height: 50,
+          // ),
+          // DiscoButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => const chatbotScreen(),
+          //         ));
+          //   },
+          //   child: const Text(
+          //     "Repeat Y-BOCS test",
+          //     style: TextStyle(color: Colors.white, fontSize: 16),
+          //   ),
+          //   width: 160,
+          //   height: 60,
+          //   isActive: true,
+          // ),
         ],
       ),
     );
@@ -97,21 +117,24 @@ class _ResultScreenState extends State<ResultScreen> {
           Image.asset(
             'assets/celebration.gif',
             fit: BoxFit.contain,
+            height: 180.0,
           ),
-          const SizedBox(
-            width: double.infinity,
-            child: Text(
-              "Your Score:",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                //   color: Colors.white,
-                color: Color.fromARGB(255, 0, 163, 173),
 
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              ),
+          // const SizedBox(
+          //   width: double.infinity,
+          //child:
+          Text(
+            "Your Score:",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              //   color: Colors.white,
+              color: Color.fromARGB(255, 0, 163, 173),
+
+              fontSize: 40.0,
+              fontWeight: FontWeight.bold,
             ),
           ),
+          // ),
           // const SizedBox(
           //   height: 10.0,
           // ),
@@ -124,23 +147,27 @@ class _ResultScreenState extends State<ResultScreen> {
             ),
           ),
           const SizedBox(
-            height: 10.0,
+            height: 2.0,
           ),
           Text((() {
             if (widget.score >= 0 && widget.score <= 13) {
-              _resultPrnt = "mild symptoms";
+              _resultPrnt = "Symptoms: Mild";
               return _resultPrnt;
             } else if (widget.score >= 14 && widget.score <= 25) {
-              _resultPrnt = "moderate symptoms";
+              _resultPrnt = "Symptoms: Moderate";
               return _resultPrnt;
             } else if (widget.score >= 26 && widget.score <= 34) {
-              _resultPrnt = "moderate-severe symptoms";
+              _resultPrnt = "Symptoms: Moderate-severe";
               return _resultPrnt;
             } else {
-              _resultPrnt = "severe symptoms";
+              _resultPrnt = "Symptoms: Severe";
               return _resultPrnt;
             }
-          })()),
+          })(),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 163, 173))),
           const SizedBox(
             height: 20.0,
           ),
@@ -156,7 +183,7 @@ class _ResultScreenState extends State<ResultScreen> {
             color: AppColor.secondaryColor,
             padding: const EdgeInsets.all(18.0),
             child: const Text(
-              "Repeat the Y-BOCS test",
+              "Repeat Y-BOCS test",
               style: const TextStyle(color: Colors.white),
             ),
             highlightColor: const Color.fromARGB(255, 0, 163, 173),

@@ -11,6 +11,7 @@ import 'pages/aboutUs.dart';
 import 'splash.dart';
 import 'tools.dart';
 import 'therapist.dart';
+import 'aboutocd.dart';
 
 const kBackgroundColor = Color.fromARGB(255, 255, 255, 255);
 //const kPrimaryColor = Color.fromARGB(255, 253, 253, 253);
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/contact': (context) => Contact(),
         '/Tools': (context) => Tools(),
         '/Therapist': (context) => Therapists(),
-
+        '/AboutOCD': (context) => Aboutocd(),
         '/chatbot': (BuildContext context) => const chatbotScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
         // '/aboutUs': (context) => AboutUsScreen(),
