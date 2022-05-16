@@ -14,6 +14,11 @@ import 'chatbbot/screens/result_screen.dart';
 import 'package:cureocd/aboutocd.dart';
 import 'package:cureocd/chatbbot/chatbot.dart';
 
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+
+
+
 final _firestore = Firestore.instance;
 String username = 'User';
 String email = 'user@example.com';
@@ -31,7 +36,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
   late KFDrawerController _drawerController;
   int selectedpage = 0;
-  final _pageNo = [HomeMain(), chatbotScreen(),Contact(), ChatterScreen()];
+  final _pageNo = [HomeMain(), chatbotScreen(), Contact(), ChatterScreen()];
 
   @override
   void initState() {
@@ -66,6 +71,24 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           },
           // page: ClassBuilder.fromString('Notifications'),
         ),
+
+        KFDrawerItem.initWithPage(
+          text: const Text(
+            'Join live therapy session',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
+          ),
+          icon: const Icon(Icons.trending_up, color: Colors.white),
+          onPressed: () {
+            // JoinMeetingPage()
+            Navigator.pushReplacementNamed(context, '/Tools');
+          },
+          // page: ResultScreen(),
+        ),
+
         KFDrawerItem.initWithPage(
           text: const Text(
             'Product - Precuations',
