@@ -63,14 +63,14 @@ class _ResultScreenState extends State<ResultScreen> {
             },
           ),
 
-          CustomButton(
-            text: 'Repeat YBOCS-test',
-            accentColor: Colors.white,
-            mainColor: Color.fromARGB(255, 0, 163, 173),
-            onpress: () {
-              Navigator.pushNamed(context, '/chatbotScreen');
-            },
-          ),
+          // CustomButton(
+          //   text: 'Repeat YBOCS-test',
+          //   accentColor: Colors.white,
+          //   mainColor: Color.fromARGB(255, 0, 163, 173),
+          //   onpress: () {
+          //     Navigator.pushNamed(context, '/chatbotScreen');
+          //   },
+          // ),
 
           // DiscoButton(
           //   onPressed: () {
@@ -183,7 +183,7 @@ class _ResultScreenState extends State<ResultScreen> {
             color: AppColor.secondaryColor,
             padding: const EdgeInsets.all(18.0),
             child: const Text(
-              "Repeat Y-BOCS test",
+              "Start VR therapy",
               style: const TextStyle(color: Colors.white),
             ),
             highlightColor: const Color.fromARGB(255, 0, 163, 173),

@@ -51,21 +51,21 @@ class _ContactState extends State<Contact> {
               ),
             ),
           ),
-          actions: [
-            IconButton(
-              // alignment: Alignment.topRight,
-              icon: const Icon(
-                Icons.chat,
-                color: Color.fromARGB(255, 255, 254, 254),
-              ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ChatterScreen(),
-                  )),
-              //   padding:  new EdgeInsets.all(0.0),
-            ),
-          ],
+          // actions: [
+          //   IconButton(
+          //     // alignment: Alignment.topRight,
+          //     icon: const Icon(
+          //       Icons.chat,
+          //       color: Color.fromARGB(255, 255, 254, 254),
+          //     ),
+          //     onPressed: () => Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => ChatterScreen(),
+          //         )),
+          //     //   padding:  new EdgeInsets.all(0.0),
+          //   ),
+          // ],
           title: const Text(
             'CureOCD',
             style: TextStyle(
@@ -150,9 +150,9 @@ class _ContactState extends State<Contact> {
                 alignment: Alignment.center,
                 child: Row(
                   children: [
-                    Icon(Icons.copyright_outlined,
+                    const Icon(Icons.copyright_outlined,
                         size: 10.0,
-                        color: const Color.fromARGB(255, 0, 163, 173)),
+                        color: Color.fromARGB(255, 0, 163, 173)),
                     const Text('2022 CureOCD Inc.',
                         style: TextStyle(
                             fontSize: 10,

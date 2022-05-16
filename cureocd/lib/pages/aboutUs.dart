@@ -233,11 +233,11 @@ class _AboutUsState extends State<AboutUs> {
                           builder: (context) => ChatterScreen(),
                         ));
                   },
-                  child: const Text('Learn more >',
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 0, 163, 173))),
+                  // child: const Text('Learn more >',
+                  //     style: TextStyle(
+                  //         fontSize: 15,
+                  //         fontWeight: FontWeight.bold,
+                  //         color: Color.fromARGB(255, 0, 163, 173))),
                 ),
               ),
               const SizedBox(height: 25),
@@ -258,9 +258,9 @@ class _AboutUsState extends State<AboutUs> {
               ),
               const SizedBox(height: 15),
 
-              Align(
+              const Align(
                 alignment: Alignment.center,
-                child: const Text(
+                child: Text(
                     'Participate in discussions and attend support groups in community to meet and learn from others on a similar journey with OCD',
                     style: TextStyle(
                       fontSize: 15,
@@ -279,7 +279,7 @@ class _AboutUsState extends State<AboutUs> {
                   onpress: () {
                     Navigator.push(
                         context,
-                        new MaterialPageRoute(
+                        MaterialPageRoute(
                           builder: (context) => ChatterScreen(),
                         ));
                   },
@@ -318,7 +318,7 @@ class _AboutUsState extends State<AboutUs> {
                   onTap: () {
                     Navigator.push(
                         context,
-                        new MaterialPageRoute(
+                        MaterialPageRoute(
                           builder: (context) => Therapists(),
                         ));
                   },
@@ -407,9 +407,9 @@ class _AboutUsState extends State<AboutUs> {
                 alignment: Alignment.center,
                 child: Row(
                   children: [
-                    Icon(Icons.copyright_outlined,
+                    const Icon(Icons.copyright_outlined,
                         size: 10.0,
-                        color: const Color.fromARGB(255, 0, 163, 173)),
+                        color: Color.fromARGB(255, 0, 163, 173)),
                     const Text('2022 CureOCD Inc.',
                         style: TextStyle(
                             fontSize: 10,

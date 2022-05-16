@@ -177,15 +177,15 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
       bottomNavigationBar: ConvexAppBar(
         backgroundColor: const Color.fromARGB(255, 0, 163, 173),
         items: [
-          TabItem(
+          const TabItem(
             icon: Icons.home,
             title: 'Home',
           ),
-          TabItem(
+          const TabItem(
             icon: Icons.question_answer_rounded,
             title: 'OCD test',
           ),
-          TabItem(icon: Icons.chat, title: 'Community'),
+          const TabItem(icon: Icons.chat, title: 'Community'),
           TabItem(icon: Icons.person, title: 'About us'),
         ],
         initialActiveIndex: selectedpage,
