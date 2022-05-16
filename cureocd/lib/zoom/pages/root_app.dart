@@ -18,80 +18,101 @@ class _RootAppState extends State<RootApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: black,
-     // appBar: getBody(),
+      appBar: getAppBar(),
       body: getBody(),
       bottomNavigationBar: getFooter(),
     );
   }
 
-  Widget getAppBar() {
+  getAppBar() {
     return AppBar(
-      backgroundColor: headerAndFooter,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              const Icon(
-                Octicons.mute,
-                color: grey,
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              const Icon(
-                AntDesign.camera,
-                color: grey,
-              )
-            ],
-          ),
-          Row(
-            children: [
-              const Icon(
-                Icons.security_outlined,
-                color: green,
-                size: 15,
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              const Text(
-                "Zoom",
-                style: TextStyle(
-                    fontSize: 17, color: grey, fontWeight: FontWeight.bold),
-              ),
-              const Icon(
-                Icons.keyboard_arrow_down,
-                color: grey,
-                size: 20,
-              ),
-            ],
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (_) => const HomeMain()),
-                  (route) => false);
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                  color: red, borderRadius: BorderRadius.circular(8)),
-              child: const Padding(
-                padding: EdgeInsets.only(
-                    left: 12, right: 12, top: 5, bottom: 5),
-                child: const Text("Leave",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: grey,
-                        fontWeight: FontWeight.w600)),
-              ),
+      backgroundColor: black,
+      elevation: 0,
+      leading: GestureDetector(
+        onTap: () => Navigator.pushNamed(context, '/JoinMeetingPage'),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 20, left: 10),
+          child: Text(
+            "Close",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
             ),
-          )
-        ],
+          ),
+        ),
       ),
+      // title: const Text("Join a Meeting"),
     );
   }
+
+  // Widget getAppBar() {
+  //   return AppBar(
+  //     backgroundColor: headerAndFooter,
+  //     title: Row(
+  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //       children: [
+  //         Row(
+  //           children: const [
+  //             Icon(
+  //               Octicons.mute,
+  //               color: grey,
+  //             ),
+  //             SizedBox(
+  //               width: 15,
+  //             ),
+  //             Icon(
+  //               AntDesign.camera,
+  //               color: grey,
+  //             )
+  //           ],
+  //         ),
+  //         Row(
+  //           children: const [
+  //             Icon(
+  //               Icons.security_outlined,
+  //               color: green,
+  //               size: 15,
+  //             ),
+  //             SizedBox(
+  //               width: 5,
+  //             ),
+  //             Text(
+  //               "Zoom",
+  //               style: TextStyle(
+  //                   fontSize: 17, color: grey, fontWeight: FontWeight.bold),
+  //             ),
+  //             Icon(
+  //               Icons.keyboard_arrow_down,
+  //               color: grey,
+  //               size: 20,
+  //             ),
+  //           ],
+  //         ),
+  //         GestureDetector(
+  //           onTap: () {
+  //             Navigator.pushAndRemoveUntil(
+  //                 context,
+  //                 MaterialPageRoute(builder: (_) => const HomeMain()),
+  //                 (route) => false);
+  //           },
+  //           child: Container(
+  //             decoration: BoxDecoration(
+  //                 color: red, borderRadius: BorderRadius.circular(8)),
+  //             child: const Padding(
+  //               padding:
+  //                   EdgeInsets.only(left: 12, right: 12, top: 5, bottom: 5),
+  //               child: Text("Leave",
+  //                   style: TextStyle(
+  //                       fontSize: 15,
+  //                       color: grey,
+  //                       fontWeight: FontWeight.w600)),
+  //             ),
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Widget getBody() {
     var size = MediaQuery.of(context).size;
@@ -100,6 +121,7 @@ class _RootAppState extends State<RootApp> {
       height: size.height,
       child: Stack(
         children: [
+          // Image.asset('assets/images/woman_therapist1.jpg'),
           Positioned(
             top: 15,
             right: 15,
@@ -110,7 +132,7 @@ class _RootAppState extends State<RootApp> {
                   borderRadius: BorderRadius.circular(12),
                   image: const DecorationImage(
                       image: NetworkImage(
-                          "https://images.unsplash.com/photo-1543486958-d783bfbf7f8e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c2VsZmllfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"),
+                          "https://www.incimages.com/uploaded_files/image/1920x1080/getty_81860234_970647970450057_56612.jpg"),
                       fit: BoxFit.cover)),
             ),
           ),
@@ -121,7 +143,7 @@ class _RootAppState extends State<RootApp> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          "https://yt3.ggpht.com/yti/ANoDKi7t8UDpIBhR4vFhxH8woiUdojAZ-8kqhQKj3kki7g=s108-c-k-c0x00ffffff-no-rj"),
+                          "https://cdn.mind-diagnostics.org/uploads/mind-diagnostics/images/image/url/difference-between-therapist-2-resize.jpg"),
                       fit: BoxFit.cover)),
             ),
           )

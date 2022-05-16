@@ -17,8 +17,6 @@ import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-
-
 final _firestore = Firestore.instance;
 String username = 'User';
 String email = 'user@example.com';
@@ -74,17 +72,17 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
 
         KFDrawerItem.initWithPage(
           text: const Text(
-            'Join live therapy session',
+            'Live session with\ntherapist',
             style: TextStyle(
               color: Colors.white,
               fontSize: 17,
               fontFamily: 'Poppins',
             ),
           ),
-          icon: const Icon(Icons.trending_up, color: Colors.white),
+          icon: const Icon(Icons.model_training, color: Colors.white),
           onPressed: () {
             // JoinMeetingPage()
-            Navigator.pushReplacementNamed(context, '/Tools');
+            Navigator.pushReplacementNamed(context, '/JoinMeetingPage');
           },
           // page: ResultScreen(),
         ),
@@ -142,7 +140,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
               fontFamily: 'Poppins',
             ),
           ),
-          icon: const Icon(Icons.account_box, color: Colors.white),
+          icon: const Icon(Icons.email, color: Colors.white),
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/contact');
           },

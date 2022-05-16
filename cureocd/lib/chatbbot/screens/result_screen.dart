@@ -40,6 +40,7 @@ class _ResultScreenState extends State<ResultScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            getAppBar(),
             quizResultInfo(),
             bottomButtons(),
           ],
@@ -48,16 +49,37 @@ class _ResultScreenState extends State<ResultScreen> {
     );
   }
 
+  getAppBar() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 0,
+      leading: GestureDetector(
+        onTap: () => Navigator.pushNamed(context, '/homeMain'),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 20, left: 10),
+          child: Text(
+            "Close",
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: Color.fromARGB(255, 0, 163, 173)),
+          ),
+        ),
+      ),
+      // title: const Text("Join a Meeting"),
+    );
+  }
+
   Widget bottomButtons() {
     return Container(
-      margin: const EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 180),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomButton(
-            text: 'Close',
+            text: 'Start VR therapy',
             accentColor: Colors.white,
-            mainColor: Color.fromARGB(255, 0, 163, 173),
+            mainColor: const Color.fromARGB(255, 0, 163, 173),
             onpress: () {
               Navigator.pushNamed(context, '/homeMain');
             },
@@ -107,7 +129,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Widget quizResultInfo() {
     return Container(
-      margin: const EdgeInsets.only(top: 50),
+      margin: const EdgeInsets.only(top: 10),
       //backgroundColor: AppColor.pripmaryColor,
       // body:
       child: Column(
@@ -117,13 +139,9 @@ class _ResultScreenState extends State<ResultScreen> {
           Image.asset(
             'assets/celebration.gif',
             fit: BoxFit.contain,
-            height: 180.0,
+            height: 160.0,
           ),
-
-          // const SizedBox(
-          //   width: double.infinity,
-          //child:
-          Text(
+          const Text(
             "Your Score:",
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -134,10 +152,6 @@ class _ResultScreenState extends State<ResultScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          // ),
-          // const SizedBox(
-          //   height: 10.0,
-          // ),
           Text(
             "${widget.score} / 40",
             style: const TextStyle(
@@ -164,31 +178,29 @@ class _ResultScreenState extends State<ResultScreen> {
               return _resultPrnt;
             }
           })(),
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 0, 163, 173))),
-          const SizedBox(
-            height: 20.0,
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const chatbotScreen(),
-                  ));
-            },
-            shape: const StadiumBorder(),
-            color: AppColor.secondaryColor,
-            padding: const EdgeInsets.all(18.0),
-            child: const Text(
-              "Start VR therapy",
-              style: const TextStyle(color: Colors.white),
-            ),
-            highlightColor: const Color.fromARGB(255, 0, 163, 173),
-            hoverColor: const Color.fromARGB(186, 0, 164, 173),
-          ),
+
+          // FlatButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => const chatbotScreen(),
+          //         ));
+          //   },
+          //   shape: const StadiumBorder(),
+          //   color: AppColor.secondaryColor,
+          //   padding: const EdgeInsets.all(18.0),
+          //   child: const Text(
+          //     "Start VR therapy",
+          //     style: TextStyle(color: Colors.white),
+          //   ),
+          //   highlightColor: const Color.fromARGB(255, 0, 163, 173),
+          //   hoverColor: const Color.fromARGB(186, 0, 164, 173),
+          // ),
         ],
       ),
     );

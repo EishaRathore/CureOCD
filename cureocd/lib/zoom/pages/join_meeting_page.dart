@@ -1,13 +1,15 @@
 import 'package:cureocd/zoom/pages/root_app.dart';
 import 'package:cureocd/zoom/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/basic.dart';
+import 'package:cureocd/zoom/pages/join_meeting_page.dart';
 
-class JoinMeetingPage extends StatefulWidget {
+class Joinmeetingpage extends StatefulWidget {
   @override
-  _JoinMeetingPageState createState() => _JoinMeetingPageState();
+  _JoinmeetingpageState createState() => _JoinmeetingpageState();
 }
 
-class _JoinMeetingPageState extends State<JoinMeetingPage> {
+class _JoinmeetingpageState extends State<Joinmeetingpage> {
   bool isSwitchedAudio = true;
   bool isSwitchedVideo = true;
   @override
@@ -15,28 +17,61 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: headerAndFooter,
-     // appBar: getAppBar(),
+      appBar: getAppBar(),
       body: getBody(),
     );
   }
 
-  Widget getAppBar() {
+  // getAppBar() {
+  //   AppBar(
+  //     backgroundColor: const Color.fromARGB(255, 0, 163, 173),
+  //     automaticallyImplyLeading: false,
+  //     elevation: 1.0,
+  //     leading: ClipRRect(
+  //       borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+  //       child: Material(
+  //         shadowColor: Colors.transparent,
+  //         color: Colors.transparent,
+  //         child: Row(
+  //           children: [
+  //             IconButton(
+  //               icon: const Icon(Icons.arrow_back_ios,
+  //                   color: Color.fromARGB(255, 255, 255, 255)),
+  //               onPressed: () => Navigator.pushNamed(context, '/homeMain'),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //     title: const Text(
+  //       'CureOCD',
+  //       style: TextStyle(
+  //         fontSize: 20.0,
+  //         fontWeight: FontWeight.bold,
+  //       ),
+  //       textAlign: TextAlign.center,
+  //     ),
+  //   );
+  // }
+
+  getAppBar() {
     return AppBar(
       backgroundColor: headerAndFooter,
       elevation: 0,
       leading: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20, left: 10),
+        onTap: () => Navigator.pushNamed(context, '/homeMain'),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 20, left: 10),
           child: Text(
             "Close",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
       ),
-      title: Text("Join a Meeting"),
+      // title: const Text("Join a Meeting"),
     );
   }
 
@@ -44,8 +79,8 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
     var size = MediaQuery.of(context).size;
     return Column(
       children: [
-        SizedBox(
-          height: 10,
+        const SizedBox(
+          height: 40,
         ),
         Container(
           height: 50,
@@ -64,27 +99,28 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
                     cursorColor: primary,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Meeting ID",
-                        hintStyle: TextStyle(color: grey.withOpacity(0.3)),
-                        suffixIcon: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: grey,
-                        )),
+                      border: InputBorder.none,
+                      hintText: "Meeting ID",
+                      hintStyle: TextStyle(color: grey.withOpacity(0.3)),
+                      // suffixIcon: const Icon(
+                      //   Icons.keyboard_arrow_down,
+                      //   color: grey,
+                      // )
+                    ),
                   ),
                 ),
               )
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
-        Text(
+        const Text(
           "Join with a personal link name",
           style: TextStyle(color: primary),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Container(
@@ -113,7 +149,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         GestureDetector(
@@ -125,16 +161,20 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             width: size.width * 0.9,
             height: 50,
             decoration: BoxDecoration(
-                color: primary, borderRadius: BorderRadius.circular(15)),
-            child: Center(
+                color: const Color.fromARGB(255, 0, 163, 173),
+                borderRadius: BorderRadius.circular(15)),
+            child: const Center(
               child: Text(
                 "Join",
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Padding(
@@ -144,7 +184,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             style: TextStyle(color: grey.withOpacity(0.6), height: 1.3),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Padding(
@@ -157,7 +197,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Container(
@@ -168,7 +208,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Don't Connect To Audio",
                   style: TextStyle(
                       color: grey,
@@ -196,7 +236,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Turn Off My Video",
                   style: TextStyle(
                       color: grey,

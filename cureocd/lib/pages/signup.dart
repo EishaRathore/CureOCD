@@ -188,6 +188,7 @@ class _ChatterSignUpState extends State<ChatterSignUp> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            // login
                             onPressed: () {
                               Navigator.pushReplacementNamed(context, '/login');
                             },

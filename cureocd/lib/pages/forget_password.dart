@@ -6,7 +6,7 @@ import 'ConfirmEmail.dart';
 
 class ForgotPassword extends StatefulWidget {
   static String id = 'forgot-password';
- final String message =
+  final String message =
       "An email has just been sent to you, Click the link provided to complete password reset";
 
   @override
@@ -27,7 +27,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) {
-          return ConfirmEmail(message: widget.message,);
+          return ConfirmEmail(
+            message: widget.message,
+          );
         }),
       );
     } catch (e) {
@@ -39,13 +41,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-  leading: IconButton(
-    icon: const Icon(Icons.arrow_back, color: const Color.fromARGB(255, 255, 255, 255)),
-    onPressed: () =>  Navigator.pushReplacementNamed(context, '/login')
-  ), 
- //title: Text("CureOCD"),
-  //centerTitle: true,
-),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back,
+                color: const Color.fromARGB(255, 255, 255, 255)),
+            onPressed: () => Navigator.pushReplacementNamed(context, '/login')),
+        //title: Text("CureOCD"),
+        //centerTitle: true,
+      ),
       backgroundColor: const Color.fromARGB(255, 0, 163, 173),
       body: Form(
         key: _formKey,
@@ -65,41 +67,41 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   labelText: 'Email',
-                  icon:  Icon(
+                  icon: Icon(
                     Icons.mail,
                     color: Colors.white,
                   ),
-                  errorStyle: const TextStyle(color: Colors.white),
-                  labelStyle: const TextStyle(color: Colors.white),
-                  hintStyle: const TextStyle(color: Colors.white),
-                  focusedBorder: const UnderlineInputBorder(
+                  errorStyle: TextStyle(color: Colors.white),
+                  labelStyle: TextStyle(color: Colors.white),
+                  hintStyle: TextStyle(color: Colors.white),
+                  focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
-                  enabledBorder: const UnderlineInputBorder(
+                  enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
                   errorBorder: UnderlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.white),
+                    borderSide: BorderSide(color: Colors.white),
                   ),
                 ),
               ),
               const SizedBox(height: 20),
               Hero(
-                      tag: 'sendEmail',
-                      child: CustomButton(
-                        mainColor: const Color.fromARGB(255, 255, 255, 255),
-                        // text: 'login',
-                        //  accentColor: Color.fromARGB(255, 0, 163, 173),
-                        //      mainColor: Color.fromARGB(255, 255, 255, 255),
-                        onpress: () {
-                          _passwordReset();
-                  print(_email);
-                          // Navigator.pushReplacementNamed(context, '/chat');
-                        },
-                        text: 'Send Email',
-                        accentColor: const Color.fromARGB(255, 0, 163, 173),
-                      ),
-                    ),
+                tag: 'sendEmail',
+                child: CustomButton(
+                  mainColor: const Color.fromARGB(255, 255, 255, 255),
+                  // text: 'login',
+                  //  accentColor: Color.fromARGB(255, 0, 163, 173),
+                  //      mainColor: Color.fromARGB(255, 255, 255, 255),
+                  onpress: () {
+                    _passwordReset();
+                    print(_email);
+                    // Navigator.pushReplacementNamed(context, '/chat');
+                  },
+                  text: 'Send Email',
+                  accentColor: const Color.fromARGB(255, 0, 163, 173),
+                ),
+              ),
               // RaisedButton(
               //   child: const Text('Send Email'),
               //   onPressed: () {

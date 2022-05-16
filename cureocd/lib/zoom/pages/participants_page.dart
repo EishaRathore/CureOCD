@@ -1,7 +1,10 @@
+import 'package:cureocd/zoom/pages/root_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:cureocd/zoom/json/participants_json.dart';
 import 'package:cureocd/zoom/theme/colors.dart';
+
+import '../../widgets/CustomButton.dart';
 
 class ParticipantsPage extends StatefulWidget {
   @override
@@ -22,7 +25,7 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
   Widget getBody() {
     return SingleChildScrollView(
         child: Padding(
-      padding: const EdgeInsets.only(top: 15, bottom: 70),
+      padding: const EdgeInsets.only(top: 20, bottom: 70),
       child: Column(
           children: List.generate(participants.length, (index) {
         return Column(
@@ -43,22 +46,23 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
                                 image: NetworkImage(participants[index]['img']),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
+                        // height: 20,
                       ),
                       Text(
                         participants[index]['name'],
-                        style: TextStyle(fontSize: 16),
+                        style: const TextStyle(fontSize: 16),
                       )
                     ],
                   ),
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         MaterialCommunityIcons.microphone,
                         color: grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Icon(
@@ -72,10 +76,10 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Divider()
+            const Divider()
           ],
         );
       })),
@@ -91,8 +95,8 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
         onTap: () {
           Navigator.pop(context);
         },
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20, left: 10),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 20, left: 10),
           child: Text(
             "Close",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
@@ -108,23 +112,39 @@ class _ParticipantsPageState extends State<ParticipantsPage> {
     return Container(
       width: size.width,
       height: 80,
-      decoration: BoxDecoration(color: black),
+      decoration: const BoxDecoration(color: black),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               decoration: BoxDecoration(
-                  color: headerAndFooter,
+                  //  color: headerAndFooter,
                   borderRadius: BorderRadius.circular(8)),
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: Text(
-                  "Invite",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
-                ),
+              child: CustomButton(
+                text: 'Back',
+                accentColor: Colors.white,
+                mainColor: const Color.fromARGB(255, 0, 163, 173),
+                onpress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return RootApp();
+                        //return LoginScreen();
+                      },
+                    ),
+                  );
+                },
               ),
+              // const Padding(
+              //   padding: EdgeInsets.all(8),
+              //   child: Text(
+              //     "Invite",
+              //     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              //   ),
+              // ),
             )
           ],
         ),

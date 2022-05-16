@@ -229,7 +229,7 @@ class _AboutUsState extends State<AboutUs> {
                   onTap: () {
                     Navigator.push(
                         context,
-                        new MaterialPageRoute(
+                        MaterialPageRoute(
                           builder: (context) => ChatterScreen(),
                         ));
                   },
@@ -301,9 +301,9 @@ class _AboutUsState extends State<AboutUs> {
                         color: Color.fromARGB(255, 0, 163, 173))),
               ),
               const SizedBox(height: 15),
-              Align(
+              const Align(
                 alignment: Alignment.center,
-                child: const Text(
+                child: Text(
                     'We have trained therapists. Every VEXPOcd therapist is licensed, trained in ERP and has experience in treatig the OCD patients.',
                     style: TextStyle(
                       fontSize: 15,
@@ -406,11 +406,10 @@ class _AboutUsState extends State<AboutUs> {
               Align(
                 alignment: Alignment.center,
                 child: Row(
-                  children: [
-                    const Icon(Icons.copyright_outlined,
-                        size: 10.0,
-                        color: Color.fromARGB(255, 0, 163, 173)),
-                    const Text('2022 CureOCD Inc.',
+                  children: const [
+                    Icon(Icons.copyright_outlined,
+                        size: 10.0, color: Color.fromARGB(255, 0, 163, 173)),
+                    Text('2022 CureOCD Inc.',
                         style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.bold,

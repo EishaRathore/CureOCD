@@ -42,7 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 //Implement logout functionality
               }),
         ],
-        title: Text('VEXPOcd'),
+        title: const Text('VEXPOcd'),
         backgroundColor: Colors.indigo,
       ),
       body: SafeArea(
@@ -67,7 +67,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     onPressed: () {
                       //Implement send functionality.
                     },
-                    child: Text(
+                    child: const Text(
                       'Send',
                       style: kSendButtonTextStyle,
                     ),

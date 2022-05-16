@@ -12,7 +12,9 @@ import 'splash.dart';
 import 'tools.dart';
 import 'therapist.dart';
 import 'aboutocd.dart';
+import 'zoom/pages/join_meeting_page.dart';
 
+//flutter run --no-sound-null-safety
 const kBackgroundColor = Color.fromARGB(255, 255, 255, 255);
 //const kPrimaryColor = Color.fromARGB(255, 253, 253, 253);
 void main() => runApp(const MyApp());
@@ -46,8 +48,10 @@ class MyApp extends StatelessWidget {
         '/Tools': (context) => Tools(),
         '/Therapist': (context) => Therapists(),
         '/AboutOCD': (context) => Aboutocd(),
+        '/JoinMeetingPage': (context) => Joinmeetingpage(),
         '/chatbot': (BuildContext context) => const chatbotScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
+
         // '/aboutUs': (context) => AboutUsScreen(),
 
         // '/chats':(context)=>ChatterScreen()
