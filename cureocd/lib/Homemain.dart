@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:cureocd/pages/aboutUs.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:cureocd/pages/chatterScreen.dart';
@@ -11,6 +12,7 @@ import 'package:cureocd/tools.dart';
 import 'package:cureocd/therapist.dart';
 import 'chatbbot/screens/result_screen.dart';
 import 'package:cureocd/aboutocd.dart';
+import 'package:cureocd/chatbbot/chatbot.dart';
 
 final _firestore = Firestore.instance;
 String username = 'User';
@@ -29,7 +31,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
   late KFDrawerController _drawerController;
   int selectedpage = 0;
-  final _pageNo = [HomeMain(), Contact(), ChatterScreen()];
+  final _pageNo = [HomeMain(), chatbotScreen(),Contact(), ChatterScreen()];
 
   @override
   void initState() {
@@ -167,7 +169,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
         onTap: (int index) {
           setState(() {
             selectedpage = index;
-
+            print('click index=$index');
             // Navigator.pushReplacementNamed(context, '/Therapist');
           });
         },

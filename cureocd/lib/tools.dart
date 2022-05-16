@@ -89,7 +89,7 @@ class _ToolsState extends State<Tools> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                    ' - Do not leave your Rift near pets or small children.\n\n - Do not eat, drink, or smoke near your Rift.\n\n - Make sure to clear your play area of any objects, wires or people you may knock into or trip over when using your Rift. \n\n - Secure your Rift in a safe place when you are not using it',
+                    ' - Take at least a 10-15 minutes, even if you don’t thing you need it.\n\n - Use of the headset and Oculus controllers may result in a loss of balance. If your balance feels affected, remove your headset and take a break until normal balance returns.\n\n - Do not leave your Rift near pets or small children.\n\n - Do not eat, drink, or smoke near your Rift.\n\n - Make sure to clear your play area of any objects, wires or people you may knock into or trip over when using your Rift. \n\n - Secure your Rift in a safe place when you are not using it. \n\n - To reduce the risk of discomfort, the headset should be balanced and centered. Please adjust the top strap and adjust the headband by twisting the fit wheel on the back to ensure comfortable placement of the headset and that you see a single, clear image. Adjust the lenses by pressing the button located on the right underside of your headset to accommodate glasses or improve your comfort.',
                     style: TextStyle(
                         fontSize: 15, color: Color.fromARGB(255, 107, 102, 102)
                         //    color: Color.fromARGB(255, 107, 102, 102),
