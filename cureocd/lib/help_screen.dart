@@ -30,7 +30,7 @@ class _HelpScreenState extends State<HelpScreen> {
               ),
               Container(
                 padding: const EdgeInsets.only(top: 8),
-                child: Text(
+                child: const Text(
                   'How can we help you?',
                   style: TextStyle(
                     fontSize: 20,
@@ -56,7 +56,7 @@ class _HelpScreenState extends State<HelpScreen> {
                       width: 140,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 0, 163, 173),
+                        color: const Color.fromARGB(255, 0, 163, 173),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(4.0)),
                         boxShadow: <BoxShadow>[
@@ -70,9 +70,9 @@ class _HelpScreenState extends State<HelpScreen> {
                         color: Colors.transparent,
                         child: InkWell(
                           onTap: () {},
-                          child: Center(
+                          child: const Center(
                             child: Padding(
-                              padding: const EdgeInsets.all(4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Text(
                                 'Chat with Us',
                                 style: TextStyle(

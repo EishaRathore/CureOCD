@@ -10,14 +10,12 @@ import 'package:cureocd/Contact.dart';
 import 'package:kf_drawer/kf_drawer.dart';
 import 'package:cureocd/tools.dart';
 import 'package:cureocd/therapist.dart';
-import 'chatbbot/screens/result_screen.dart';
 import 'package:cureocd/aboutocd.dart';
 import 'package:cureocd/chatbbot/chatbot.dart';
+import 'package:cureocd/therapist.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
-
 
 final _firestore = Firestore.instance;
 String username = 'User';
@@ -35,8 +33,9 @@ class HomeMain extends StatefulWidget {
 class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   final _auth = FirebaseAuth.instance;
   late KFDrawerController _drawerController;
-  int selectedpage = 0;
-  final _pageNo = [HomeMain(), chatbotScreen(), Contact(), ChatterScreen()];
+  //int selectedpage = 0;
+
+  //final _pageNo = [HomeMain(), chatbotScreen(), Contact(), ChatterScreen()];
 
   @override
   void initState() {
@@ -71,24 +70,22 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
           },
           // page: ClassBuilder.fromString('Notifications'),
         ),
-
         KFDrawerItem.initWithPage(
           text: const Text(
-            'Join live therapy session',
+            'Live session with\ntherapist',
             style: TextStyle(
               color: Colors.white,
               fontSize: 17,
               fontFamily: 'Poppins',
             ),
           ),
-          icon: const Icon(Icons.trending_up, color: Colors.white),
+          icon: const Icon(Icons.model_training, color: Colors.white),
           onPressed: () {
             // JoinMeetingPage()
-            Navigator.pushReplacementNamed(context, '/Tools');
+            Navigator.pushReplacementNamed(context, '/JoinMeetingPage');
           },
           // page: ResultScreen(),
         ),
-
         KFDrawerItem.initWithPage(
           text: const Text(
             'Product - Precuations',
@@ -118,21 +115,20 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
             Navigator.pushReplacementNamed(context, '/AboutOCD');
           },
         ),
-        // KFDrawerItem.initWithPage(
-        //   text: const Text(
-        //     'About OCD and ERP',
-        //     style: TextStyle(
-        //       color: Colors.white,
-        //       fontSize: 17,
-        //       fontFamily: 'Poppins',
-        //     ),
-        //   ),
-        //   icon: const Icon(Icons.question_mark, color: Colors.white),
-        //   onPressed: () {
-        //     Navigator.pushReplacementNamed(context, '/Aboutocd');
-        //   },
-        //   // page: ClassBuilder.fromString('Notifications'),
-        // ),
+        KFDrawerItem.initWithPage(
+          text: const Text(
+            'About us',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: 'Poppins',
+            ),
+          ),
+          icon: const Icon(Icons.person, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/Therapist');
+          },
+        ),
         KFDrawerItem.initWithPage(
           text: const Text(
             'Contact us',
@@ -142,7 +138,7 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
               fontFamily: 'Poppins',
             ),
           ),
-          icon: const Icon(Icons.account_box, color: Colors.white),
+          icon: const Icon(Icons.email, color: Colors.white),
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/contact');
           },
@@ -174,29 +170,30 @@ class _HomeMainState extends State<HomeMain> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: ConvexAppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 163, 173),
-        items: [
-          const TabItem(
-            icon: Icons.home,
-            title: 'Home',
-          ),
-          const TabItem(
-            icon: Icons.question_answer_rounded,
-            title: 'OCD test',
-          ),
-          const TabItem(icon: Icons.chat, title: 'Community'),
-          TabItem(icon: Icons.person, title: 'About us'),
-        ],
-        initialActiveIndex: selectedpage,
-        onTap: (int index) {
-          setState(() {
-            selectedpage = index;
-            print('click index=$index');
-            // Navigator.pushReplacementNamed(context, '/Therapist');
-          });
-        },
-      ),
+      // bottomNavigationBar: ConvexAppBar(
+      //   backgroundColor: const Color.fromARGB(255, 0, 163, 173),
+      //   items: [
+      //     const TabItem(
+      //       icon: Icons.home,
+      //       title: 'Home',
+      //     ),
+      //     const TabItem(
+      //       icon: Icons.question_answer_rounded,
+      //       title: 'OCD test',
+      //     ),
+      //     const TabItem(icon: Icons.chat, title: 'Community'),
+      //     TabItem(icon: Icons.person, title: 'About us'),
+      //   ],
+      //   initialActiveIndex: selectedpage,
+      //   onTap: (int index) {
+      //     setState(() {
+      //       selectedpage = index;
+      //       print('click index=$index');
+      //       //   Navigator.pushReplacementNamed(context, '/Therapist');
+      //     });
+      //   },
+
+      // ),
       body: KFDrawer(
         controller: _drawerController,
         header: Align(

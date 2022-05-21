@@ -154,7 +154,7 @@ class _ChatterLoginState extends State<ChatterLogin> {
                           ForgotPassword.id,
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Forgot Password?',
                         style: TextStyle(color: Colors.grey, fontSize: 12),
                       ),
