@@ -13,7 +13,7 @@ List textItems = ["Mute", "Stop Video", "Share Screen", "Participants", "More"];
 List colorItems = [
   grey,
   grey,
-  green,
+  grey,
   grey,
   grey,
 ];

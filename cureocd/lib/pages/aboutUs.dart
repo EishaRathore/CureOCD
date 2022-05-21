@@ -70,6 +70,7 @@ class _AboutUsState extends State<AboutUs> {
         body: Padding(
           padding: const EdgeInsets.all(12.0),
           child: ListView(
+            // shrinkWrap: true,
             children: [
               const SizedBox(height: 15),
               Image.asset(
@@ -223,23 +224,18 @@ class _AboutUsState extends State<AboutUs> {
               ),
               const SizedBox(height: 15),
 
-              Align(
-                alignment: Alignment.topLeft,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ChatterScreen(),
-                        ));
-                  },
-                  // child: const Text('Learn more >',
-                  //     style: TextStyle(
-                  //         fontSize: 15,
-                  //         fontWeight: FontWeight.bold,
-                  //         color: Color.fromARGB(255, 0, 163, 173))),
-                ),
-              ),
+              // Align(
+              //   alignment: Alignment.topLeft,
+              //   child: InkWell(
+              //     onTap: () {
+              //       Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //             builder: (context) => ChatterScreen(),
+              //           ));
+              //     },
+              //   ),
+              // ),
               const SizedBox(height: 25),
               Image.asset('assets/images/young_kids_aboutUS_image3.jpg'),
 
@@ -304,7 +300,7 @@ class _AboutUsState extends State<AboutUs> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                    'We have trained therapists. Every VEXPOcd therapist is licensed, trained in ERP and has experience in treatig the OCD patients.',
+                    'We have trained therapists. Every CureOCD therapist is licensed, trained in ERP and has experience in treatig the OCD patients.',
                     style: TextStyle(
                       fontSize: 15,
                       color: Color.fromARGB(255, 107, 102, 102),
@@ -312,29 +308,46 @@ class _AboutUsState extends State<AboutUs> {
                     )),
               ),
               const SizedBox(height: 15),
-              Align(
-                alignment: Alignment.topLeft,
-                child: InkWell(
-                  onTap: () {
+
+              Hero(
+                tag: 'Join now',
+                child: CustomButton(
+                  text: 'Further details',
+                  accentColor: Colors.white,
+                  mainColor: const Color.fromARGB(255, 0, 163, 173),
+                  onpress: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => Therapists(),
                         ));
                   },
-                  child: const Text('Click here for further details >',
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 0, 163, 173))),
                 ),
               ),
+
+              // Align(
+              //   alignment: Alignment.topLeft,
+              //   child: InkWell(
+              //     onTap: () {
+              //       Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //             builder: (context) => Therapists(),
+              //           ));
+              //     },
+              //     child: const Text('Click here for further details >',
+              //         style: TextStyle(
+              //             fontSize: 15,
+              //             fontWeight: FontWeight.bold,
+              //             color: Color.fromARGB(255, 0, 163, 173))),
+              //   ),
+              // ),
               const SizedBox(height: 25),
 
               Image.asset('assets/images/woman_therapist1.jpg'),
 
-              const SizedBox(height: 10),
-              Image.asset('assets/images/woman_therapist2.jpg'),
+              // const SizedBox(height: 10),
+              // Image.asset('assets/images/woman_therapist2.jpg'),
 
 //*******CONTACT
 
@@ -411,7 +424,7 @@ class _AboutUsState extends State<AboutUs> {
                         size: 10.0, color: Color.fromARGB(255, 0, 163, 173)),
                     Text('2022 CureOCD Inc.',
                         style: TextStyle(
-                            fontSize: 10,
+                            fontSize: 8,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 0, 163, 173))),
                   ],

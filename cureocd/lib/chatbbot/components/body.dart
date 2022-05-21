@@ -1,6 +1,6 @@
-import 'package:cureocd/chatbbot/screens/quizz_screen.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/CustomButton.dart';
+import '../quizscreens/main.dart';
 import 'background.dart';
 import 'button.dart';
 
@@ -46,7 +46,7 @@ class Body extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const QuizzScreen();
+                          return MyApp();
                           //return LoginScreen();
                         },
                       ),
