@@ -2,13 +2,38 @@ import 'package:cureocd/Homemain.dart';
 import 'package:cureocd/widgets/CustomButton.dart';
 import 'package:flutter/material.dart';
 import 'package:no_context_navigation/no_context_navigation.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+final firestore = Firestore.instance;
+String username = 'User';
+String email = 'user@example.com';
+//late String messageText;
+late FirebaseUser loggedInUser;
 
 class Result extends StatelessWidget {
+  Result(this.resultScore, this.resetHandlar);
   final int resultScore;
   final VoidCallback resetHandlar;
+  final _auth = FirebaseAuth.instance.currentUser();
+  Future<bool> doesNameAlreadyExist(String email) async {
+    final QuerySnapshot result = await Firestore.instance
+        .collection('quizscore')
+        .where('senderemail', isEqualTo: email)
+        .limit(1)
+        .getDocuments();
+    final List<DocumentSnapshot> documents = result.documents;
+    return documents.length == 1;
+  }
 
-  Result(this.resultScore, this.resetHandlar);
   String get resultPhrase {
+    firestore.collection('quizscore').add({
+      'sender': username,
+      'quizscore': resultScore,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+      'senderemail': email,
+    });
+
     String resultText;
     if (resultScore >= 0 && resultScore <= 13) {
       resultText = '\nOCD level: Mild Result Score:$resultScore';
@@ -55,40 +80,8 @@ class Result extends StatelessWidget {
             text: 'Start VR Therapy',
           ),
           const SizedBox(height: 40.0),
-
-          // CustomButton(
-          //   accentColor: const Color.fromARGB(255, 255, 255, 255),
-          //   mainColor: const Color.fromARGB(255, 0, 163, 173),
-          //   onpress: () {
-          //     Navigator.pushReplacementNamed(context, '/homeMain');
-          //   },
-          //   text: 'Close',
-          // )
         ],
       ),
     );
   }
-
-  // getAppBar() {
-  //   return AppBar(
-  //     backgroundColor: Color.fromARGB(255, 0, 163, 173),
-  //     elevation: 0,
-  //     leading: GestureDetector(
-  //       onTap: () {
-  //         navService.pushNamed('/homeMain');
-  //       },
-  //       child: const Padding(
-  //         padding: EdgeInsets.only(top: 20, left: 10),
-  //         child: Text(
-  //           "Close",
-  //           style: TextStyle(
-  //               fontSize: 16,
-  //               fontWeight: FontWeight.w600,
-  //               color: Color.fromARGB(255, 255, 255, 255)),
-  //         ),
-  //       ),
-  //     ),
-  //     // title: const Text("Join a Meeting"),
-  //   );
-  // }
 }
