@@ -1,19 +1,11 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
+# FYP18PID11
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="cureocd/Images/cureocd_logo.png" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">CureOCD</h3>
@@ -21,7 +13,7 @@
   <p align="center">
     Virtual Therapist: Virtual Reality based Cognitive Behavior Therapist for Obsessive Compulsive Disorder
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/EishaButt/CureOCD"><strong>Explore Project »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -81,16 +73,13 @@ use of VR for therapy in other areas as more than just entertainment. In near fu
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section details the development tools and programs that have been used in the making of this project.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Oculus Rift S](https://www.oculus.com/rift-s/)
+* [Unity 3D Game Engine](https://unity.com/)
+* [Figma](https://www.figma.com/)
+* [Flutter](https://flutter.dev/)
+* [Firebase](https://firebase.google.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -99,33 +88,50 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a Project and run it follow these steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
+ #### Quick start
+ 
+  Install VS Code If you don't have it to run a code [Visual Studio Code](https://code.visualstudio.com/).
+  
+ ##### Extensions to Install in VsCode:
+
+- `Install Flutter` - [Flutter](https://flutter.dev/get-started/)
+- `Install Dart` - [Dart](https://dart.dev/)
+ 
+ #### VR Headset
+ 
+ Required a VR Headset to be able to perform VR therapy Sessions.
+ 
+- `Simple VR Headset with Bluetooth Remote Joystick` - Using this Headset only the first Level of Therapy can be Run. 
+- `Oculus Headet` - Any Oculus Headset Can be Used to Perform Higher Level Therapy.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+For installing and setting up this application. Follow these Steps.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
+
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   $ git clone https://github.com/EishaButt/CureOCD.git
    ```
-3. Install NPM packages
+   
+2. Install packages
+   `Run this Commad in terminal`
    ```sh
-   npm install
+   flutter pub get
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+
+3. Connect Your Android Emmulator or Device 
+
+4. Enter this Command in Terminal
+
+   ```sh
+   flutter run --no-sound-null-safety
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -135,9 +141,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Demo Video of Running Project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -146,15 +150,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [x] SignUp/SignIn
+- [x] ChatBot Y-BOCS Assesment
+- [x] Chat Community
+- [x] VR Environments
 - [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -163,7 +163,13 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This project exists thanks to all the people who contribute.
+
+[<img src="https://avatars.githubusercontent.com/u/46721882?v=4" alt="EishaButt" style="height: 100px; width:100px;"/>](https://github.com/EishaButt)   [<img src="https://avatars.githubusercontent.com/u/55206006?v=4" alt="Khansa-Khaliq" style="height: 100px; width:100px;"/>](https://github.com/Khansa-Khaliq)   [<img src="https://avatars.githubusercontent.com/u/55224607?v=4" alt="Mehr-un-nisa" style="height: 100px; width:100px;"/>](https://github.com/Mehr-un-nisa)
+
+
+
+
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -176,23 +182,15 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+- Eisha Nawaz - eisharathore5@gmail.com 
+- Khansa Khaliq - khaliqkhansa@gmail.com
+- Mehr-u-Nisa - mehrunnisa533@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+Project Link: [https://github.com/EishaButt/CureOCD](https://github.com/EishaButt/CureOCD)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -201,33 +199,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+We are grateful and would like to express our sincere gratitude to our supervisor Ma’am Amna Zafar for her invaluable guidance, continuous encouragement and
+constant support in making project research possible. We really appreciate her guidance from the initial to the final level that enabled us to develop an understanding of this project thoroughly. Without her advice and assistance it would be a lot tougher to completion. We also sincerely thanks for the time spent proofreading and correcting our mistakes. Many thanks go to member group for their excellent cooperation, inspirations and supports during this study. This four year experience with  will be remembered as important memory. We acknowledge our sincere gratitude to our parents for their love, dream and sacrifice throughout my life. We are really thankful for their sacrifice, patience, and understanding that were inevitable to make this work possible. Their sacrifice had inspired us from the day we learned how to read and write until what we have become now. Lastly we would like to thanks any person which contributes to our final year project directly on indirectly. We would like to acknowledge their comments and suggestions, which was crucial for the successful completion of this project.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
