@@ -1,22 +1,5 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -33,19 +16,15 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">CureOCD</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Virtual Therapist: Virtual Reality based Cognitive Behavior Therapist for Obsessive Compulsive Disorder
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,16 +63,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+CureOCD is an application that implements the ERP steps, that is a subtype of CBT, to induce anxiety provoking effects in patients and then provide a virtual therapy to reduce the obsessions that result in creating anxiety.Our application contains the functionality of YBOCS test that is a standard test to diagnose the OCD severity level. On the basis of this test patients are exposed to specific environment. This project aims to develop a prototype that would give an experience based on a comparable reality like the one the patient is familiar with, challenging their Obsessive Compulsive Disorder (OCD) in a controlled environment and urging the patient to dissimulate their compulsions.
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+* Virtual reality (VR) is the most immersive technology utilized for symptom provocation in OCD because it removes the actual world’s distractions.
+* Limited trained specialists
+* Prohibited cost of treatment
+* Specific reasons to people with OCD such as fear of exposure and uneasiness in recognizing in obsessions.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `BLANK_README.md` to get started.
+The future goal of this project is to fully develop the conceptualized application and make it available to mental health professionals, to justify and incentivize the
+use of VR for therapy in other areas as more than just entertainment. In near future VR could assist standardized clinical training in exposure therapy, making training easier and more accessible. Therapists could practice with virtual patients repeatedly while mastering clinical evaluation and exposure therapy skills in a VR training environment. Comfort and skill with exposure therapy will enable therapists in offering evidence-based treatment and alleviating patients’ fears of the therapy.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
