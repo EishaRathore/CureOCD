@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
           'score': 3
         },
         {'text': 'Incapacitating', 'score': 4},
-        {'text': 'none', 'score': 0}
+        {'text': 'None', 'score': 0}
       ]
     },
     {

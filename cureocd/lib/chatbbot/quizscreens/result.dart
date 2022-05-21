@@ -73,12 +73,23 @@ class Result extends StatelessWidget {
           const SizedBox(
             height: 20.0,
           ),
-          CustomButton(
-            accentColor: const Color.fromARGB(255, 255, 255, 255),
-            mainColor: const Color.fromARGB(255, 0, 163, 173),
-            onpress: () {},
-            text: 'Start VR Therapy',
+          TextButton(
+            child: const Text(
+              'Start VR Therapy',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
+            // textColor: Colors.blue,
+            onPressed: resetHandlar,
           ),
+          // CustomButton(
+          //   accentColor: const Color.fromARGB(255, 255, 255, 255),
+          //   mainColor: const Color.fromARGB(255, 0, 163, 173),
+          //   onpress: () {},
+          //   text: 'Start VR Therapy',
+          // ),
           const SizedBox(height: 40.0),
         ],
       ),
