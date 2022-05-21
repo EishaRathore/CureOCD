@@ -158,11 +158,11 @@ Demo Video of Running Project.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [✓] SignUp/SignIn
-- [✓] ChatBot Y-BOCS Assesment
-- [✓] Chat Community
-- [✓] VR Environments
-- [x] Multi-language Support
+- [x] SignUp/SignIn
+- [x] ChatBot Y-BOCS Assesment
+- [x] Chat Community
+- [x] VR Environments
+- [ ] Multi-language Support
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -171,7 +171,13 @@ Demo Video of Running Project.
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This project exists thanks to all the people who contribute.
+
+<img src="https://avatars.githubusercontent.com/u/46721882?v=4" alt="EishaButt" style="height: 100px; width:100px;"/>   <img src="https://avatars.githubusercontent.com/u/55206006?v=4" alt="Khansa-Khaliq" style="height: 100px; width:100px;"/>   <img src="https://avatars.githubusercontent.com/u/55224607?v=4" alt="Mehr-un-nisa" style="height: 100px; width:100px;"/>
+
+
+
+
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -184,23 +190,15 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Eisha Nawaz - eisharathore5@gmail.com 
+Khansa Khaliq - khaliqkhansa@gmail.com
+Mehr-u-Nisa - mehrunnisa533@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+Project Link: [https://github.com/EishaButt/CureOCD](https://github.com/EishaButt/CureOCD)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -209,33 +207,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+We are grateful and would like to express our sincere gratitude to our supervisor Ma’am Amna Zafar for her invaluable guidance, continuous encouragement and
+constant support in making project research possible. We really appreciate her guidance from the initial to the final level that enabled us to develop an understanding of this project thoroughly. Without her advice and assistance it would be a lot tougher to completion. We also sincerely thanks for the time spent proofreading and correcting our mistakes. Many thanks go to member group for their excellent cooperation, inspirations and supports during this study. This four year experience with  will be remembered as important memory. We acknowledge our sincere gratitude to our parents for their love, dream and sacrifice throughout my life. We are really thankful for their sacrifice, patience, and understanding that were inevitable to make this work possible. Their sacrifice had inspired us from the day we learned how to read and write until what we have become now. Lastly we would like to thanks any person which contributes to our final year project directly on indirectly. We would like to acknowledge their comments and suggestions, which was crucial for the successful completion of this project.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
