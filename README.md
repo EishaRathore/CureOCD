@@ -164,7 +164,7 @@ Demo Video of Running Project.
 
 This project exists thanks to all the people who contribute.
 
-<img src="https://avatars.githubusercontent.com/u/46721882?v=4" alt="EishaButt" style="height: 100px; width:100px;"/>   <img src="https://avatars.githubusercontent.com/u/55206006?v=4" alt="Khansa-Khaliq" style="height: 100px; width:100px;"/>   <img src="https://avatars.githubusercontent.com/u/55224607?v=4" alt="Mehr-un-nisa" style="height: 100px; width:100px;"/>
+[<img src="https://avatars.githubusercontent.com/u/46721882?v=4" alt="EishaButt" style="height: 100px; width:100px;"/>](https://github.com/EishaButt)   [<img src="https://avatars.githubusercontent.com/u/55206006?v=4" alt="Khansa-Khaliq" style="height: 100px; width:100px;"/>](https://github.com/Khansa-Khaliq)   [<img src="https://avatars.githubusercontent.com/u/55224607?v=4" alt="Mehr-un-nisa" style="height: 100px; width:100px;"/>](https://github.com/Mehr-un-nisa)
 
 
 
