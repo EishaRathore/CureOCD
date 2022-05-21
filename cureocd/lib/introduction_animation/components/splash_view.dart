@@ -39,17 +39,6 @@ class _SplashViewState extends State<SplashView> {
               fit: BoxFit.contain,
               height: 60,
             ),
-            // const Padding(
-            //   padding: EdgeInsets.only(top: 30.0, bottom: 8.0),
-            //   child: Text(
-            //     "CureOCD",
-            //     style: TextStyle(
-            //       fontSize: 35.0,
-            //       fontWeight: FontWeight.bold,
-            //       color: Color.fromARGB(255, 0, 163, 173),
-            //     ),
-            //   ),
-            // ),
             const SizedBox(
               height: 20,
             ),

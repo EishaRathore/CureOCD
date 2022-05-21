@@ -1,6 +1,3 @@
-// import 'dart:html';
-
-// import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:kf_drawer/kf_drawer.dart';
@@ -15,16 +12,6 @@ class Contact extends KFDrawerContent {
 }
 
 class _ContactState extends State<Contact> {
-  // String _selectedValue;
-  // Map<String, bool> items = {
-  //   'Sale': false,
-  // };
-
-  // Map<String, bool> items2 = {
-  //   'Consultant Notes only': false,
-  //   'Overdue only': false,
-  //   'Data Range': false,
-  // };
 
   @override
   Widget build(BuildContext context) {
@@ -51,21 +38,6 @@ class _ContactState extends State<Contact> {
               ),
             ),
           ),
-          // actions: [
-          //   IconButton(
-          //     // alignment: Alignment.topRight,
-          //     icon: const Icon(
-          //       Icons.chat,
-          //       color: Color.fromARGB(255, 255, 254, 254),
-          //     ),
-          //     onPressed: () => Navigator.push(
-          //         context,
-          //         MaterialPageRoute(
-          //           builder: (context) => ChatterScreen(),
-          //         )),
-          //     //   padding:  new EdgeInsets.all(0.0),
-          //   ),
-          // ],
           title: const Text(
             'CureOCD',
             style: TextStyle(

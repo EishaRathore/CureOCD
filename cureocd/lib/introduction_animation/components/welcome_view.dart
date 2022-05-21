@@ -89,25 +89,6 @@ class _WelcomeViewState extends State<WelcomeView> {
                   alignment: Alignment.topLeft,
                 ),
               ),
-              // Positioned(
-              //   top: 29,
-              //   left: 68,
-              //   child: GradientText(
-              //     'VexpOcd',
-              //     style: const TextStyle(
-              //       fontSize: 23.0,
-              //       fontWeight: FontWeight.bold,
-              //     ),
-              //     textAlign: TextAlign.center,
-              //     // ignore: prefer_const_literals_to_create_immutables
-              //     colors: [
-              //       const Color.fromARGB(255, 0, 118, 197),
-              //       const Color.fromARGB(255, 197, 194, 194),
-              //       // const Color.fromARGB(255, 107, 4, 110),
-              //       const Color.fromARGB(255, 0, 118, 197),
-              //     ],
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 100),
                 child: Column(
@@ -157,39 +138,6 @@ class _WelcomeViewState extends State<WelcomeView> {
             ],
           ),
         ),
-        // child: Padding(
-        //   padding: const EdgeInsets.only(bottom: 100),
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       SlideTransition(
-        //         position: _welcomeImageAnimation,
-        //         child: Container(
-        //           constraints: const BoxConstraints(maxWidth: 350, maxHeight: 350),
-        //           child: Image.asset(
-        //             'assets/welcome.png',
-        //             fit: BoxFit.contain,
-        //           ),
-        //         ),
-        //       ),
-        //       SlideTransition(
-        //         position: _welcomeFirstHalfAnimation,
-        //         child: const Text(
-        //           "Welcome",
-        //           style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
-        //         ),
-        //       ),
-        //       const Padding(
-        //         padding:
-        //             EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
-        //         child: Text(
-        //           "OCD makes life difficult but you can still\n enjoy a happy life.",
-        //           textAlign: TextAlign.center,
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }

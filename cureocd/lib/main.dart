@@ -1,4 +1,3 @@
-// import 'package:chat_app/pages/chat.dart';
 import 'package:cureocd/Homemain.dart';
 import 'package:cureocd/chatbbot/chatbot.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,6 @@ import 'therapist.dart';
 import 'aboutocd.dart';
 
 const kBackgroundColor = Color.fromARGB(255, 255, 255, 255);
-//const kPrimaryColor = Color.fromARGB(255, 253, 253, 253);
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -35,7 +33,6 @@ class MyApp extends StatelessWidget {
       title: 'CureOCD',
       initialRoute: '/',
       routes: {
-        //  '/': (context) => ChatterHome(),
         '/': (context) => const SplashScreen(),
         '/login': (context) => ChatterLogin(),
         '/signup': (context) => ChatterSignUp(),
@@ -48,9 +45,6 @@ class MyApp extends StatelessWidget {
         '/AboutOCD': (context) => Aboutocd(),
         '/chatbot': (BuildContext context) => const chatbotScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
-        // '/aboutUs': (context) => AboutUsScreen(),
-
-        // '/chats':(context)=>ChatterScreen()
       },
     );
   }

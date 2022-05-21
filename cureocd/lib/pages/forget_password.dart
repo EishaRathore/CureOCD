@@ -43,8 +43,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     icon: const Icon(Icons.arrow_back, color: const Color.fromARGB(255, 255, 255, 255)),
     onPressed: () =>  Navigator.pushReplacementNamed(context, '/login')
   ), 
- //title: Text("CureOCD"),
-  //centerTitle: true,
 ),
       backgroundColor: const Color.fromARGB(255, 0, 163, 173),
       body: Form(
@@ -88,25 +86,14 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       tag: 'sendEmail',
                       child: CustomButton(
                         mainColor: const Color.fromARGB(255, 255, 255, 255),
-                        // text: 'login',
-                        //  accentColor: Color.fromARGB(255, 0, 163, 173),
-                        //      mainColor: Color.fromARGB(255, 255, 255, 255),
                         onpress: () {
                           _passwordReset();
                   print(_email);
-                          // Navigator.pushReplacementNamed(context, '/chat');
                         },
                         text: 'Send Email',
                         accentColor: const Color.fromARGB(255, 0, 163, 173),
                       ),
                     ),
-              // RaisedButton(
-              //   child: const Text('Send Email'),
-              //   onPressed: () {
-              //     _passwordReset();
-              //     print(_email);
-              //   },
-              // ),
               FlatButton(
                 child: const Text('Sign In'),
                 onPressed: () {

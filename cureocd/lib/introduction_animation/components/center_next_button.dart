@@ -164,14 +164,6 @@ class CenterNextButton extends StatelessWidget {
                       },
                     ),
                   ),
-                  // const Text(
-                  //   'Login',
-                  //   style: TextStyle(
-                  //     color: Color(0xff132137),
-                  //     fontSize: 16,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
                 ],
               ),
             ),
