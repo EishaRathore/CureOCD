@@ -1,14 +1,5 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -193,9 +184,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Eisha Nawaz - eisharathore5@gmail.com 
-Khansa Khaliq - khaliqkhansa@gmail.com
-Mehr-u-Nisa - mehrunnisa533@gmail.com
+- Eisha Nawaz - eisharathore5@gmail.com 
+- Khansa Khaliq - khaliqkhansa@gmail.com
+- Mehr-u-Nisa - mehrunnisa533@gmail.com
 
 
 Project Link: [https://github.com/EishaButt/CureOCD](https://github.com/EishaButt/CureOCD)
