@@ -12,7 +12,7 @@
   <p align="center">
     Virtual Therapist: Virtual Reality based Cognitive Behavior Therapist for Obsessive Compulsive Disorder
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/EishaButt/CureOCD"><strong>Explore Project »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
