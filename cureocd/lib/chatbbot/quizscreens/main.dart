@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   var _totalScore = 0;
   final _questions = const [
     {
-      'questionText': "TIME OCCUPIED BY OBSESSIVE THOUGHTS\n"
+      'questionText': "TIME OCCUPIED BY OBSESSIVE THOUGHTS\n\n"
           'How much of your time is occupied by obsessive thoughts?',
       'answers': [
         {'text': 'Less than 1 hr/day or occasional occurrence', 'score': 1},
@@ -39,22 +39,22 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': "INTERFERENCE DUE TO OBSESSIVE THOUGHTS\n"
+      'questionText': "INTERFERENCE DUE TO OBSESSIVE THOUGHTS\n\n"
           'How much do your obsessive thoughts interfere with your work, school, social, or other important role functioning?',
       'answers': [
         {
           'text':
-              'Slight interference with social or other activities,\n but overall performance not impaired',
+              'Slight interference with social or other activities, but overall performance not impaired',
           'score': 1
         },
         {
           'text':
-              'Definite interference with social or occupational\nperformance,but still manageable',
+              'Definite interference with social or occupational performance,but still manageable',
           'score': 2
         },
         {
           'text':
-              'Causes substantial impairment in social or\n occupational performance',
+              'Causes substantial impairment in social or occupational performance',
           'score': 3
         },
         {'text': 'Incapacitating', 'score': 4},
@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': "DISTRESS ASSOCIATED WITH OBSESSIVE THOUGHTS\n"
+      'questionText': "DISTRESS ASSOCIATED WITH OBSESSIVE THOUGHTS\n\n"
           "How much distress do your obsessive thoughts cause you?",
       'answers': [
         {'text': 'Not too disturbing', 'score': 1},
@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': "RESISTANCE AGAINST OBSESSIONS\n"
+      'questionText': "RESISTANCE AGAINST OBSESSIONS\n\n"
           "How much of an effort do you make to resist the obsessive thoughts? How often do you try to disregard or turn your attention away from these thoughts as they enter your mind?",
       'answers': [
         {'text': 'Try to resist all the time', 'score': 0},
@@ -88,72 +88,72 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': 'DEGREE OF CONTROL OVER OBSESSIVE THOUGHTS\n'
+      'questionText': 'DEGREE OF CONTROL OVER OBSESSIVE THOUGHTS\n\n'
           "How much control do you have over your obsessive thoughts? How successful are you in stopping or diverting your obsessive thinking? Can you dismiss them?",
       'answers': [
         {'text': 'Complete control', 'score': 0},
         {
           'text':
-              'Usually able to stop or divert obsessions\nwith some effort and concentration',
+              'Usually able to stop or divert obsessions with some effort and concentration',
           'score': 1
         },
         {'text': 'Sometimes able to stop or divert obsessions', 'score': 2},
         {
           'text':
-              'Rarely successful in stopping or dismissing\nobsessions,can only divert attention\nwith difficulty',
+              'Rarely successful in stopping or dismissing obsessions,can only divert attention with difficulty',
           'score': 3
         },
         {
           'text':
-              'Obsessions are completely involuntary,\nrarely able to even momentarily alter\nobsessive thinking',
+              'Obsessions are completely involuntary, rarely able to even momentarily alter obsessive thinking',
           'score': 4
         }
       ]
     },
     {
-      'questionText': "TIME SPENT PERFORMING COMPULSIVE BEHAVIORS\n"
+      'questionText': "TIME SPENT PERFORMING COMPULSIVE BEHAVIORS\n\n"
           'How much time do you spend performing compulsive behaviors? How much longer than most people does it take to complete routine activities because of your rituals? How frequently do you do rituals?',
       'answers': [
         {
           'text':
-              'Less than 1 hr/day or occasional\nperformance of compulsive behaviors',
+              'Less than 1 hr/day or occasional performance of compulsive behaviors',
           'score': 1
         },
         {
           'text':
-              'From 1 to 3 hrs/day, or frequent\nperformance of compulsive behaviors',
+              'From 1 to 3 hrs/day, or frequent performance of compulsive behaviors',
           'score': 2
         },
         {
           'text':
-              'More than 3 and up to 8 hrs/day,\nor very frequent performance of\ncompulsive behaviors',
+              'More than 3 and up to 8 hrs/day, or very frequent performance of compulsive behaviors',
           'score': 3
         },
         {
           'text':
-              'More than 8 hrs/day, or near constant\nperformance of compulsive behaviors\n(too numerous to count)',
+              'More than 8 hrs/day, or near constant performance of compulsive behaviors (too numerous to count)',
           'score': 4
         },
         {'text': 'None', 'score': 0}
       ]
     },
     {
-      'questionText': "INTERFERENCE DUE TO COMPULSIVE BEHAVIORS\n"
+      'questionText': "INTERFERENCE DUE TO COMPULSIVE BEHAVIORS\n\n"
           'How much do your compulsive behaviors interfere with your work, school, social, or other important role functioning? Is there anything that you don’t do because of the compulsions?',
       'answers': [
         {
           'text':
-              'Slight interference with social or other\nactivities, but overall performance not impaired',
+              'Slight interference with social or other activities, but overall performance not impaired',
           'score': 1
         },
         {
           'text':
-              'Definite interference with social or occupational performance,\nbut still manageable',
+              'Definite interference with social or occupational performance, but still manageable',
           'score': 2
         },
         {
           'text':
-              'Causes substantial impairment in social or occupational\nperformance',
+              'Causes substantial impairment in social or occupational performance',
           'score': 3
         },
         {'text': 'Incapacitating', 'score': 4},
@@ -161,30 +161,30 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': "DISTRESS ASSOCIATED WITH COMPULSIVE BEHAVIOR\n"
+      'questionText': "DISTRESS ASSOCIATED WITH COMPULSIVE BEHAVIOR\n\n"
           'How would you feel if prevented from performing your compulsion(s)? How anxious would you become?',
       'answers': [
         {'text': 'Only slightly anxious if compulsions prevented', 'score': 1},
         {
           'text':
-              'Anxiety would mount but remain manageable if compulsions\nprevented',
+              'Anxiety would mount but remain manageable if compulsions prevented',
           'score': 2
         },
         {
           'text':
-              'Prominent and very disturbing increase in anxiety if\ncompulsions interrupted',
+              'Prominent and very disturbing increase in anxiety if compulsions interrupted',
           'score': 3
         },
         {
           'text':
-              'Incapacitating anxiety from any intervention aimed at\nmodifying activity',
+              'Incapacitating anxiety from any intervention aimed at modifying activity',
           'score': 4
         },
         {'text': 'None', 'score': 0}
       ]
     },
     {
-      'questionText': "RESISTANCE AGAINST COMPULSIONS\n"
+      'questionText': "RESISTANCE AGAINST COMPULSIONS\n\n"
           'How much of an effort do you make to resist the compulsions?',
       'answers': [
         {'text': 'Always try to resist', 'score': 0},
@@ -192,7 +192,7 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Make some effort to resist', 'score': 2},
         {
           'text':
-              'Yield to all obsessions without attempting to control them, but\nwith some reluctance',
+              'Yield to all obsessions without attempting to control them, but with some reluctance',
           'score': 3
         },
         {
@@ -202,28 +202,28 @@ class _MyAppState extends State<MyApp> {
       ]
     },
     {
-      'questionText': "DEGREE OF CONTROL OVER COMPULSIVE BEHAVIOR\n"
+      'questionText': "DEGREE OF CONTROL OVER COMPULSIVE BEHAVIOR\n\n"
           'How much control do you have over the compulsions? ',
       'answers': [
         {'text': 'Complete control', 'score': 0},
         {
           'text':
-              'Pressure to perform the behavior but usually able to exercise\nvoluntary control over it',
+              'Pressure to perform the behavior but usually able to exercise voluntary control over it',
           'score': 1
         },
         {
           'text':
-              'Strong pressure to perform behavior, can control it only with\ndifficulty',
+              'Strong pressure to perform behavior, can control it only with difficulty',
           'score': 2
         },
         {
           'text':
-              'Very strong drive to perform behavior, must be carried to\ncompletion, can only delay with difficulty',
+              'Very strong drive to perform behavior, must be carried to completion, can only delay with difficulty',
           'score': 3
         },
         {
           'text':
-              'Drive to perform behavior experienced as completely\ninvoluntary and over-powering, rarely able to even momentarily\ndelay activity.',
+              'Drive to perform behavior experienced as completely involuntary and over-powering, rarely able to even momentarily delay activity.',
           'score': 4
         }
       ]

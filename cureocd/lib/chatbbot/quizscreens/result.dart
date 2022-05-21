@@ -4,22 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:no_context_navigation/no_context_navigation.dart';
 
 class Result extends StatelessWidget {
-  late final int resultScore;
-  late final VoidCallback resetHandlar;
+  final int resultScore;
+  final VoidCallback resetHandlar;
 
   Result(this.resultScore, this.resetHandlar);
   String get resultPhrase {
     String resultText;
     if (resultScore >= 0 && resultScore <= 13) {
-      resultText = '\nSymptoms: Mild Result Score:$resultScore';
+      resultText = '\nOCD level: Mild Result Score:$resultScore';
     } else if (resultScore >= 14 && resultScore <= 25) {
-      resultText = '\nSymptoms: Moderate Result Score:$resultScore';
+      resultText = '\nOCD level: Moderate Result Score:$resultScore';
     } else if (resultScore >= 26 && resultScore <= 34) {
-      resultText = '\nSymptoms: Moderate-severe Result Score:$resultScore';
+      resultText = '\nOCD level: Moderate-severe Result Score:$resultScore';
     } else {
-      resultText = '\nSymptoms: Severe Result Score:$resultScore';
+      resultText = '\nOCD level: Severe Result Score:$resultScore';
     }
-    SizedBox(height: 20.0);
+    const SizedBox(height: 20.0);
     return resultText;
   }
 
@@ -29,7 +29,7 @@ class Result extends StatelessWidget {
       child: Column(
         children: <Widget>[
           // getAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 40.0,
           ),
           Image.asset(
@@ -40,7 +40,7 @@ class Result extends StatelessWidget {
           Text(
             resultPhrase,
             style: const TextStyle(
-                fontSize: 36,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 0, 163, 173)),
             textAlign: TextAlign.center,

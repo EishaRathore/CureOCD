@@ -10,7 +10,8 @@ class Answer extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.all(5),
       child: FlatButton(
-        color: Colors.blue,
+        height: 62.0,
+        color: const Color.fromARGB(255, 0, 163, 173),
         textColor: Colors.white,
         child: Text(answerText),
         onPressed: selectHandler,
