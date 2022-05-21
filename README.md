@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="cureocd/Images/cureocd_logo.png" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">CureOCD</h3>
@@ -81,16 +81,13 @@ use of VR for therapy in other areas as more than just entertainment. In near fu
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section details the development tools and programs that have been used in the making of this project.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Oculus Rift S](https://www.oculus.com/rift-s/)
+* [Unity 3D Game Engine](https://unity.com/)
+* [Figma](https://www.figma.com/)
+* [Flutter](https://flutter.dev/)
+* [Firebase](https://firebase.google.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -99,33 +96,50 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a Project and run it follow these steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
+ #### Quick start
+ 
+  Install VS Code If you don't have it to run a code [Visual Studio Code](https://code.visualstudio.com/).
+  
+ ##### Extensions to Install in VsCode:
+
+- `Install Flutter` - [Flutter](https://flutter.dev/get-started/)
+- `Install Dart` - [Dart](https://dart.dev/)
+ 
+ #### VR Headset
+ 
+ Required a VR Headset to be able to perform VR therapy Sessions.
+ 
+- `Simple VR Headset with Bluetooth Remote Joystick` - Using this Headset only the first Level of Therapy can be Run. 
+- `Oculus Headet` - Any Oculus Headset Can be Used to Perform Higher Level Therapy.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+For installing and setting up this application. Follow these Steps.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
+
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   $ git clone https://github.com/EishaButt/CureOCD.git
    ```
-3. Install NPM packages
+2. Install packages
+
+  `Run this Commad in terminal`
+  
    ```sh
-   npm install
+   flutter pub get
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   
+3. Connect Your Android Emmulator or Device 
+
+4. Enter this Command in Terminal
+   ```sh
+   flutter run --no-sound-null-safety
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
