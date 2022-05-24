@@ -16,7 +16,7 @@
     <a href="https://github.com/EishaButt/CureOCD"><strong>Explore Project »</strong></a>
     <br />
     <br />
-    <a href="httphttps://github.com/EishaButt/CureOCD/blob/master/Demo.mp4">View Demo</a>
+    <a href="https://github.com/EishaButt/CureOCD/blob/master/Demo.mp4">View Demo</a>
   </p>
 </div>
 
