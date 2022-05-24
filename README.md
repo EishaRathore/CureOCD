@@ -53,8 +53,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 CureOCD is an application that implements the ERP steps, that is a subtype of CBT, to induce anxiety provoking effects in patients and then provide a virtual therapy to reduce the obsessions that result in creating anxiety.Our application contains the functionality of YBOCS test that is a standard test to diagnose the OCD severity level. On the basis of this test patients are exposed to specific environment. This project aims to develop a prototype that would give an experience based on a comparable reality like the one the patient is familiar with, challenging their Obsessive Compulsive Disorder (OCD) in a controlled environment and urging the patient to dissimulate their compulsions.
 
 Here's why:
@@ -94,6 +92,7 @@ To get a Project and run it follow these steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
+
  #### Quick start
  
   Install VS Code If you don't have it to run a code [Visual Studio Code](https://code.visualstudio.com/).
@@ -105,6 +104,8 @@ This is an example of how to list things you need to use the software and how to
  
  #### VR Headset
  
+[Oculus Rift S](https://newdesign.3anqod.com/wp-content/uploads/2020/11/oculus-rift-s-virtual-reality-headset.jpg)
+
  Required a VR Headset to be able to perform VR therapy Sessions.
  
 - `Simple VR Headset with Bluetooth Remote Joystick` - Using this Headset only the first Level of Therapy can be Run. 
@@ -133,6 +134,28 @@ For installing and setting up this application. Follow these Steps.
    ```sh
    flutter run --no-sound-null-safety
    ```
+### Unity 3D Game Engine
+
+* Use [Unity Hub](https://unity3d.com/get-unity/download) to Install UnityHub 3.1.1 (or later)
+* Install unity 2020.3.23f1 and unity 2019.3.0f6 from the unity hub with android support. from the unity archives. or you can directly install it from [Unity Archives](https://unity3d.com/get-unity/download/archive) by selecting unity Hub option it will open on unity Hub.
+* Select the Android Support, android SDK, android NDK from the options bellow.
+
+## How to build and run Hello World in the Unity3D editor
+VRRoomEnvironment and Door Environment:
+* Open the given project in unity hub
+* Open VRRoomEnvironment and Door Environment in unity 2020.3.23f1 version 
+* open the scene `Assets/Scenes/` 
+* Connect Oculus rift S to your device.
+* click play.
+
+RoadEnv:
+* Open the given project in unity hub
+* Open RoadEnv in 2019.3.0f6 version.
+* open the scene `Assets/Scenes/` 
+* Build this Project From `File/Build Settings/build`
+* Run this build.apk file on your mobile device and use Cardbaord with bluetooth remote device to play it.  
+
+You should now see a VR Environments in running Form.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
