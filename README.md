@@ -16,7 +16,7 @@
     <a href="https://github.com/EishaButt/CureOCD"><strong>Explore Project »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="httphttps://github.com/EishaButt/CureOCD/blob/master/Demo.mp4">View Demo</a>
   </p>
 </div>
 
@@ -164,7 +164,7 @@ You should now see a VR Environments in running Form.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Demo Video of Running Project.
+[Demo Video of Running Project](https://github.com/EishaButt/CureOCD/blob/master/Demo.mp4)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
