@@ -234,6 +234,16 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex = 0;
       _totalScore = 0;
+    //    if (_totalScore >= 0 && _totalScore <= 13) {
+    // Navigator.push(context,
+    //             MaterialPageRoute(builder: (context) => UnityViewPage()));
+    // } else if (_totalScore >= 14 && _totalScore <= 25) {
+    //   Navigator.pushReplacementNamed(context, '/chatbot');
+    // } else if (_totalScore >= 26 && _totalScore <= 34) {
+    //   Navigator.pushReplacementNamed(context, '/chatbot');
+    // } else {
+    //  Navigator.pushReplacementNamed(context, '/chatbot');
+    // }
     });
   }
 
